@@ -3,76 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nilabh Pandey | AI & Robotics Portfolio</title>
+    <title>Nilabh Pandey | AI, Robotics & Sustainability Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <style>
         :root {
             --primary: #00d2ff;
             --secondary: #3a7bd5;
-            --bg: #0f172a;
+            --accent: #10b981; /* Sustainability Green */
+            --bg: #020617;
             --card-bg: #1e293b;
             --text-main: #f8fafc;
             --text-dim: #94a3b8;
+            --nav-bg: rgba(2, 6, 23, 0.8);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, sans-serif; }
 
-        body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; }
+        body { 
+            background-color: var(--bg); 
+            color: var(--text-main); 
+            line-height: 1.6; 
+            overflow-x: hidden;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--secondary); border-radius: 10px; }
 
         /* Navigation */
         nav {
-            position: fixed; width: 100%; padding: 1rem 5%; background: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(10px); z-index: 1000; display: flex; justify-content: space-between; align-items: center;
+            position: fixed; width: 100%; padding: 1.5rem 8%; 
+            background: var(--nav-bg); backdrop-filter: blur(12px); 
+            z-index: 1000; display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
-        .logo { font-size: 1.5rem; font-weight: bold; background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .nav-links { display: flex; list-style: none; }
-        .nav-links li { margin-left: 2rem; }
-        .nav-links a { text-decoration: none; color: var(--text-main); font-size: 0.9rem; transition: 0.3s; }
+        .logo { font-size: 1.6rem; font-weight: 800; letter-spacing: -1px; }
+        .logo span { color: var(--primary); }
+        
+        .nav-links { display: flex; list-style: none; gap: 2.5rem; }
+        .nav-links a { 
+            text-decoration: none; color: var(--text-dim); 
+            font-size: 0.9rem; font-weight: 500; transition: 0.3s; 
+        }
         .nav-links a:hover { color: var(--primary); }
 
         /* Hero Section */
         header {
-            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
-            text-align: center; background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%); padding: 0 10%;
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; 
+            align-items: center; text-align: center; padding: 0 10%;
+            background: radial-gradient(circle at 50% 50%, #1e293b 0%, #020617 100%);
         }
-        header h1 { font-size: 4rem; margin-bottom: 1rem; }
-        header p { font-size: 1.2rem; color: var(--text-dim); max-width: 700px; margin-bottom: 2rem; }
-        .btn { padding: 0.8rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; border: none; cursor: pointer; }
-        .btn-primary { background: linear-gradient(to right, var(--primary), var(--secondary)); color: white; }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3); }
+        .badge {
+            background: rgba(0, 210, 255, 0.1); color: var(--primary);
+            padding: 8px 20px; border-radius: 50px; font-size: 0.85rem;
+            margin-bottom: 2rem; border: 1px solid rgba(0, 210, 255, 0.2);
+        }
+        header h1 { font-size: 4.5rem; margin-bottom: 1rem; letter-spacing: -2px; line-height: 1.1; }
+        header p { font-size: 1.25rem; color: var(--text-dim); max-width: 800px; margin-bottom: 2.5rem; }
+        
+        .social-icons { display: flex; gap: 1.5rem; margin-bottom: 3rem; }
+        .social-icons a { 
+            color: var(--text-dim); font-size: 1.8rem; transition: 0.3s; 
+        }
+        .social-icons a:hover { color: var(--primary); transform: translateY(-5px); }
 
-        /* Sections */
-        section { padding: 100px 10%; }
-        h2 { font-size: 2.5rem; margin-bottom: 3rem; text-align: center; }
-        h2::after { content: ''; display: block; width: 50px; height: 4px; background: var(--primary); margin: 10px auto; border-radius: 2px; }
+        /* Sections Styling */
+        section { padding: 120px 10%; }
+        .section-title { font-size: 2.5rem; margin-bottom: 4rem; position: relative; }
+        .section-title::after {
+            content: ''; position: absolute; left: 0; bottom: -10px;
+            width: 60px; height: 4px; background: var(--primary); border-radius: 2px;
+        }
 
-        /* Grid Layouts */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .card { background: var(--card-bg); padding: 2rem; border-radius: 15px; border: 1px solid #334155; transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
-        .card h3 { color: var(--primary); margin-bottom: 1rem; }
-        .card .date { font-size: 0.8rem; color: var(--text-dim); display: block; margin-bottom: 1rem; }
-        .skills-tag { display: inline-block; background: #334155; padding: 2px 10px; border-radius: 5px; font-size: 0.75rem; margin: 2px; }
+        /* Grid & Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+        .card { 
+            background: var(--card-bg); padding: 2.5rem; border-radius: 20px; 
+            border: 1px solid rgba(255,255,255,0.05); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative; overflow: hidden;
+        }
+        .card:hover { 
+            transform: translateY(-12px); border-color: var(--primary); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .card i { font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem; display: block; }
+        .card .date { font-size: 0.85rem; color: var(--primary); font-weight: 600; margin-bottom: 0.5rem; display: block; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        .card p { color: var(--text-dim); font-size: 1rem; margin-bottom: 1.5rem; }
 
-        /* Publications Section */
-        .pub-link { color: var(--primary); text-decoration: none; font-size: 0.9rem; }
+        /* Tags */
+        .tag-container { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { 
+            background: rgba(255,255,255,0.05); padding: 5px 12px; 
+            border-radius: 6px; font-size: 0.75rem; color: var(--text-main);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Publications */
+        .pub-link { 
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.9rem;
+        }
         .pub-link:hover { text-decoration: underline; }
 
-        footer { text-align: center; padding: 3rem; background: #020617; border-top: 1px solid #334155; }
-        .socials { margin-bottom: 1rem; }
-        .socials a { color: var(--text-main); font-size: 1.5rem; margin: 0 1rem; transition: 0.3s; }
-        .socials a:hover { color: var(--primary); }
+        /* Footer */
+        footer { 
+            background: #010409; padding: 100px 10% 50px; text-align: center; 
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .contact-grid { margin-bottom: 4rem; }
+        .contact-item { margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-dim); }
 
+        /* Responsive */
+        @media (max-width: 992px) {
+            header h1 { font-size: 3.5rem; }
+            nav { padding: 1.5rem 5%; }
+        }
         @media (max-width: 768px) {
-            header h1 { font-size: 2.5rem; }
             .nav-links { display: none; }
+            header h1 { font-size: 2.8rem; }
+            section { padding: 80px 5%; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">NP.</div>
+        <div class="logo">NILABH<span>.</span></div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -83,126 +144,133 @@
     </nav>
 
     <header>
-        <h1>Nilabh Pandey</h1>
-        <p>Master's student in IT, Digitalization & Sustainability at HSLU, Switzerland. Specializing in AI, Robotics, and Computer Vision for a sustainable future.</p>
-        <div class="socials">
+        <div class="badge" data-aos="fade-down">Master's @ HSLU Switzerland</div>
+        <h1 data-aos="fade-up">Nilabh Pandey</h1>
+        <p data-aos="fade-up" data-aos-delay="100">
+            Pioneering AI & Robotics solutions for a sustainable world. [cite_start]Master's student specialized in Computer Vision, Drone Tech, and Digitalization. [cite: 1]
+        </p>
+        <div class="social-icons" data-aos="fade-up" data-aos-delay="200">
             <a href="mailto:nilabhpandey7@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/nilabh-pandey/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ProNilabh" target="_blank"><i class="fab fa-github"></i></a>
         </div>
-        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#projects" class="btn btn-primary" style="padding: 1rem 2.5rem; background: linear-gradient(45deg, var(--primary), var(--secondary)); border-radius: 50px; text-decoration: none; color: white; font-weight: 700;" data-aos="zoom-in">Explore Projects</a>
     </header>
 
     <section id="about">
-        <h2>About Me</h2>
-        <div class="card">
-            <p>I am a Master's student at Lucerne University of Applied Sciences and Arts (HSLU). My background includes research in AI & Robotics with hands-on expertise in drone-based imaging and computer vision. I have professional experience with the Indian Space Agency (NESAC ISRO) and have published research in international IEEE conferences.</p>
+        <h2 class="section-title" data-aos="fade-right">Professional Summary</h2>
+        <div class="card" data-aos="fade-up">
+            <p style="font-size: 1.2rem;">
+                [cite_start]Currently pursuing a **Master of Science in IT, Digitalization & Sustainability** at Lucerne University of Applied Sciences and Arts[cite: 1]. With a strong foundation in **AI & Robotics** from VIT India, I combine hands-on experience in drone-based imaging with a passion for environmental impact. [cite_start]My journey spans from research at the **Indian Space Agency (NESAC)** to developing automated classification systems in Malaysia[cite: 1].
+            </p>
         </div>
     </section>
 
     <section id="experience">
-        <h2>Experience</h2>
+        <h2 class="section-title" data-aos="fade-right">Core Experience</h2>
         <div class="grid">
-            <div class="card">
-                <span class="date">Jan 2025 – May 2025</span>
-                <h3>AI Researcher</h3>
-                <p><strong>Universiti Teknologi PETRONAS, Malaysia</strong></p>
-                <p>Worked on Automated Classification for Glass Facade Condition Monitoring using deep learning and drone imaging.</p>
+            <div class="card" data-aos="fade-up">
+                <i class="fas fa-microchip"></i>
+                <span class="date">Jan 2025 – June 2025</span>
+                <h3>Researcher</h3>
+                <p><strong>Universiti Teknologi PETRONAS (Malaysia)</strong></p>
+                <p>Led research on AI-driven glass façade monitoring using computer vision and drones. [cite_start]Focused on automated condition assessment. [cite: 1]</p>
+                <div class="tag-container">
+                    <span class="tag">Deep Learning</span><span class="tag">UAV Imaging</span><span class="tag">MATLAB</span>
+                </div>
             </div>
-            <div class="card">
+
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-satellite"></i>
                 <span class="date">May 2024 – July 2024</span>
-                <h3>Research Intern</h3>
-                <p><strong>NESAC, ISRO (Dept. of Space, India)</strong></p>
-                <p>Implemented Stereo/Depth Cameras for Unmanned Aerial Vehicles (UAVs) to enhance autonomous navigation.</p>
+                <h3>Intern @ NESAC</h3>
+                <p><strong>Indian Space Agency (ISRO facility)</strong></p>
+                [cite_start]<p>Contributed to advanced UAV/drone projects for disaster management and environmental monitoring. [cite: 1]</p>
+                <div class="tag-container">
+                    <span class="tag">Robotics</span><span class="tag">Remote Sensing</span><span class="tag">Python</span>
+                </div>
             </div>
-            <div class="card">
+            
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-leaf"></i>
                 <span class="date">Aug 2024 – Dec 2024</span>
-                <h3>Research Intern</h3>
-                <p><strong>CCPS, Chennai, India</strong></p>
-                <p>Developed lightweight CNN models for leaf classification and agricultural innovation.</p>
+                <h3>AI Intern</h3>
+                <p><strong>CCPS Chennai</strong></p>
+                [cite_start]<p>Developed lightweight CNN architectures for agricultural plant disease detection. [cite: 1]</p>
+                <div class="tag-container">
+                    <span class="tag">TensorFlow</span><span class="tag">CNN</span><span class="tag">OpenCV</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="education">
-        <h2>Education</h2>
+    <section id="education" style="background: rgba(255,255,255,0.02);">
+        <h2 class="section-title" data-aos="fade-right">Education</h2>
         <div class="grid">
-            <div class="card">
-                <span class="date">2025 – 2027</span>
-                <h3>M.Sc. IT, Digitalization & Sustainability</h3>
-                <p>Lucerne University of Applied Sciences and Arts (HSLU), Switzerland</p>
-                <div>
-                    <span class="skills-tag">AI</span> <span class="skills-tag">NLP</span> <span class="skills-tag">Blockchain</span> <span class="skills-tag">Data Science</span>
+            <div class="card" data-aos="fade-up">
+                <h3>M.Sc. IT & Sustainability</h3>
+                [cite_start]<p><strong>HSLU, Switzerland</strong> (2025 – 2027) [cite: 1]</p>
+                <div class="tag-container">
+                    <span class="tag">Sustainability</span><span class="tag">Digitalization</span><span class="tag">IT Management</span>
                 </div>
             </div>
-            <div class="card">
-                <span class="date">2021 – 2025</span>
-                <h3>B.Tech Computer Science (AI & Robotics)</h3>
-                <p>Vellore Institute of Technology, India</p>
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <h3>B.Tech AI & Robotics</h3>
+                [cite_start]<p><strong>Vellore Institute of Technology</strong> (2021 – 2025) [cite: 1]</p>
                 <p>CGPA: 8.86/10</p>
-                <div>
-                    <span class="skills-tag">DSA</span> <span class="skills-tag">IoT</span> <span class="skills-tag">Robotics</span> <span class="skills-tag">Python</span>
+                <div class="tag-container">
+                    <span class="tag">Neural Networks</span><span class="tag">Embedded Systems</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="publications">
-        <h2>Publications</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Glass Facade Condition Monitoring</h3>
-                <p>Published in 2025 IEEE International Conference on Automatic Control and Intelligent Systems (I2CACIS).</p>
-                <a href="https://doi.org/10.1109/I2CACIS65476.2025.11101021" class="pub-link">View on IEEE Xplore</a>
-            </div>
-            <div class="card">
-                <h3>MBConvNet-CNS: Lightweight CNN</h3>
-                <p>Published in 2024 12th International Conference on Intelligent Systems and Embedded Design (ISED).</p>
-                <a href="https://doi.org/10.1109/ISED63599.2024.10957590" class="pub-link">View on IEEE Xplore</a>
             </div>
         </div>
     </section>
 
     <section id="projects">
-        <h2>Featured Projects</h2>
+        <h2 class="section-title" data-aos="fade-right">Featured Projects & Publications</h2>
         <div class="grid">
-            <div class="card">
+            <div class="card" data-aos="zoom-in">
                 <h3>Baltic-ECA-Net</h3>
-                <p>Ultra-lightweight attention network for real-time Algal Bloom detection using Ghost Modules.</p>
-                <div>
-                    <span class="skills-tag">Machine Learning</span> <span class="skills-tag">Image Processing</span>
+                <p>An ultra-lightweight attention network for real-time Algal Bloom detection in environmental monitoring.</p>
+                <div class="tag-container" style="margin-bottom: 1rem;">
+                    <span class="tag">Ghost Modules</span><span class="tag">Pytorch</span>
                 </div>
             </div>
-            <div class="card">
+
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                <h3>IEEE Publication</h3>
+                [cite_start]<p>Drone-Based Imaging and Automated Classification for Glass Facade Condition Monitoring (2025). [cite: 1]</p>
+                <a href="https://doi.org/10.1109/I2CACIS65476.2025.11101021" class="pub-link" target="_blank">Read Paper <i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <div class="card" data-aos="zoom-in" data-aos-delay="200">
                 <h3>DiveSSI</h3>
-                <p>Blockchain-powered Self-Sovereign Identity for diving certifications using Solidity and IPFS.</p>
-                <div>
-                    <span class="skills-tag">Blockchain</span> <span class="skills-tag">Solidity</span> <span class="skills-tag">Smart Contracts</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Drone Tracking System</h3>
-                <p>Real-time system using YOLOv5 and Arduino for autonomous detection and tracking.</p>
-                <div>
-                    <span class="skills-tag">PyTorch</span> <span class="skills-tag">OpenCV</span> <span class="skills-tag">YOLO</span>
+                <p>Decentralized identity for scuba diving certifications using Solidity and IPFS blockchain tech.</p>
+                <div class="tag-container">
+                    <span class="tag">Web3</span><span class="tag">Solidity</span><span class="tag">IPFS</span>
                 </div>
             </div>
         </div>
     </section>
 
     <footer id="contact">
-        <p>Let's connect for future collaborations!</p>
-        <p>Rotkreuz, Switzerland | +41-772898726</p>
-        <div class="socials">
-            <a href="mailto:nilabhpandey7@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
+        <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">Get In Touch</h2>
+        <div class="contact-grid">
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Lucerne, Switzerland</div>
+            <div class="contact-item"><i class="fas fa-envelope"></i> nilabhpandey7@gmail.com</div>
+            <div class="contact-item"><i class="fas fa-phone"></i> +41 77 289 87 26</div>
         </div>
-        <p>&copy; 2026 Nilabh Pandey. All rights reserved.</p>
+        
+        <div class="social-icons" style="justify-content: center;">
+            <a href="https://www.linkedin.com/in/nilabh-pandey/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ProNilabh" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p style="color: var(--text-dim); font-size: 0.8rem; margin-top: 2rem;">&copy; 2026 Nilabh Pandey | Built with Passion for Innovation.</p>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
+        AOS.init({ duration: 1000, once: true });
+
+        // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
