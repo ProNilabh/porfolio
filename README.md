@@ -2,15 +2,6 @@
 
 Personal portfolio website showcasing AI research, robotics projects, publications, and experience.
 
-**Live:** [https://nilabhpandey.github.io](https://nilabhpandey.github.io)
-
-## Setup
-
-1. Create a GitHub repository named `<your-username>.github.io`
-2. Upload `index.html` and `Nilabh_Pandey_Image.jpg` to the root
-3. Enable GitHub Pages in repo Settings → Pages → Deploy from main branch
-4. Visit `https://<your-username>.github.io`
-
 ## Features
 
 - Dark / Light mode (dark by default)
