@@ -5,213 +5,206 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nilabh Pandey — AI & Robotics Engineer</title>
     <meta name="description" content="Portfolio of Nilabh Pandey – AI Researcher, Robotics Engineer, and MS student at HSLU Switzerland.">
+    <!-- Inline SVG Favicon — "N" in accent orange -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0B'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='900' font-size='40' fill='%23FF6B2B'%3EN%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --accent: #FF6B2B; --accent-light: #FF8F5C; --accent-glow: rgba(255, 107, 43, 0.4); --accent-subtle: rgba(255, 107, 43, 0.08);
-            --purple: #8B5CF6; --purple-light: #A78BFA; --purple-glow: rgba(139, 92, 246, 0.35); --purple-subtle: rgba(139, 92, 246, 0.08);
-            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --accent:#FF6B2B;--accent-light:#FF8F5C;--accent-glow:rgba(255,107,43,0.4);--accent-subtle:rgba(255,107,43,0.08);
+            --purple:#8B5CF6;--purple-light:#A78BFA;--purple-glow:rgba(139,92,246,0.35);--purple-subtle:rgba(139,92,246,0.08);
+            --transition:0.4s cubic-bezier(0.25,0.46,0.45,0.94);
         }
-        [data-theme="dark"] {
-            --bg: #09090B; --bg-secondary: #0F0F12; --bg-card: #15151A; --bg-card-hover: #1C1C22;
-            --text: #F0F0F5; --text-secondary: #A1A1AA; --text-muted: #71717A;
-            --border: rgba(255,255,255,0.10); --border-hover: rgba(255,255,255,0.18);
-            --border-accent: rgba(255,107,43,0.25); --border-purple: rgba(139,92,246,0.25);
-            --nav-bg: rgba(9,9,11,0.88); --toggle-border: var(--accent);
-            --card-shadow: 0 2px 12px rgba(0,0,0,0.4); --card-shadow-hover: 0 8px 30px rgba(255,107,43,0.12);
-            --section-divider: linear-gradient(90deg, transparent, var(--accent) 30%, var(--purple) 70%, transparent);
-        }
-        [data-theme="light"] {
-            --bg: #FAFAF9; --bg-secondary: #F0F0EE; --bg-card: #FFFFFF; --bg-card-hover: #F7F7F5;
-            --text: #18181B; --text-secondary: #52525B; --text-muted: #71717A;
-            --border: rgba(0,0,0,0.12); --border-hover: rgba(0,0,0,0.22);
-            --border-accent: rgba(255,107,43,0.3); --border-purple: rgba(139,92,246,0.3);
-            --nav-bg: rgba(250,250,249,0.88); --toggle-border: var(--purple);
-            --card-shadow: 0 2px 12px rgba(0,0,0,0.06); --card-shadow-hover: 0 8px 30px rgba(139,92,246,0.12);
-            --section-divider: linear-gradient(90deg, transparent, var(--purple) 30%, var(--accent) 70%, transparent);
-        }
-        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-        html { scroll-behavior:smooth; scroll-padding-top:80px; cursor:none; }
-        body { font-family:'Sora',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; overflow-x:hidden; transition:background var(--transition),color var(--transition); cursor:none; }
-        a { color:inherit; text-decoration:none; cursor:none; }
-        button, select { cursor:none; }
-        img { max-width:100%; display:block; }
-        ::selection { background:var(--accent); color:#fff; }
+        [data-theme="dark"]{--bg:#09090B;--bg-secondary:#0F0F12;--bg-card:#15151A;--bg-card-hover:#1C1C22;--text:#F0F0F5;--text-secondary:#A1A1AA;--text-muted:#71717A;--border:rgba(255,255,255,0.10);--border-hover:rgba(255,255,255,0.18);--border-accent:rgba(255,107,43,0.25);--border-purple:rgba(139,92,246,0.25);--nav-bg:rgba(9,9,11,0.88);--toggle-border:var(--accent);--card-shadow:0 2px 12px rgba(0,0,0,0.4);--card-shadow-hover:0 8px 30px rgba(255,107,43,0.12);--section-divider:linear-gradient(90deg,transparent,var(--accent) 30%,var(--purple) 70%,transparent)}
+        [data-theme="light"]{--bg:#FAFAF9;--bg-secondary:#F0F0EE;--bg-card:#FFFFFF;--bg-card-hover:#F7F7F5;--text:#18181B;--text-secondary:#52525B;--text-muted:#71717A;--border:rgba(0,0,0,0.12);--border-hover:rgba(0,0,0,0.22);--border-accent:rgba(255,107,43,0.3);--border-purple:rgba(139,92,246,0.3);--nav-bg:rgba(250,250,249,0.88);--toggle-border:var(--purple);--card-shadow:0 2px 12px rgba(0,0,0,0.06);--card-shadow-hover:0 8px 30px rgba(139,92,246,0.12);--section-divider:linear-gradient(90deg,transparent,var(--purple) 30%,var(--accent) 70%,transparent)}
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;scroll-padding-top:80px;cursor:none}
+        body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;transition:background var(--transition),color var(--transition);cursor:none}
+        a{color:inherit;text-decoration:none;cursor:none}
+        button{cursor:none;border:none;background:none}
+        img{max-width:100%;display:block}
+        ::selection{background:var(--accent);color:#fff}
 
-        .cursor-dot { position:fixed; width:8px; height:8px; background:var(--accent); border-radius:50%; pointer-events:none; z-index:99999; transform:translate(-50%,-50%); transition:width .2s,height .2s,background .3s; }
-        .cursor-ring { position:fixed; width:40px; height:40px; border:1.5px solid var(--accent); border-radius:50%; pointer-events:none; z-index:99998; transform:translate(-50%,-50%); transition:width .3s,height .3s,border-color .3s,background .3s; }
-        .cursor-ring.hover { width:60px; height:60px; background:var(--accent-glow); border-color:var(--accent); }
-        .cursor-dot.hover { width:4px; height:4px; }
-        .cursor-glow { position:fixed; width:300px; height:300px; background:radial-gradient(circle,var(--accent-glow) 0%,transparent 70%); border-radius:50%; pointer-events:none; z-index:0; transform:translate(-50%,-50%); opacity:.3; transition:opacity .5s; }
+        .cursor-dot{position:fixed;width:8px;height:8px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .3s}
+        .cursor-ring{position:fixed;width:40px;height:40px;border:1.5px solid var(--accent);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s,background .3s}
+        .cursor-ring.hover{width:60px;height:60px;background:var(--accent-glow);border-color:var(--accent)}
+        .cursor-dot.hover{width:4px;height:4px}
+        .cursor-glow{position:fixed;width:300px;height:300px;background:radial-gradient(circle,var(--accent-glow) 0%,transparent 70%);border-radius:50%;pointer-events:none;z-index:0;transform:translate(-50%,-50%);opacity:.3;transition:opacity .5s}
 
-        .grid-bg { position:fixed; inset:0; z-index:0; background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px); background-size:60px 60px; opacity:.4; }
-        .section-divider { height:1px; background:var(--section-divider); opacity:.4; position:relative; z-index:1; }
+        .grid-bg{position:fixed;inset:0;z-index:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.4}
+        .section-divider{height:1px;background:var(--section-divider);opacity:.4;position:relative;z-index:1}
 
-        nav { position:fixed; top:0; left:0; right:0; z-index:1000; background:var(--nav-bg); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--border); transition:background var(--transition),border-color var(--transition); }
-        .nav-inner { max-width:1200px; margin:0 auto; padding:0 2rem; height:64px; display:flex; align-items:center; justify-content:space-between; }
-        .nav-logo { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:1.1rem; letter-spacing:-.5px; }
-        .nav-logo span { color:var(--accent); }
-        .nav-links { display:flex; gap:1.5rem; align-items:center; }
-        .nav-links a { font-size:.85rem; font-weight:500; color:var(--text-secondary); transition:color .3s; position:relative; }
-        .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background:var(--accent); transition:width .3s; }
-        .nav-links a:hover { color:var(--text); }
-        .nav-links a:hover::after { width:100%; }
+        nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--nav-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:background var(--transition),border-color var(--transition)}
+        .nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+        .nav-logo{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.1rem;letter-spacing:-.5px}
+        .nav-logo span{color:var(--accent)}
+        .nav-links{display:flex;gap:1.5rem;align-items:center}
+        .nav-links a{font-size:.85rem;font-weight:500;color:var(--text-secondary);transition:color .3s;position:relative}
+        .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--accent);transition:width .3s}
+        .nav-links a:hover{color:var(--text)}
+        .nav-links a:hover::after{width:100%}
 
-        /* Language Selector */
-        .lang-select { background:var(--bg-card); color:var(--text); border:1.5px solid var(--border-purple); border-radius:8px; padding:4px 8px; font-family:'JetBrains Mono',monospace; font-size:.72rem; font-weight:500; appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238B5CF6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 8px center; padding-right:22px; transition:all .3s; outline:none; flex-shrink:0; }
-        .lang-select:hover, .lang-select:focus { border-color:var(--purple); box-shadow:0 0 10px var(--purple-glow); }
-        .lang-select option { background:var(--bg-card); color:var(--text); }
+        .nav-controls{display:flex;align-items:center;gap:.75rem}
 
-        .theme-toggle { background:var(--bg-card); border:2px solid var(--toggle-border); border-radius:50px; width:48px; height:26px; position:relative; transition:background var(--transition),border-color var(--transition),box-shadow var(--transition); box-shadow:0 0 8px var(--accent-glow); flex-shrink:0; }
-        .theme-toggle:hover { box-shadow:0 0 16px var(--accent-glow); }
-        .theme-toggle::after { content:''; position:absolute; top:3px; left:3px; width:16px; height:16px; border-radius:50%; background:var(--accent); transition:transform .3s,background .3s; }
-        [data-theme="light"] .theme-toggle { border-color:var(--purple); box-shadow:0 0 8px var(--purple-glow); }
-        [data-theme="light"] .theme-toggle:hover { box-shadow:0 0 16px var(--purple-glow); }
-        [data-theme="light"] .theme-toggle::after { transform:translateX(22px); background:var(--purple); }
+        /* Flag Language Switcher */
+        .lang-switcher{position:relative;flex-shrink:0}
+        .lang-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--bg-card);border:1.5px solid var(--border-purple);border-radius:8px;font-size:1.05rem;transition:all .3s;line-height:1}
+        .lang-btn:hover,.lang-btn:focus{border-color:var(--purple);box-shadow:0 0 10px var(--purple-glow)}
+        .lang-btn .arrow{font-size:.55rem;color:var(--purple-light);margin-left:2px}
+        .lang-dropdown{position:absolute;top:calc(100% + 8px);right:0;background:var(--bg-card);border:1.5px solid var(--border-purple);border-radius:12px;padding:6px;display:none;flex-direction:column;gap:2px;box-shadow:0 8px 30px rgba(0,0,0,0.3);z-index:9999;min-width:52px}
+        .lang-dropdown.open{display:flex}
+        .lang-option{padding:6px 10px;font-size:1.05rem;border-radius:8px;transition:background .2s;text-align:center;line-height:1}
+        .lang-option:hover{background:var(--accent-subtle)}
+        .lang-option.active{background:var(--purple-subtle);box-shadow:inset 0 0 0 1.5px var(--border-purple)}
 
-        .nav-controls { display:flex; align-items:center; gap:.75rem; }
+        /* Theme Toggle */
+        .theme-toggle{background:var(--bg-card);border:2px solid var(--toggle-border) !important;border-radius:50px;width:48px;height:26px;position:relative;transition:background var(--transition),border-color var(--transition),box-shadow var(--transition);box-shadow:0 0 8px var(--accent-glow);flex-shrink:0}
+        .theme-toggle:hover{box-shadow:0 0 16px var(--accent-glow)}
+        .theme-toggle::after{content:'';position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:var(--accent);transition:transform .3s,background .3s}
+        [data-theme="light"] .theme-toggle{border-color:var(--purple) !important;box-shadow:0 0 8px var(--purple-glow)}
+        [data-theme="light"] .theme-toggle:hover{box-shadow:0 0 16px var(--purple-glow)}
+        [data-theme="light"] .theme-toggle::after{transform:translateX(22px);background:var(--purple)}
 
-        .hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; padding:4px; }
-        .hamburger span { width:24px; height:2px; background:var(--text); transition:transform .3s,opacity .3s; border-radius:2px; }
+        .hamburger{display:none;flex-direction:column;gap:5px;padding:4px}
+        .hamburger span{width:24px;height:2px;background:var(--text);transition:transform .3s,opacity .3s;border-radius:2px}
 
-        .hero { min-height:100vh; display:flex; align-items:center; position:relative; z-index:1; overflow:hidden; }
-        .hero-inner { max-width:1200px; margin:0 auto; padding:120px 2rem 80px; display:grid; grid-template-columns:1fr auto; gap:4rem; align-items:center; width:100%; }
-        .hero-content { position:relative; }
-        .hero-tag { display:inline-flex; align-items:center; gap:8px; padding:6px 16px; background:var(--bg-card); border:1px solid var(--border-accent); border-radius:50px; font-family:'JetBrains Mono',monospace; font-size:.75rem; color:var(--accent); margin-bottom:1.5rem; animation:fadeInUp .8s ease both; }
-        .hero-tag .pulse { width:8px; height:8px; background:#22c55e; border-radius:50%; animation:pulse 2s infinite; }
-        .hero h1 { font-family:'Outfit',sans-serif; font-size:clamp(2.8rem,6vw,5rem); font-weight:900; line-height:1.05; letter-spacing:-2px; margin-bottom:1.5rem; animation:fadeInUp .8s ease .1s both; }
-        .hero h1 .gradient-text { background:linear-gradient(135deg,var(--accent),var(--purple)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-        .hero-desc { font-size:1.05rem; color:var(--text-secondary); max-width:540px; line-height:1.8; margin-bottom:2rem; animation:fadeInUp .8s ease .2s both; }
-        .hero-buttons { display:flex; gap:1rem; flex-wrap:wrap; animation:fadeInUp .8s ease .3s both; }
-        .btn { display:inline-flex; align-items:center; gap:8px; padding:12px 28px; border-radius:50px; font-family:'Sora',sans-serif; font-weight:600; font-size:.9rem; transition:all .3s; border:none; }
-        .btn-primary { background:linear-gradient(135deg,var(--accent),#e55a1b); color:#fff; box-shadow:0 4px 20px var(--accent-glow); }
-        .btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 30px var(--accent-glow); }
-        .btn-outline { background:transparent; color:var(--text); border:2px solid var(--border-hover); }
-        .btn-outline:hover { border-color:var(--purple); color:var(--purple); transform:translateY(-2px); box-shadow:0 4px 20px var(--purple-glow); }
+        .hero{min-height:100vh;display:flex;align-items:center;position:relative;z-index:1;overflow:hidden}
+        .hero-inner{max-width:1200px;margin:0 auto;padding:120px 2rem 80px;display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;width:100%}
+        .hero-content{position:relative}
+        .hero-tag{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;background:var(--bg-card);border:1px solid var(--border-accent);border-radius:50px;font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);margin-bottom:1.5rem;animation:fadeInUp .8s ease both}
+        .hero-tag .pulse{width:8px;height:8px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite}
+        .hero h1{font-family:'Outfit',sans-serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:900;line-height:1.05;letter-spacing:-2px;margin-bottom:1.5rem;animation:fadeInUp .8s ease .1s both}
+        .hero h1 .gradient-text{background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .hero-desc{font-size:1.05rem;color:var(--text-secondary);max-width:540px;line-height:1.8;margin-bottom:2rem;animation:fadeInUp .8s ease .2s both}
+        .hero-buttons{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeInUp .8s ease .3s both}
+        .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:50px;font-family:'Sora',sans-serif;font-weight:600;font-size:.9rem;transition:all .3s;border:none}
+        .btn-primary{background:linear-gradient(135deg,var(--accent),#e55a1b);color:#fff;box-shadow:0 4px 20px var(--accent-glow)}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--accent-glow)}
+        .btn-outline{background:transparent;color:var(--text);border:2px solid var(--border-hover)}
+        .btn-outline:hover{border-color:var(--purple);color:var(--purple);transform:translateY(-2px);box-shadow:0 4px 20px var(--purple-glow)}
 
-        .hero-image-wrapper { position:relative; animation:fadeInUp .8s ease .4s both; }
-        .hero-image-frame { width:280px; height:320px; border-radius:20px; overflow:hidden; border:2px solid var(--border-accent); position:relative; box-shadow:0 0 40px var(--accent-glow),0 0 80px rgba(139,92,246,0.1); }
-        .hero-image-frame img { width:100%; height:100%; object-fit:cover; object-position:top; }
-        .hero-image-frame::before { content:''; position:absolute; inset:0; background:linear-gradient(to top,var(--bg) 0%,transparent 40%); z-index:1; pointer-events:none; }
-        .hero-float-badge { position:absolute; background:var(--bg-card); border:1px solid var(--border-accent); border-radius:12px; padding:10px 16px; font-size:.78rem; font-family:'JetBrains Mono',monospace; backdrop-filter:blur(10px); white-space:nowrap; box-shadow:var(--card-shadow); }
-        .hero-float-badge.top-right { top:-12px; right:-50px; animation:float 4s ease-in-out infinite; }
-        .hero-float-badge.bottom-left { bottom:30px; left:-60px; animation:float 4s ease-in-out 1s infinite; }
-        .hero-float-badge .badge-icon { font-size:1rem; }
-        .hero-float-badge .badge-label { color:var(--text-muted); }
-        .hero-float-badge .badge-value { color:var(--accent); font-weight:600; }
-        .hero-stats { display:flex; gap:2.5rem; margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border); animation:fadeInUp .8s ease .5s both; }
-        .hero-stat-number { font-family:'Outfit',sans-serif; font-size:1.8rem; font-weight:800; color:var(--text); }
-        .hero-stat-number span { color:var(--accent); }
-        .hero-stat-label { font-size:.78rem; color:var(--text-muted); margin-top:2px; }
+        .hero-image-wrapper{position:relative;animation:fadeInUp .8s ease .4s both}
+        .hero-image-frame{width:280px;height:320px;border-radius:20px;overflow:hidden;border:2px solid var(--border-accent);position:relative;box-shadow:0 0 40px var(--accent-glow),0 0 80px rgba(139,92,246,0.1)}
+        .hero-image-frame img{width:100%;height:100%;object-fit:cover;object-position:top}
+        .hero-image-frame::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,transparent 40%);z-index:1;pointer-events:none}
+        .hero-float-badge{position:absolute;background:var(--bg-card);border:1px solid var(--border-accent);border-radius:12px;padding:10px 16px;font-size:.78rem;font-family:'JetBrains Mono',monospace;backdrop-filter:blur(10px);white-space:nowrap;box-shadow:var(--card-shadow)}
+        .hero-float-badge.top-right{top:-12px;right:-50px;animation:float 4s ease-in-out infinite}
+        .hero-float-badge.bottom-left{bottom:30px;left:-60px;animation:float 4s ease-in-out 1s infinite}
+        .hero-float-badge .badge-icon{font-size:1rem}
+        .hero-float-badge .badge-label{color:var(--text-muted)}
+        .hero-float-badge .badge-value{color:var(--accent);font-weight:600}
+        .hero-stats{display:flex;gap:2.5rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);animation:fadeInUp .8s ease .5s both}
+        .hero-stat-number{font-family:'Outfit',sans-serif;font-size:1.8rem;font-weight:800;color:var(--text)}
+        .hero-stat-number span{color:var(--accent)}
+        .hero-stat-label{font-size:.78rem;color:var(--text-muted);margin-top:2px}
 
-        section { position:relative; z-index:1; padding:100px 0; }
-        .container { max-width:1200px; margin:0 auto; padding:0 2rem; }
-        .section-header { margin-bottom:3.5rem; }
-        .section-label { font-family:'JetBrains Mono',monospace; font-size:.75rem; color:var(--accent); text-transform:uppercase; letter-spacing:3px; margin-bottom:.75rem; display:flex; align-items:center; gap:.5rem; }
-        .section-label::before { content:''; display:inline-block; width:24px; height:2px; background:linear-gradient(90deg,var(--accent),var(--purple)); border-radius:2px; }
-        .section-title { font-family:'Outfit',sans-serif; font-size:clamp(2rem,4vw,2.8rem); font-weight:800; letter-spacing:-1.5px; line-height:1.15; }
+        section{position:relative;z-index:1;padding:100px 0}
+        .container{max-width:1200px;margin:0 auto;padding:0 2rem}
+        .section-header{margin-bottom:3.5rem}
+        .section-label{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);text-transform:uppercase;letter-spacing:3px;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+        .section-label::before{content:'';display:inline-block;width:24px;height:2px;background:linear-gradient(90deg,var(--accent),var(--purple));border-radius:2px}
+        .section-title{font-family:'Outfit',sans-serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:800;letter-spacing:-1.5px;line-height:1.15}
 
-        .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
-        .about-text { font-size:1rem; color:var(--text-secondary); line-height:1.9; }
-        .about-text strong { color:var(--text); }
-        .about-highlights { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
-        .highlight-card { background:var(--bg-card); border:1.5px solid var(--border); border-radius:16px; padding:1.5rem; transition:all .3s; box-shadow:var(--card-shadow); }
-        .highlight-card:hover { border-color:var(--accent); transform:translateY(-3px); box-shadow:var(--card-shadow-hover); }
-        .highlight-icon { font-size:1.5rem; margin-bottom:.75rem; width:42px; height:42px; display:flex; align-items:center; justify-content:center; background:var(--accent-subtle); border-radius:10px; }
-        .highlight-title { font-weight:700; font-size:.9rem; margin-bottom:.25rem; color:var(--text); }
-        .highlight-desc { font-size:.78rem; color:var(--text-muted); }
+        .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+        .about-text{font-size:1rem;color:var(--text-secondary);line-height:1.9}
+        .about-text strong{color:var(--text)}
+        .about-highlights{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+        .highlight-card{background:var(--bg-card);border:1.5px solid var(--border);border-radius:16px;padding:1.5rem;transition:all .3s;box-shadow:var(--card-shadow)}
+        .highlight-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--card-shadow-hover)}
+        .highlight-icon{font-size:1.5rem;margin-bottom:.75rem;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--accent-subtle);border-radius:10px}
+        .highlight-title{font-weight:700;font-size:.9rem;margin-bottom:.25rem;color:var(--text)}
+        .highlight-desc{font-size:.78rem;color:var(--text-muted)}
 
-        .timeline { position:relative; padding-left:3rem; }
-        .timeline::before { content:''; position:absolute; left:7px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom,var(--accent),var(--purple),transparent); }
-        .timeline-item { position:relative; margin-bottom:2.5rem; padding:1.5rem; background:var(--bg-card); border:1.5px solid var(--border); border-radius:16px; transition:all .3s; box-shadow:var(--card-shadow); }
-        .timeline-item:hover { border-color:var(--accent); transform:translateX(6px); box-shadow:var(--card-shadow-hover); }
-        .timeline-item::before { content:''; position:absolute; left:-2.88rem; top:1.75rem; width:14px; height:14px; background:var(--accent); border-radius:50%; border:3px solid var(--bg); box-shadow:0 0 8px var(--accent-glow); }
-        .timeline-date { font-family:'JetBrains Mono',monospace; font-size:.75rem; color:var(--accent); margin-bottom:.5rem; font-weight:500; }
-        .timeline-role { font-weight:700; font-size:1.05rem; margin-bottom:.25rem; color:var(--text); }
-        .timeline-org { font-size:.85rem; color:var(--text-secondary); margin-bottom:.5rem; }
-        .timeline-desc { font-size:.85rem; color:var(--text-muted); line-height:1.7; }
+        .timeline{position:relative;padding-left:3rem}
+        .timeline::before{content:'';position:absolute;left:7px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--accent),var(--purple),transparent)}
+        .timeline-item{position:relative;margin-bottom:2.5rem;padding:1.5rem;background:var(--bg-card);border:1.5px solid var(--border);border-radius:16px;transition:all .3s;box-shadow:var(--card-shadow)}
+        .timeline-item:hover{border-color:var(--accent);transform:translateX(6px);box-shadow:var(--card-shadow-hover)}
+        .timeline-item::before{content:'';position:absolute;left:-2.88rem;top:1.75rem;width:14px;height:14px;background:var(--accent);border-radius:50%;border:3px solid var(--bg);box-shadow:0 0 8px var(--accent-glow)}
+        .timeline-date{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);margin-bottom:.5rem;font-weight:500}
+        .timeline-role{font-weight:700;font-size:1.05rem;margin-bottom:.25rem;color:var(--text)}
+        .timeline-org{font-size:.85rem;color:var(--text-secondary);margin-bottom:.5rem}
+        .timeline-desc{font-size:.85rem;color:var(--text-muted);line-height:1.7}
 
-        .edu-grid { display:grid; gap:1.25rem; }
-        .edu-card { background:var(--bg-card); border:1.5px solid var(--border); border-radius:16px; padding:1.75rem; display:grid; grid-template-columns:auto 1fr auto; gap:1.5rem; align-items:start; transition:all .3s; box-shadow:var(--card-shadow); }
-        .edu-card:hover { border-color:var(--purple); transform:translateY(-2px); box-shadow:var(--card-shadow-hover); }
-        .edu-icon { width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; background:linear-gradient(135deg,var(--accent),var(--purple)); flex-shrink:0; }
-        .edu-degree { font-weight:700; font-size:1rem; margin-bottom:.25rem; color:var(--text); }
-        .edu-school { font-size:.85rem; color:var(--text-secondary); margin-bottom:.25rem; }
-        .edu-coursework { font-size:.78rem; color:var(--text-muted); }
-        .edu-gpa { font-family:'JetBrains Mono',monospace; font-size:.85rem; font-weight:700; color:var(--accent); background:var(--accent-subtle); border:1.5px solid var(--border-accent); padding:6px 14px; border-radius:50px; white-space:nowrap; height:fit-content; }
+        .edu-grid{display:grid;gap:1.25rem}
+        .edu-card{background:var(--bg-card);border:1.5px solid var(--border);border-radius:16px;padding:1.75rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.5rem;align-items:start;transition:all .3s;box-shadow:var(--card-shadow)}
+        .edu-card:hover{border-color:var(--purple);transform:translateY(-2px);box-shadow:var(--card-shadow-hover)}
+        .edu-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;background:linear-gradient(135deg,var(--accent),var(--purple));flex-shrink:0}
+        .edu-degree{font-weight:700;font-size:1rem;margin-bottom:.25rem;color:var(--text)}
+        .edu-school{font-size:.85rem;color:var(--text-secondary);margin-bottom:.25rem}
+        .edu-coursework{font-size:.78rem;color:var(--text-muted)}
+        .edu-gpa{font-family:'JetBrains Mono',monospace;font-size:.85rem;font-weight:700;color:var(--accent);background:var(--accent-subtle);border:1.5px solid var(--border-accent);padding:6px 14px;border-radius:50px;white-space:nowrap;height:fit-content}
 
-        .pub-card { background:var(--bg-card); border:1.5px solid var(--border); border-radius:16px; padding:2rem; margin-bottom:1.25rem; position:relative; overflow:hidden; transition:all .3s; box-shadow:var(--card-shadow); }
-        .pub-card:hover { border-color:var(--purple); transform:translateY(-2px); box-shadow:var(--card-shadow-hover); }
-        .pub-card::before { content:''; position:absolute; top:0; left:0; width:4px; height:100%; background:linear-gradient(to bottom,var(--accent),var(--purple)); }
-        .pub-venue { font-family:'JetBrains Mono',monospace; font-size:.7rem; color:var(--purple-light); text-transform:uppercase; letter-spacing:1.5px; margin-bottom:.5rem; font-weight:500; }
-        .pub-title { font-weight:700; font-size:1.05rem; margin-bottom:.5rem; line-height:1.5; color:var(--text); }
-        .pub-details { font-size:.8rem; color:var(--text-muted); line-height:1.6; }
-        .pub-doi { display:inline-flex; align-items:center; gap:6px; margin-top:.75rem; font-family:'JetBrains Mono',monospace; font-size:.72rem; color:var(--accent); padding:4px 12px; border:1.5px solid var(--border-accent); border-radius:50px; transition:all .3s; }
-        .pub-doi:hover { border-color:var(--accent); background:var(--accent-subtle); box-shadow:0 0 12px var(--accent-glow); }
+        .pub-card{background:var(--bg-card);border:1.5px solid var(--border);border-radius:16px;padding:2rem;margin-bottom:1.25rem;position:relative;overflow:hidden;transition:all .3s;box-shadow:var(--card-shadow)}
+        .pub-card:hover{border-color:var(--purple);transform:translateY(-2px);box-shadow:var(--card-shadow-hover)}
+        .pub-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(to bottom,var(--accent),var(--purple))}
+        .pub-venue{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--purple-light);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.5rem;font-weight:500}
+        .pub-title{font-weight:700;font-size:1.05rem;margin-bottom:.5rem;line-height:1.5;color:var(--text)}
+        .pub-details{font-size:.8rem;color:var(--text-muted);line-height:1.6}
+        .pub-doi{display:inline-flex;align-items:center;gap:6px;margin-top:.75rem;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--accent);padding:4px 12px;border:1.5px solid var(--border-accent);border-radius:50px;transition:all .3s}
+        .pub-doi:hover{border-color:var(--accent);background:var(--accent-subtle);box-shadow:0 0 12px var(--accent-glow)}
 
-        .projects-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(350px,1fr)); gap:1.25rem; }
-        .project-card { background:var(--bg-card); border:1.5px solid var(--border); border-radius:16px; padding:1.75rem; transition:all .4s; position:relative; overflow:hidden; box-shadow:var(--card-shadow); }
-        .project-card::after { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--accent),var(--purple)); opacity:0; transition:opacity .3s; }
-        .project-card:hover { border-color:var(--accent); transform:translateY(-4px); box-shadow:var(--card-shadow-hover); }
-        .project-card:hover::after { opacity:1; }
-        .project-year { font-family:'JetBrains Mono',monospace; font-size:.72rem; color:var(--accent); margin-bottom:.75rem; font-weight:600; padding:2px 10px; background:var(--accent-subtle); border:1px solid var(--border-accent); border-radius:50px; display:inline-block; }
-        .project-name { font-weight:700; font-size:1.05rem; margin-bottom:.5rem; line-height:1.4; color:var(--text); }
-        .project-desc { font-size:.85rem; color:var(--text-muted); line-height:1.7; margin-bottom:1rem; }
-        .project-tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:1rem; }
-        .project-tag { padding:4px 10px; background:var(--purple-subtle); border:1px solid var(--border-purple); border-radius:50px; font-size:.7rem; font-family:'JetBrains Mono',monospace; color:var(--purple-light); }
-        .project-link { display:inline-flex; align-items:center; gap:6px; font-size:.82rem; font-weight:600; color:var(--accent); transition:gap .3s; }
-        .project-link:hover { gap:10px; }
+        .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:1.25rem}
+        .project-card{background:var(--bg-card);border:1.5px solid var(--border);border-radius:16px;padding:1.75rem;transition:all .4s;position:relative;overflow:hidden;box-shadow:var(--card-shadow)}
+        .project-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--purple));opacity:0;transition:opacity .3s}
+        .project-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:var(--card-shadow-hover)}
+        .project-card:hover::after{opacity:1}
+        .project-year{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--accent);margin-bottom:.75rem;font-weight:600;padding:2px 10px;background:var(--accent-subtle);border:1px solid var(--border-accent);border-radius:50px;display:inline-block}
+        .project-name{font-weight:700;font-size:1.05rem;margin-bottom:.5rem;line-height:1.4;color:var(--text)}
+        .project-desc{font-size:.85rem;color:var(--text-muted);line-height:1.7;margin-bottom:1rem}
+        .project-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1rem}
+        .project-tag{padding:4px 10px;background:var(--purple-subtle);border:1px solid var(--border-purple);border-radius:50px;font-size:.7rem;font-family:'JetBrains Mono',monospace;color:var(--purple-light)}
+        .project-link{display:inline-flex;align-items:center;gap:6px;font-size:.82rem;font-weight:600;color:var(--accent);transition:gap .3s}
+        .project-link:hover{gap:10px}
 
-        .skills-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.25rem; }
-        .skill-group { background:var(--bg-card); border:1.5px solid var(--border); border-radius:16px; padding:1.75rem; transition:all .3s; box-shadow:var(--card-shadow); }
-        .skill-group:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:var(--card-shadow-hover); }
-        .skill-group-title { font-family:'JetBrains Mono',monospace; font-size:.75rem; color:var(--accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:1rem; padding-bottom:.75rem; border-bottom:1px solid var(--border); }
-        .skill-pills { display:flex; flex-wrap:wrap; gap:8px; }
-        .skill-pill { padding:6px 14px; background:var(--bg); border:1.5px solid var(--border); border-radius:50px; font-size:.82rem; color:var(--text-secondary); transition:all .3s; }
-        .skill-pill:hover { border-color:var(--accent); color:var(--accent); background:var(--accent-subtle); box-shadow:0 0 12px var(--accent-glow); }
+        .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem}
+        .skill-group{background:var(--bg-card);border:1.5px solid var(--border);border-radius:16px;padding:1.75rem;transition:all .3s;box-shadow:var(--card-shadow)}
+        .skill-group:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--card-shadow-hover)}
+        .skill-group-title{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--border)}
+        .skill-pills{display:flex;flex-wrap:wrap;gap:8px}
+        .skill-pill{padding:6px 14px;background:var(--bg);border:1.5px solid var(--border);border-radius:50px;font-size:.82rem;color:var(--text-secondary);transition:all .3s}
+        .skill-pill:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-subtle);box-shadow:0 0 12px var(--accent-glow)}
 
-        .certs-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:1rem; }
-        .cert-card { background:var(--bg-card); border:1.5px solid var(--border); border-radius:12px; padding:1.25rem; display:flex; gap:1rem; align-items:start; transition:all .3s; box-shadow:var(--card-shadow); }
-        .cert-card:hover { border-color:var(--purple); transform:translateY(-2px); box-shadow:var(--card-shadow-hover); }
-        .cert-badge { width:42px; height:42px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0; background:var(--purple-subtle); border:1.5px solid var(--border-purple); }
-        .cert-name { font-weight:600; font-size:.9rem; margin-bottom:.15rem; color:var(--text); }
-        .cert-issuer { font-size:.78rem; color:var(--text-muted); }
+        .certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1rem}
+        .cert-card{background:var(--bg-card);border:1.5px solid var(--border);border-radius:12px;padding:1.25rem;display:flex;gap:1rem;align-items:start;transition:all .3s;box-shadow:var(--card-shadow)}
+        .cert-card:hover{border-color:var(--purple);transform:translateY(-2px);box-shadow:var(--card-shadow-hover)}
+        .cert-badge{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;background:var(--purple-subtle);border:1.5px solid var(--border-purple)}
+        .cert-name{font-weight:600;font-size:.9rem;margin-bottom:.15rem;color:var(--text)}
+        .cert-issuer{font-size:.78rem;color:var(--text-muted)}
 
-        .contact-section { text-align:center; padding-bottom:60px; }
-        .contact-section .section-header { display:flex; flex-direction:column; align-items:center; }
-        .contact-cards { display:flex; justify-content:center; gap:1.25rem; flex-wrap:wrap; margin-bottom:3rem; }
-        .contact-card { background:var(--bg-card); border:1.5px solid var(--border); border-radius:14px; padding:1.25rem 2rem; display:flex; align-items:center; gap:1rem; transition:all .3s; box-shadow:var(--card-shadow); }
-        .contact-card:hover { border-color:var(--accent); transform:translateY(-3px); box-shadow:var(--card-shadow-hover); }
-        .contact-card-icon { font-size:1.3rem; width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:var(--accent-subtle); border:1px solid var(--border-accent); border-radius:10px; }
-        .contact-card-label { font-size:.72rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; }
-        .contact-card-value { font-weight:600; font-size:.9rem; color:var(--text); }
+        .contact-section{text-align:center;padding-bottom:60px}
+        .contact-section .section-header{display:flex;flex-direction:column;align-items:center}
+        .contact-cards{display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;margin-bottom:3rem}
+        .contact-card{background:var(--bg-card);border:1.5px solid var(--border);border-radius:14px;padding:1.25rem 2rem;display:flex;align-items:center;gap:1rem;transition:all .3s;box-shadow:var(--card-shadow)}
+        .contact-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--card-shadow-hover)}
+        .contact-card-icon{font-size:1.3rem;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:var(--accent-subtle);border:1px solid var(--border-accent);border-radius:10px}
+        .contact-card-label{font-size:.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px}
+        .contact-card-value{font-weight:600;font-size:.9rem;color:var(--text)}
 
-        footer { position:relative; z-index:1; border-top:1px solid var(--border); padding:2rem 0; text-align:center; }
-        .footer-inner { max-width:1200px; margin:0 auto; padding:0 2rem; display:flex; justify-content:space-between; align-items:center; }
-        .footer-copy { font-size:.78rem; color:var(--text-muted); }
-        .footer-links { display:flex; gap:1.5rem; }
-        .footer-links a { font-size:.78rem; color:var(--text-muted); transition:color .3s; padding:4px 0; border-bottom:1px solid transparent; }
-        .footer-links a:hover { color:var(--accent); border-bottom-color:var(--accent); }
+        footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2rem 0;text-align:center}
+        .footer-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
+        .footer-copy{font-size:.78rem;color:var(--text-muted)}
+        .footer-links{display:flex;gap:1.5rem}
+        .footer-links a{font-size:.78rem;color:var(--text-muted);transition:color .3s;padding:4px 0;border-bottom:1px solid transparent}
+        .footer-links a:hover{color:var(--accent);border-bottom-color:var(--accent)}
 
-        .reveal { opacity:0; transform:translateY(30px); transition:opacity .7s ease,transform .7s ease; }
-        .reveal.visible { opacity:1; transform:translateY(0); }
+        .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+        .reveal.visible{opacity:1;transform:translateY(0)}
 
-        @keyframes fadeInUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
-        @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.5)} }
-        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 
-        .mobile-menu { display:none; position:fixed; inset:0; background:var(--bg); z-index:999; flex-direction:column; align-items:center; justify-content:center; gap:2rem; opacity:0; pointer-events:none; transition:opacity .3s; }
-        .mobile-menu.open { opacity:1; pointer-events:all; }
-        .mobile-menu a { font-size:1.5rem; font-weight:700; color:var(--text); }
-        .mobile-close { position:absolute; top:1.25rem; right:2rem; font-size:2rem; background:none; border:none; color:var(--text); }
+        .mobile-menu{display:none;position:fixed;inset:0;background:var(--bg);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;pointer-events:none;transition:opacity .3s}
+        .mobile-menu.open{opacity:1;pointer-events:all}
+        .mobile-menu a{font-size:1.5rem;font-weight:700;color:var(--text)}
+        .mobile-close{position:absolute;top:1.25rem;right:2rem;font-size:2rem;color:var(--text)}
 
         @media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:2rem}.hero-image-wrapper{display:flex;justify-content:center;order:-1}.hero-float-badge{display:none}.about-grid{grid-template-columns:1fr}.projects-grid{grid-template-columns:1fr}.certs-grid{grid-template-columns:1fr}.edu-card{grid-template-columns:1fr}.edu-gpa{justify-self:start}.edu-icon{display:none}.footer-inner{flex-direction:column;gap:1rem}}
-        @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.mobile-menu{display:flex}.hero h1{letter-spacing:-1px}.hero-stats{gap:1.5rem}.hero-image-frame{width:200px;height:240px}.cursor-dot,.cursor-ring,.cursor-glow{display:none}html,body,a,button,select{cursor:auto}section{padding:60px 0}.nav-controls{gap:.5rem}}
+        @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.mobile-menu{display:flex}.hero h1{letter-spacing:-1px}.hero-stats{gap:1.5rem}.hero-image-frame{width:200px;height:240px}.cursor-dot,.cursor-ring,.cursor-glow{display:none}html,body,a,button{cursor:auto}section{padding:60px 0}.nav-controls{gap:.5rem}}
         @media(max-width:480px){.contact-cards{flex-direction:column;align-items:center}.contact-card{width:100%}.skills-grid{grid-template-columns:1fr}}
 
-        #particles-canvas { position:fixed; inset:0; z-index:0; pointer-events:none; }
+        #particles-canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
     </style>
 </head>
 <body>
@@ -233,21 +226,32 @@
                 <a href="#skills" data-i18n="nav_skills">Skills</a>
                 <a href="#contact" data-i18n="nav_contact">Contact</a>
                 <div class="nav-controls">
-                    <select class="lang-select" id="langSelect" aria-label="Language">
-                        <option value="en">EN 🇬🇧</option>
-                        <option value="de">DE 🇩🇪</option>
-                        <option value="fr">FR 🇫🇷</option>
-                        <option value="pt">PT 🇧🇷</option>
-                        <option value="es">ES 🇪🇸</option>
-                        <option value="hi">HI 🇮🇳</option>
-                    </select>
+                    <div class="lang-switcher">
+                        <button class="lang-btn" id="langBtn">🇬🇧 <span class="arrow">▼</span></button>
+                        <div class="lang-dropdown" id="langDropdown">
+                            <button class="lang-option active" data-lang="en">🇬🇧</button>
+                            <button class="lang-option" data-lang="de">🇩🇪</button>
+                            <button class="lang-option" data-lang="fr">🇫🇷</button>
+                            <button class="lang-option" data-lang="pt">🇧🇷</button>
+                            <button class="lang-option" data-lang="es">🇪🇸</button>
+                            <button class="lang-option" data-lang="hi">🇮🇳</button>
+                        </div>
+                    </div>
                     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"></button>
                 </div>
             </div>
             <div class="nav-controls">
-                <select class="lang-select" id="langSelectMobile" aria-label="Language" style="display:none">
-                    <option value="en">EN</option><option value="de">DE</option><option value="fr">FR</option><option value="pt">PT</option><option value="es">ES</option><option value="hi">HI</option>
-                </select>
+                <div class="lang-switcher">
+                    <button class="lang-btn" id="langBtnMob">🇬🇧 <span class="arrow">▼</span></button>
+                    <div class="lang-dropdown" id="langDropdownMob">
+                        <button class="lang-option active" data-lang="en">🇬🇧</button>
+                        <button class="lang-option" data-lang="de">🇩🇪</button>
+                        <button class="lang-option" data-lang="fr">🇫🇷</button>
+                        <button class="lang-option" data-lang="pt">🇧🇷</button>
+                        <button class="lang-option" data-lang="es">🇪🇸</button>
+                        <button class="lang-option" data-lang="hi">🇮🇳</button>
+                    </div>
+                </div>
                 <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
             </div>
         </div>
@@ -287,516 +291,177 @@
                 <div class="hero-float-badge bottom-left"><span class="badge-icon">📍</span>&nbsp;<span class="badge-value" data-i18n="badge_loc">Switzerland</span></div>
             </div>
         </div>
-    </section>
-    <div class="section-divider"></div>
+    </section><div class="section-divider"></div>
 
-    <section id="about">
-        <div class="container">
-            <div class="section-header reveal"><div class="section-label" data-i18n="label_about">Who I Am</div><h2 class="section-title" data-i18n="title_about">About Me</h2></div>
-            <div class="about-grid">
-                <div class="about-text reveal" data-i18n-html="about_text">
-                    <p>I am a Master's student in <strong>IT, Digitalization &amp; Sustainability</strong> at Lucerne University of Applied Sciences and Arts (HSLU), Switzerland. With research experience spanning <strong>AI, Robotics, and Computer Vision</strong>, I bring a unique blend of academic rigor and hands-on engineering.</p><br>
-                    <p>My journey has taken me from building <strong>drone-based imaging systems at ISRO</strong> (India's space agency) to developing <strong>automated glass facade monitoring</strong> at Universiti Teknologi PETRONAS in Malaysia. I'm passionate about deploying lightweight, efficient AI models on edge devices — making intelligence accessible where it matters most.</p><br>
-                    <p>With published work in <strong>IEEE conferences</strong> and expertise across Python, PyTorch, TensorFlow, and embedded systems, I bridge the gap between deep learning research and real-world robotic applications.</p>
-                </div>
-                <div class="about-highlights reveal">
-                    <div class="highlight-card"><div class="highlight-icon">🤖</div><div class="highlight-title" data-i18n="hl_ai">AI & Robotics</div><div class="highlight-desc" data-i18n="hl_ai_d">Computer Vision, CNNs, YOLO, Edge AI</div></div>
-                    <div class="highlight-card"><div class="highlight-icon">🛸</div><div class="highlight-title" data-i18n="hl_drone">Drone Tech</div><div class="highlight-desc" data-i18n="hl_drone_d">UAV imaging, stereo depth, autonomous systems</div></div>
-                    <div class="highlight-card"><div class="highlight-icon">🔬</div><div class="highlight-title" data-i18n="hl_research">Research</div><div class="highlight-desc" data-i18n="hl_research_d">2 IEEE papers, ISRO internship, UTP</div></div>
-                    <div class="highlight-card"><div class="highlight-icon">⛓️</div><div class="highlight-title">Blockchain</div><div class="highlight-desc" data-i18n="hl_bc_d">SSI, Smart Contracts, Solidity, IPFS</div></div>
-                </div>
+    <section id="about"><div class="container">
+        <div class="section-header reveal"><div class="section-label" data-i18n="label_about">Who I Am</div><h2 class="section-title" data-i18n="title_about">About Me</h2></div>
+        <div class="about-grid">
+            <div class="about-text reveal" data-i18n-html="about_text"><p>I am a Master's student in <strong>IT, Digitalization &amp; Sustainability</strong> at Lucerne University of Applied Sciences and Arts (HSLU), Switzerland. With research experience spanning <strong>AI, Robotics, and Computer Vision</strong>, I bring a unique blend of academic rigor and hands-on engineering.</p><br><p>My journey has taken me from building <strong>drone-based imaging systems at ISRO</strong> (India's space agency) to developing <strong>automated glass facade monitoring</strong> at Universiti Teknologi PETRONAS in Malaysia. I'm passionate about deploying lightweight, efficient AI models on edge devices — making intelligence accessible where it matters most.</p><br><p>With published work in <strong>IEEE conferences</strong> and expertise across Python, PyTorch, TensorFlow, and embedded systems, I bridge the gap between deep learning research and real-world robotic applications.</p></div>
+            <div class="about-highlights reveal">
+                <div class="highlight-card"><div class="highlight-icon">🤖</div><div class="highlight-title" data-i18n="hl_ai">AI & Robotics</div><div class="highlight-desc" data-i18n="hl_ai_d">Computer Vision, CNNs, YOLO, Edge AI</div></div>
+                <div class="highlight-card"><div class="highlight-icon">🛸</div><div class="highlight-title" data-i18n="hl_drone">Drone Tech</div><div class="highlight-desc" data-i18n="hl_drone_d">UAV imaging, stereo depth, autonomous systems</div></div>
+                <div class="highlight-card"><div class="highlight-icon">🔬</div><div class="highlight-title" data-i18n="hl_research">Research</div><div class="highlight-desc" data-i18n="hl_research_d">2 IEEE papers, ISRO internship, UTP</div></div>
+                <div class="highlight-card"><div class="highlight-icon">⛓️</div><div class="highlight-title">Blockchain</div><div class="highlight-desc" data-i18n="hl_bc_d">SSI, Smart Contracts, Solidity, IPFS</div></div>
             </div>
         </div>
-    </section>
-    <div class="section-divider"></div>
+    </div></section><div class="section-divider"></div>
 
-    <section id="experience" style="background:var(--bg-secondary)">
-        <div class="container">
-            <div class="section-header reveal"><div class="section-label" data-i18n="label_exp">Where I've Worked</div><h2 class="section-title" data-i18n="title_exp">Experience</h2></div>
-            <div class="timeline">
-                <div class="timeline-item reveal"><div class="timeline-date">Jan 2025 — May 2025</div><div class="timeline-role" data-i18n="exp1_role">AI & Drone Researcher</div><div class="timeline-org">Universiti Teknologi PETRONAS · Seri Iskandar, Malaysia</div><div class="timeline-desc" data-i18n="exp1_desc">Department of Electrical and Electronics Engineering. Worked on the implementation of Automated Classification for Glass Facade Condition Monitoring using drone-based imaging and deep learning.</div></div>
-                <div class="timeline-item reveal"><div class="timeline-date">Aug 2024 — Dec 2024</div><div class="timeline-role" data-i18n="exp2_role">Research Intern</div><div class="timeline-org">Centre for Cyber Physical Systems (CCPS) · VIT Chennai, India</div><div class="timeline-desc" data-i18n="exp2_desc">R&D facility for AI and IoT innovation. Developed lightweight CNN models (MBConvNet-CNS) and their application in plant leaf disease classification.</div></div>
-                <div class="timeline-item reveal"><div class="timeline-date">May 2024 — Jul 2024</div><div class="timeline-role" data-i18n="exp3_role">Research Intern</div><div class="timeline-org">NESAC (ISRO) · Department of Space, Govt. of India · Shillong</div><div class="timeline-desc" data-i18n="exp3_desc">Worked on the implementation of Stereo/Depth Cameras for Unmanned Aerial Vehicles (UAVs) under the Department of Space, Government of India.</div></div>
-            </div>
+    <section id="experience" style="background:var(--bg-secondary)"><div class="container">
+        <div class="section-header reveal"><div class="section-label" data-i18n="label_exp">Where I've Worked</div><h2 class="section-title" data-i18n="title_exp">Experience</h2></div>
+        <div class="timeline">
+            <div class="timeline-item reveal"><div class="timeline-date">Jan 2025 — May 2025</div><div class="timeline-role" data-i18n="exp1_role">AI & Drone Researcher</div><div class="timeline-org">Universiti Teknologi PETRONAS · Seri Iskandar, Malaysia</div><div class="timeline-desc" data-i18n="exp1_desc">Department of Electrical and Electronics Engineering. Worked on the implementation of Automated Classification for Glass Facade Condition Monitoring using drone-based imaging and deep learning.</div></div>
+            <div class="timeline-item reveal"><div class="timeline-date">Aug 2024 — Dec 2024</div><div class="timeline-role" data-i18n="exp2_role">Research Intern</div><div class="timeline-org">Centre for Cyber Physical Systems (CCPS) · VIT Chennai, India</div><div class="timeline-desc" data-i18n="exp2_desc">R&D facility for AI and IoT innovation. Developed lightweight CNN models (MBConvNet-CNS) and their application in plant leaf disease classification.</div></div>
+            <div class="timeline-item reveal"><div class="timeline-date">May 2024 — Jul 2024</div><div class="timeline-role" data-i18n="exp3_role">Research Intern</div><div class="timeline-org">NESAC (ISRO) · Department of Space, Govt. of India · Shillong</div><div class="timeline-desc" data-i18n="exp3_desc">Worked on the implementation of Stereo/Depth Cameras for Unmanned Aerial Vehicles (UAVs) under the Department of Space, Government of India.</div></div>
         </div>
-    </section>
-    <div class="section-divider"></div>
+    </div></section><div class="section-divider"></div>
 
-    <section id="education">
-        <div class="container">
-            <div class="section-header reveal"><div class="section-label" data-i18n="label_edu">Academic Journey</div><h2 class="section-title" data-i18n="title_edu">Education</h2></div>
-            <div class="edu-grid">
-                <div class="edu-card reveal"><div class="edu-icon">🇨🇭</div><div><div class="edu-degree" data-i18n="edu1_deg">M.Sc. in IT, Digitalization & Sustainability</div><div class="edu-school">Lucerne University of Applied Sciences and Arts (HSLU) · 2025–2027</div><div class="edu-coursework">AI · NLP · ML · Data Science · Blockchain · Managing IT-Projects · Digital Business Models</div></div><div class="edu-gpa">3.76 / 4</div></div>
-                <div class="edu-card reveal"><div class="edu-icon">🇮🇳</div><div><div class="edu-degree" data-i18n="edu2_deg">B.Tech in Computer Science (AI & Robotics)</div><div class="edu-school">Vellore Institute of Technology, Chennai · 2021–2025</div><div class="edu-coursework">DSA · C/C++ · Java · Python · Operating Systems · Robotics · IoT · Computer Networks</div></div><div class="edu-gpa">8.86 / 10</div></div>
-                <div class="edu-card reveal"><div class="edu-icon">🏫</div><div><div class="edu-degree" data-i18n="edu3_deg">Class 12th — CBSE Intermediate</div><div class="edu-school">Aster Public School, Greater Noida · 2021</div><div class="edu-coursework">Mathematics · Physics · Chemistry · English · Computer Science (Python)</div></div><div class="edu-gpa">95.6%</div></div>
-                <div class="edu-card reveal"><div class="edu-icon">🏫</div><div><div class="edu-degree" data-i18n="edu4_deg">Class 10th — CBSE High School</div><div class="edu-school">Aster Public School, Greater Noida · 2019</div><div class="edu-coursework">Mathematics · Science · English · Social Science · Computer Science · Hindi</div></div><div class="edu-gpa">95.4%</div></div>
-            </div>
+    <section id="education"><div class="container">
+        <div class="section-header reveal"><div class="section-label" data-i18n="label_edu">Academic Journey</div><h2 class="section-title" data-i18n="title_edu">Education</h2></div>
+        <div class="edu-grid">
+            <div class="edu-card reveal"><div class="edu-icon">🇨🇭</div><div><div class="edu-degree" data-i18n="edu1_deg">M.Sc. in IT, Digitalization & Sustainability</div><div class="edu-school">Lucerne University of Applied Sciences and Arts (HSLU) · 2025–2027</div><div class="edu-coursework">AI · NLP · ML · Data Science · Blockchain · Managing IT-Projects · Digital Business Models</div></div><div class="edu-gpa">3.76 / 4</div></div>
+            <div class="edu-card reveal"><div class="edu-icon">🇮🇳</div><div><div class="edu-degree" data-i18n="edu2_deg">B.Tech in Computer Science (AI & Robotics)</div><div class="edu-school">Vellore Institute of Technology, Chennai · 2021–2025</div><div class="edu-coursework">DSA · C/C++ · Java · Python · Operating Systems · Robotics · IoT · Computer Networks</div></div><div class="edu-gpa">8.86 / 10</div></div>
+            <div class="edu-card reveal"><div class="edu-icon">🏫</div><div><div class="edu-degree" data-i18n="edu3_deg">Class 12th — CBSE Intermediate</div><div class="edu-school">Aster Public School, Greater Noida · 2021</div><div class="edu-coursework">Mathematics · Physics · Chemistry · English · Computer Science (Python)</div></div><div class="edu-gpa">95.6%</div></div>
+            <div class="edu-card reveal"><div class="edu-icon">🏫</div><div><div class="edu-degree" data-i18n="edu4_deg">Class 10th — CBSE High School</div><div class="edu-school">Aster Public School, Greater Noida · 2019</div><div class="edu-coursework">Mathematics · Science · English · Social Science · Computer Science · Hindi</div></div><div class="edu-gpa">95.4%</div></div>
         </div>
-    </section>
-    <div class="section-divider"></div>
+    </div></section><div class="section-divider"></div>
 
-    <section id="publications" style="background:var(--bg-secondary)">
-        <div class="container">
-            <div class="section-header reveal"><div class="section-label" data-i18n="label_pub">Research Output</div><h2 class="section-title" data-i18n="title_pub">Publications</h2></div>
-            <div class="pub-card reveal"><div class="pub-venue">IEEE I2CACIS 2025 · Kuala Lumpur, Malaysia</div><div class="pub-title" data-i18n="pub1_title">Drone-Based Imaging and Automated Classification for Glass Facade Condition Monitoring</div><div class="pub-details" data-i18n="pub1_det">2025 IEEE International Conference on Automatic Control and Intelligent Systems, pp. 333-338</div><a href="https://doi.org/10.1109/I2CACIS65476.2025.11101021" target="_blank" class="pub-doi"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg> IEEE Xplore</a></div>
-            <div class="pub-card reveal"><div class="pub-venue">IEEE ISED 2024 · Rourkela, India</div><div class="pub-title" data-i18n="pub2_title">MBConvNet-CNS: A Lightweight Convolutional Neural Network (CNN) Architecture for Plant Disease Detection</div><div class="pub-details" data-i18n="pub2_det">2024 12th International Conference on Intelligent Systems and Embedded Design, pp. 1-6</div><a href="https://doi.org/10.1109/ISED63599.2024.10957590" target="_blank" class="pub-doi"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg> IEEE Xplore</a></div>
+    <section id="publications" style="background:var(--bg-secondary)"><div class="container">
+        <div class="section-header reveal"><div class="section-label" data-i18n="label_pub">Research Output</div><h2 class="section-title" data-i18n="title_pub">Publications</h2></div>
+        <div class="pub-card reveal"><div class="pub-venue">IEEE I2CACIS 2025 · Kuala Lumpur, Malaysia</div><div class="pub-title" data-i18n="pub1_title">Drone-Based Imaging and Automated Classification for Glass Facade Condition Monitoring</div><div class="pub-details" data-i18n="pub1_det">2025 IEEE International Conference on Automatic Control and Intelligent Systems, pp. 333-338</div><a href="https://doi.org/10.1109/I2CACIS65476.2025.11101021" target="_blank" class="pub-doi"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg> IEEE Xplore</a></div>
+        <div class="pub-card reveal"><div class="pub-venue">IEEE ISED 2024 · Rourkela, India</div><div class="pub-title" data-i18n="pub2_title">MBConvNet-CNS: A Lightweight Convolutional Neural Network (CNN) Architecture for Plant Disease Detection</div><div class="pub-details" data-i18n="pub2_det">2024 12th International Conference on Intelligent Systems and Embedded Design, pp. 1-6</div><a href="https://doi.org/10.1109/ISED63599.2024.10957590" target="_blank" class="pub-doi"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg> IEEE Xplore</a></div>
+    </div></section><div class="section-divider"></div>
+
+    <section id="projects"><div class="container">
+        <div class="section-header reveal"><div class="section-label" data-i18n="label_proj">What I've Built</div><h2 class="section-title" data-i18n="title_proj">Projects</h2></div>
+        <div class="projects-grid">
+            <div class="project-card reveal"><div class="project-year">2025</div><div class="project-name" data-i18n="p1_name">Baltic-ECA-Net: Ultra-Lightweight Attention Network for Algal Bloom Detection</div><div class="project-desc" data-i18n="p1_desc">Real-time algal bloom detection using Efficient Channel Attention and Ghost Modules — optimized for edge devices.</div><div class="project-tags"><span class="project-tag">Machine Learning</span><span class="project-tag">Ghost Modules</span><span class="project-tag">ECA</span><span class="project-tag">Image Processing</span></div><a href="#" class="project-link"><span data-i18n="view_gh">View on GitHub</span> <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+            <div class="project-card reveal"><div class="project-year">2025</div><div class="project-name" data-i18n="p2_name">DiveSSI: Blockchain-Powered SSI for Diving Certifications</div><div class="project-desc" data-i18n="p2_desc">Revolutionizing diving certifications with Self-Sovereign Identity, Smart Contracts, and decentralized storage on IPFS.</div><div class="project-tags"><span class="project-tag">Blockchain</span><span class="project-tag">SSI</span><span class="project-tag">Solidity</span><span class="project-tag">IPFS</span></div><a href="#" class="project-link"><span data-i18n="view_proto">View Prototype</span> <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+            <div class="project-card reveal"><div class="project-year">2024</div><div class="project-name" data-i18n="p3_name">ML-based Language Learning Assistant</div><div class="project-desc" data-i18n="p3_desc">Personalizes learning paths based on user behavior, adapting to each learner's unique curve using ML models.</div><div class="project-tags"><span class="project-tag">Scikit-Learn</span><span class="project-tag">Pandas</span><span class="project-tag">Matplotlib</span></div><a href="#" class="project-link"><span data-i18n="view_gh">View on GitHub</span> <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+            <div class="project-card reveal"><div class="project-year">2024</div><div class="project-name" data-i18n="p4_name">Drone Detection & Tracking System</div><div class="project-desc" data-i18n="p4_desc">Real-time drone detection and tracking using YOLOv5 deep learning with Arduino-powered servo tracking.</div><div class="project-tags"><span class="project-tag">PyTorch</span><span class="project-tag">YOLOv5</span><span class="project-tag">OpenCV</span><span class="project-tag">Arduino</span></div><a href="#" class="project-link"><span data-i18n="view_gh">View on GitHub</span> <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+            <div class="project-card reveal"><div class="project-year">2024</div><div class="project-name" data-i18n="p5_name">Teleoperated Robot for Hazardous Environments</div><div class="project-desc" data-i18n="p5_desc">Remote-controlled robotic system for dangerous or inaccessible areas using Bluetooth communication and stepper motors.</div><div class="project-tags"><span class="project-tag">Arduino</span><span class="project-tag">HC-05</span><span class="project-tag">Servo</span><span class="project-tag">Sensors</span></div></div>
+            <div class="project-card reveal"><div class="project-year">2024</div><div class="project-name" data-i18n="p6_name">Smart Home Energy Management System</div><div class="project-desc" data-i18n="p6_desc">IoT-driven energy optimization with real-time monitoring, cost reduction algorithms, and scalable sensor integration.</div><div class="project-tags"><span class="project-tag">IoT</span><span class="project-tag">DHT22</span><span class="project-tag">Arduino</span><span class="project-tag">IR Sensor</span></div></div>
+            <div class="project-card reveal"><div class="project-year">2023</div><div class="project-name" data-i18n="p7_name">Automatic Arduino Car Parking System</div><div class="project-desc" data-i18n="p7_desc">Automated parking system with proximity-based vehicle detection, slot allocation, and servo-controlled barrier gates.</div><div class="project-tags"><span class="project-tag">Arduino</span><span class="project-tag">IR Sensor</span><span class="project-tag">Servo</span></div></div>
+            <div class="project-card reveal"><div class="project-year">2022</div><div class="project-name" data-i18n="p8_name">Smart Floor Cleaning Robot</div><div class="project-desc" data-i18n="p8_desc">Autonomous floor-cleaning rover with vacuuming and mopping capabilities, obstacle avoidance via ultrasonic sensors.</div><div class="project-tags"><span class="project-tag">HC-SR04</span><span class="project-tag">L298N</span><span class="project-tag">Arduino</span></div></div>
         </div>
-    </section>
-    <div class="section-divider"></div>
+    </div></section><div class="section-divider"></div>
 
-    <section id="projects">
-        <div class="container">
-            <div class="section-header reveal"><div class="section-label" data-i18n="label_proj">What I've Built</div><h2 class="section-title" data-i18n="title_proj">Projects</h2></div>
-            <div class="projects-grid">
-                <div class="project-card reveal"><div class="project-year">2025</div><div class="project-name" data-i18n="p1_name">Baltic-ECA-Net: Ultra-Lightweight Attention Network for Algal Bloom Detection</div><div class="project-desc" data-i18n="p1_desc">Real-time algal bloom detection using Efficient Channel Attention and Ghost Modules — optimized for edge devices.</div><div class="project-tags"><span class="project-tag">Machine Learning</span><span class="project-tag">Ghost Modules</span><span class="project-tag">ECA</span><span class="project-tag">Image Processing</span></div><a href="#" class="project-link"><span data-i18n="view_gh">View on GitHub</span> <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-                <div class="project-card reveal"><div class="project-year">2025</div><div class="project-name" data-i18n="p2_name">DiveSSI: Blockchain-Powered SSI for Diving Certifications</div><div class="project-desc" data-i18n="p2_desc">Revolutionizing diving certifications with Self-Sovereign Identity, Smart Contracts, and decentralized storage on IPFS.</div><div class="project-tags"><span class="project-tag">Blockchain</span><span class="project-tag">SSI</span><span class="project-tag">Solidity</span><span class="project-tag">IPFS</span></div><a href="#" class="project-link"><span data-i18n="view_proto">View Prototype</span> <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-                <div class="project-card reveal"><div class="project-year">2024</div><div class="project-name" data-i18n="p3_name">ML-based Language Learning Assistant</div><div class="project-desc" data-i18n="p3_desc">Personalizes learning paths based on user behavior, adapting to each learner's unique curve using ML models.</div><div class="project-tags"><span class="project-tag">Scikit-Learn</span><span class="project-tag">Pandas</span><span class="project-tag">Matplotlib</span></div><a href="#" class="project-link"><span data-i18n="view_gh">View on GitHub</span> <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-                <div class="project-card reveal"><div class="project-year">2024</div><div class="project-name" data-i18n="p4_name">Drone Detection & Tracking System</div><div class="project-desc" data-i18n="p4_desc">Real-time drone detection and tracking using YOLOv5 deep learning with Arduino-powered servo tracking.</div><div class="project-tags"><span class="project-tag">PyTorch</span><span class="project-tag">YOLOv5</span><span class="project-tag">OpenCV</span><span class="project-tag">Arduino</span></div><a href="#" class="project-link"><span data-i18n="view_gh">View on GitHub</span> <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-                <div class="project-card reveal"><div class="project-year">2024</div><div class="project-name" data-i18n="p5_name">Teleoperated Robot for Hazardous Environments</div><div class="project-desc" data-i18n="p5_desc">Remote-controlled robotic system for dangerous or inaccessible areas using Bluetooth communication and stepper motors.</div><div class="project-tags"><span class="project-tag">Arduino</span><span class="project-tag">HC-05</span><span class="project-tag">Servo</span><span class="project-tag">Sensors</span></div></div>
-                <div class="project-card reveal"><div class="project-year">2024</div><div class="project-name" data-i18n="p6_name">Smart Home Energy Management System</div><div class="project-desc" data-i18n="p6_desc">IoT-driven energy optimization with real-time monitoring, cost reduction algorithms, and scalable sensor integration.</div><div class="project-tags"><span class="project-tag">IoT</span><span class="project-tag">DHT22</span><span class="project-tag">Arduino</span><span class="project-tag">IR Sensor</span></div></div>
-                <div class="project-card reveal"><div class="project-year">2023</div><div class="project-name" data-i18n="p7_name">Automatic Arduino Car Parking System</div><div class="project-desc" data-i18n="p7_desc">Automated parking system with proximity-based vehicle detection, slot allocation, and servo-controlled barrier gates.</div><div class="project-tags"><span class="project-tag">Arduino</span><span class="project-tag">IR Sensor</span><span class="project-tag">Servo</span></div></div>
-                <div class="project-card reveal"><div class="project-year">2022</div><div class="project-name" data-i18n="p8_name">Smart Floor Cleaning Robot</div><div class="project-desc" data-i18n="p8_desc">Autonomous floor-cleaning rover with vacuuming and mopping capabilities, obstacle avoidance via ultrasonic sensors.</div><div class="project-tags"><span class="project-tag">HC-SR04</span><span class="project-tag">L298N</span><span class="project-tag">Arduino</span></div></div>
-            </div>
+    <section id="skills" style="background:var(--bg-secondary)"><div class="container">
+        <div class="section-header reveal"><div class="section-label" data-i18n="label_skills">Tech Stack</div><h2 class="section-title" data-i18n="title_skills">Skills & Tools</h2></div>
+        <div class="skills-grid">
+            <div class="skill-group reveal"><div class="skill-group-title" data-i18n="sk_lang">Languages</div><div class="skill-pills"><span class="skill-pill">Python</span><span class="skill-pill">C</span><span class="skill-pill">C++</span><span class="skill-pill">Java</span><span class="skill-pill">MATLAB</span><span class="skill-pill">Solidity</span><span class="skill-pill">PL/SQL</span></div></div>
+            <div class="skill-group reveal"><div class="skill-group-title">ML / DL</div><div class="skill-pills"><span class="skill-pill">PyTorch</span><span class="skill-pill">TensorFlow</span><span class="skill-pill">Keras</span><span class="skill-pill">Scikit-Learn</span><span class="skill-pill">OpenCV</span><span class="skill-pill">NumPy</span><span class="skill-pill">Pandas</span><span class="skill-pill">Matplotlib</span></div></div>
+            <div class="skill-group reveal"><div class="skill-group-title" data-i18n="sk_cloud">Cloud & DevOps</div><div class="skill-pills"><span class="skill-pill">AWS</span><span class="skill-pill">Google Cloud</span><span class="skill-pill">MySQL</span><span class="skill-pill">Oracle</span><span class="skill-pill">Jupyter</span><span class="skill-pill">Git</span></div></div>
+            <div class="skill-group reveal"><div class="skill-group-title" data-i18n="sk_hw">Hardware & IoT</div><div class="skill-pills"><span class="skill-pill">Arduino</span><span class="skill-pill">Sensors</span><span class="skill-pill">Servo Motors</span><span class="skill-pill">Bluetooth (HC-05)</span><span class="skill-pill">Robotics</span><span class="skill-pill">ROS</span></div></div>
+            <div class="skill-group reveal"><div class="skill-group-title" data-i18n="sk_domains">Domains</div><div class="skill-pills"><span class="skill-pill">Computer Vision</span><span class="skill-pill">NLP</span><span class="skill-pill">Blockchain</span><span class="skill-pill">IoT</span><span class="skill-pill">Cybersecurity</span><span class="skill-pill">Data Science</span></div></div>
+            <div class="skill-group reveal"><div class="skill-group-title" data-i18n="sk_spoken">Languages (Spoken)</div><div class="skill-pills"><span class="skill-pill">English (C1 IELTS)</span><span class="skill-pill">German (A1)</span><span class="skill-pill">Hindi</span></div></div>
         </div>
-    </section>
-    <div class="section-divider"></div>
+    </div></section><div class="section-divider"></div>
 
-    <section id="skills" style="background:var(--bg-secondary)">
-        <div class="container">
-            <div class="section-header reveal"><div class="section-label" data-i18n="label_skills">Tech Stack</div><h2 class="section-title" data-i18n="title_skills">Skills & Tools</h2></div>
-            <div class="skills-grid">
-                <div class="skill-group reveal"><div class="skill-group-title" data-i18n="sk_lang">Languages</div><div class="skill-pills"><span class="skill-pill">Python</span><span class="skill-pill">C</span><span class="skill-pill">C++</span><span class="skill-pill">Java</span><span class="skill-pill">MATLAB</span><span class="skill-pill">Solidity</span><span class="skill-pill">PL/SQL</span></div></div>
-                <div class="skill-group reveal"><div class="skill-group-title">ML / DL</div><div class="skill-pills"><span class="skill-pill">PyTorch</span><span class="skill-pill">TensorFlow</span><span class="skill-pill">Keras</span><span class="skill-pill">Scikit-Learn</span><span class="skill-pill">OpenCV</span><span class="skill-pill">NumPy</span><span class="skill-pill">Pandas</span><span class="skill-pill">Matplotlib</span></div></div>
-                <div class="skill-group reveal"><div class="skill-group-title" data-i18n="sk_cloud">Cloud & DevOps</div><div class="skill-pills"><span class="skill-pill">AWS</span><span class="skill-pill">Google Cloud</span><span class="skill-pill">MySQL</span><span class="skill-pill">Oracle</span><span class="skill-pill">Jupyter</span><span class="skill-pill">Git</span></div></div>
-                <div class="skill-group reveal"><div class="skill-group-title" data-i18n="sk_hw">Hardware & IoT</div><div class="skill-pills"><span class="skill-pill">Arduino</span><span class="skill-pill">Sensors</span><span class="skill-pill">Servo Motors</span><span class="skill-pill">Bluetooth (HC-05)</span><span class="skill-pill">Robotics</span><span class="skill-pill">ROS</span></div></div>
-                <div class="skill-group reveal"><div class="skill-group-title" data-i18n="sk_domains">Domains</div><div class="skill-pills"><span class="skill-pill">Computer Vision</span><span class="skill-pill">NLP</span><span class="skill-pill">Blockchain</span><span class="skill-pill">IoT</span><span class="skill-pill">Cybersecurity</span><span class="skill-pill">Data Science</span></div></div>
-                <div class="skill-group reveal"><div class="skill-group-title" data-i18n="sk_spoken">Languages (Spoken)</div><div class="skill-pills"><span class="skill-pill">English (C1 IELTS)</span><span class="skill-pill">German (A1)</span><span class="skill-pill">Hindi</span></div></div>
-            </div>
+    <section id="certifications"><div class="container">
+        <div class="section-header reveal"><div class="section-label" data-i18n="label_cert">Verified Credentials</div><h2 class="section-title" data-i18n="title_cert">Certifications</h2></div>
+        <div class="certs-grid">
+            <div class="cert-card reveal"><div class="cert-badge">☁️</div><div><div class="cert-name">AWS Certified Cloud Practitioner</div><div class="cert-issuer">Amazon Web Services</div></div></div>
+            <div class="cert-card reveal"><div class="cert-badge">🌐</div><div><div class="cert-name">Google Cloud Computing Foundations</div><div class="cert-issuer">Google Cloud Platform (NPTEL)</div></div></div>
+            <div class="cert-card reveal"><div class="cert-badge">🧠</div><div><div class="cert-name">Prompt Engineering for Developers</div><div class="cert-issuer">OpenAI Workshop</div></div></div>
+            <div class="cert-card reveal"><div class="cert-badge">🔒</div><div><div class="cert-name">Google Cybersecurity Certification</div><div class="cert-issuer">Google</div></div></div>
+            <div class="cert-card reveal"><div class="cert-badge">⚙️</div><div><div class="cert-name">Automation Certification</div><div class="cert-issuer">Workato</div></div></div>
+            <div class="cert-card reveal"><div class="cert-badge">🤖</div><div><div class="cert-name">AI on Microsoft Azure</div><div class="cert-issuer">Microsoft</div></div></div>
         </div>
-    </section>
-    <div class="section-divider"></div>
+    </div></section><div class="section-divider"></div>
 
-    <section id="certifications">
-        <div class="container">
-            <div class="section-header reveal"><div class="section-label" data-i18n="label_cert">Verified Credentials</div><h2 class="section-title" data-i18n="title_cert">Certifications</h2></div>
-            <div class="certs-grid">
-                <div class="cert-card reveal"><div class="cert-badge">☁️</div><div><div class="cert-name">AWS Certified Cloud Practitioner</div><div class="cert-issuer">Amazon Web Services</div></div></div>
-                <div class="cert-card reveal"><div class="cert-badge">🌐</div><div><div class="cert-name">Google Cloud Computing Foundations</div><div class="cert-issuer">Google Cloud Platform (NPTEL)</div></div></div>
-                <div class="cert-card reveal"><div class="cert-badge">🧠</div><div><div class="cert-name">Prompt Engineering for Developers</div><div class="cert-issuer">OpenAI Workshop</div></div></div>
-                <div class="cert-card reveal"><div class="cert-badge">🔒</div><div><div class="cert-name">Google Cybersecurity Certification</div><div class="cert-issuer">Google</div></div></div>
-                <div class="cert-card reveal"><div class="cert-badge">⚙️</div><div><div class="cert-name">Automation Certification</div><div class="cert-issuer">Workato</div></div></div>
-                <div class="cert-card reveal"><div class="cert-badge">🤖</div><div><div class="cert-name">AI on Microsoft Azure</div><div class="cert-issuer">Microsoft</div></div></div>
-            </div>
+    <section id="contact" class="contact-section" style="background:var(--bg-secondary)"><div class="container">
+        <div class="section-header reveal"><div class="section-label" data-i18n="label_contact">Let's Connect</div><h2 class="section-title" data-i18n="title_contact">Get in Touch</h2></div>
+        <div class="contact-cards reveal">
+            <a href="mailto:nilabhpandey7@gmail.com" class="contact-card"><div class="contact-card-icon">✉️</div><div><div class="contact-card-label" data-i18n="c_email">Email</div><div class="contact-card-value">nilabhpandey7@gmail.com</div></div></a>
+            <a href="tel:+41772898726" class="contact-card"><div class="contact-card-icon">📱</div><div><div class="contact-card-label" data-i18n="c_phone_ch">Phone (CH)</div><div class="contact-card-value">+41-772898726</div></div></a>
+            <a href="tel:+918630690991" class="contact-card"><div class="contact-card-icon">📱</div><div><div class="contact-card-label" data-i18n="c_phone_in">Phone (IN)</div><div class="contact-card-value">+91-8630690991</div></div></a>
+            <a href="https://linkedin.com/in/nilabh-pandey" target="_blank" class="contact-card"><div class="contact-card-icon">💼</div><div><div class="contact-card-label">LinkedIn</div><div class="contact-card-value">Nilabh Pandey</div></div></a>
         </div>
-    </section>
-    <div class="section-divider"></div>
+        <div class="reveal" style="color:var(--text-muted);font-size:.9rem">📍<span data-i18n="location">Zug, Switzerland</span></div>
+    </div></section>
 
-    <section id="contact" class="contact-section" style="background:var(--bg-secondary)">
-        <div class="container">
-            <div class="section-header reveal"><div class="section-label" data-i18n="label_contact">Let's Connect</div><h2 class="section-title" data-i18n="title_contact">Get in Touch</h2></div>
-            <div class="contact-cards reveal">
-                <a href="mailto:nilabhpandey7@gmail.com" class="contact-card"><div class="contact-card-icon">✉️</div><div><div class="contact-card-label" data-i18n="c_email">Email</div><div class="contact-card-value">nilabhpandey7@gmail.com</div></div></a>
-                <a href="tel:+41772898726" class="contact-card"><div class="contact-card-icon">📱</div><div><div class="contact-card-label" data-i18n="c_phone_ch">Phone (CH)</div><div class="contact-card-value">+41-772898726</div></div></a>
-                <a href="tel:+918630690991" class="contact-card"><div class="contact-card-icon">📱</div><div><div class="contact-card-label" data-i18n="c_phone_in">Phone (IN)</div><div class="contact-card-value">+91-8630690991</div></div></a>
-                <a href="https://linkedin.com/in/nilabh-pandey" target="_blank" class="contact-card"><div class="contact-card-icon">💼</div><div><div class="contact-card-label">LinkedIn</div><div class="contact-card-value">Nilabh Pandey</div></div></a>
-            </div>
-            <div class="reveal" style="color:var(--text-muted);font-size:.9rem;">📍<span data-i18n="location">Zug, Switzerland</span></div>
+    <footer><div class="footer-inner">
+        <div class="footer-copy" data-i18n="footer">© 2026 Nilabh Pandey. Crafted with purpose.</div>
+        <div class="footer-links">
+            <a href="mailto:nilabhpandey7@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/nilabh-pandey" target="_blank">LinkedIn</a>
+            <a href="https://github.com/pronilabh" target="_blank">GitHub</a>
         </div>
-    </section>
+    </div></footer>
 
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-copy" data-i18n="footer">© 2026 Nilabh Pandey. Crafted with purpose.</div>
-            <div class="footer-links">
-                <a href="mailto:nilabhpandey7@gmail.com">Email</a>
-                <a href="https://linkedin.com/in/nilabh-pandey" target="_blank">LinkedIn</a>
-                <a href="https://github.com/pronilabh" target="_blank">GitHub</a>
-            </div>
-        </div>
-    </footer>
+<script>
+// ═══════════════════════════════════════════
+// TRANSLATIONS (all 6 languages)
+// ═══════════════════════════════════════════
+const T={
+en:{nav_about:"About",nav_exp:"Experience",nav_edu:"Education",nav_pub:"Publications",nav_proj:"Projects",nav_skills:"Skills",nav_contact:"Contact",hero_tag:"Available for Opportunities",hero_title:'Building the<br><span class="gradient-text">Future with AI</span><br>& Robotics',hero_desc:"AI Researcher & MS student at HSLU, Switzerland — blending computer vision, drone-based imaging, and machine learning with real-world innovation. From ISRO to IEEE publications, turning research into impact.",hero_cta:"Get in Touch",hero_cta2:"View Projects",stat_pub:"IEEE Publications",stat_proj:"Technical Projects",stat_roles:"Research Roles",badge_loc:"Switzerland",label_about:"Who I Am",title_about:"About Me",about_text:'<p>I am a Master\'s student in <strong>IT, Digitalization &amp; Sustainability</strong> at Lucerne University of Applied Sciences and Arts (HSLU), Switzerland. With research experience spanning <strong>AI, Robotics, and Computer Vision</strong>, I bring a unique blend of academic rigor and hands-on engineering.</p><br><p>My journey has taken me from building <strong>drone-based imaging systems at ISRO</strong> (India\'s space agency) to developing <strong>automated glass facade monitoring</strong> at Universiti Teknologi PETRONAS in Malaysia. I\'m passionate about deploying lightweight, efficient AI models on edge devices — making intelligence accessible where it matters most.</p><br><p>With published work in <strong>IEEE conferences</strong> and expertise across Python, PyTorch, TensorFlow, and embedded systems, I bridge the gap between deep learning research and real-world robotic applications.</p>',hl_ai:"AI & Robotics",hl_ai_d:"Computer Vision, CNNs, YOLO, Edge AI",hl_drone:"Drone Tech",hl_drone_d:"UAV imaging, stereo depth, autonomous systems",hl_research:"Research",hl_research_d:"2 IEEE papers, ISRO internship, UTP",hl_bc_d:"SSI, Smart Contracts, Solidity, IPFS",label_exp:"Where I've Worked",title_exp:"Experience",exp1_role:"AI & Drone Researcher",exp1_desc:"Department of Electrical and Electronics Engineering. Worked on the implementation of Automated Classification for Glass Facade Condition Monitoring using drone-based imaging and deep learning.",exp2_role:"Research Intern",exp2_desc:"R&D facility for AI and IoT innovation. Developed lightweight CNN models (MBConvNet-CNS) and their application in plant leaf disease classification.",exp3_role:"Research Intern",exp3_desc:"Worked on the implementation of Stereo/Depth Cameras for Unmanned Aerial Vehicles (UAVs) under the Department of Space, Government of India.",label_edu:"Academic Journey",title_edu:"Education",edu1_deg:"M.Sc. in IT, Digitalization & Sustainability",edu2_deg:"B.Tech in Computer Science (AI & Robotics)",edu3_deg:"Class 12th — CBSE Intermediate",edu4_deg:"Class 10th — CBSE High School",label_pub:"Research Output",title_pub:"Publications",pub1_title:"Drone-Based Imaging and Automated Classification for Glass Facade Condition Monitoring",pub1_det:"2025 IEEE International Conference on Automatic Control and Intelligent Systems, pp. 333-338",pub2_title:"MBConvNet-CNS: A Lightweight Convolutional Neural Network (CNN) Architecture for Plant Disease Detection",pub2_det:"2024 12th International Conference on Intelligent Systems and Embedded Design, pp. 1-6",label_proj:"What I've Built",title_proj:"Projects",p1_name:"Baltic-ECA-Net: Ultra-Lightweight Attention Network for Algal Bloom Detection",p1_desc:"Real-time algal bloom detection using Efficient Channel Attention and Ghost Modules — optimized for edge devices.",p2_name:"DiveSSI: Blockchain-Powered SSI for Diving Certifications",p2_desc:"Revolutionizing diving certifications with Self-Sovereign Identity, Smart Contracts, and decentralized storage on IPFS.",p3_name:"ML-based Language Learning Assistant",p3_desc:"Personalizes learning paths based on user behavior, adapting to each learner's unique curve using ML models.",p4_name:"Drone Detection & Tracking System",p4_desc:"Real-time drone detection and tracking using YOLOv5 deep learning with Arduino-powered servo tracking.",p5_name:"Teleoperated Robot for Hazardous Environments",p5_desc:"Remote-controlled robotic system for dangerous or inaccessible areas using Bluetooth communication and stepper motors.",p6_name:"Smart Home Energy Management System",p6_desc:"IoT-driven energy optimization with real-time monitoring, cost reduction algorithms, and scalable sensor integration.",p7_name:"Automatic Arduino Car Parking System",p7_desc:"Automated parking system with proximity-based vehicle detection, slot allocation, and servo-controlled barrier gates.",p8_name:"Smart Floor Cleaning Robot",p8_desc:"Autonomous floor-cleaning rover with vacuuming and mopping capabilities, obstacle avoidance via ultrasonic sensors.",view_gh:"View on GitHub",view_proto:"View Prototype",label_skills:"Tech Stack",title_skills:"Skills & Tools",sk_lang:"Languages",sk_cloud:"Cloud & DevOps",sk_hw:"Hardware & IoT",sk_domains:"Domains",sk_spoken:"Languages (Spoken)",label_cert:"Verified Credentials",title_cert:"Certifications",label_contact:"Let's Connect",title_contact:"Get in Touch",c_email:"Email",c_phone_ch:"Phone (CH)",c_phone_in:"Phone (IN)",location:"Zug, Switzerland",footer:"© 2026 Nilabh Pandey. Crafted with purpose."},
+de:{nav_about:"Über mich",nav_exp:"Erfahrung",nav_edu:"Ausbildung",nav_pub:"Publikationen",nav_proj:"Projekte",nav_skills:"Kompetenzen",nav_contact:"Kontakt",hero_tag:"Offen für neue Möglichkeiten",hero_title:'Die <span class="gradient-text">Zukunft mit KI</span><br>& Robotik gestalten',hero_desc:"KI-Forscher & Masterstudent an der HSLU, Schweiz — vereint Computer Vision, drohnengestützte Bildgebung und maschinelles Lernen mit realer Innovation. Von ISRO bis zu IEEE-Publikationen: Forschung mit Wirkung.",hero_cta:"Kontakt aufnehmen",hero_cta2:"Projekte ansehen",stat_pub:"IEEE-Publikationen",stat_proj:"Technische Projekte",stat_roles:"Forschungsstellen",badge_loc:"Schweiz",label_about:"Wer ich bin",title_about:"Über mich",about_text:'<p>Ich bin Masterstudent in <strong>IT, Digitalisierung & Nachhaltigkeit</strong> an der Hochschule Luzern (HSLU), Schweiz. Mit Forschungserfahrung in <strong>KI, Robotik und Computer Vision</strong> bringe ich eine Kombination aus akademischer Strenge und praktischer Ingenieurskunst mit.</p><br><p>Mein Weg führte mich vom Aufbau <strong>drohnengestützter Bildgebungssysteme bei ISRO</strong> (Indiens Weltraumagentur) bis zur Entwicklung <strong>automatisierter Glasfassaden-Überwachung</strong> an der Universiti Teknologi PETRONAS in Malaysia. Meine Leidenschaft gilt dem Einsatz leichtgewichtiger, effizienter KI-Modelle auf Edge-Geräten.</p><br><p>Mit Veröffentlichungen auf <strong>IEEE-Konferenzen</strong> und Expertise in Python, PyTorch, TensorFlow und eingebetteten Systemen schliesse ich die Lücke zwischen Deep-Learning-Forschung und realen Roboteranwendungen.</p>',hl_ai:"KI & Robotik",hl_ai_d:"Computer Vision, CNNs, YOLO, Edge-KI",hl_drone:"Drohnentechnik",hl_drone_d:"UAV-Bildgebung, Stereo-Tiefe, autonome Systeme",hl_research:"Forschung",hl_research_d:"2 IEEE-Paper, ISRO-Praktikum, UTP",hl_bc_d:"SSI, Smart Contracts, Solidity, IPFS",label_exp:"Wo ich gearbeitet habe",title_exp:"Erfahrung",exp1_role:"KI- & Drohnen-Forscher",exp1_desc:"Fakultät für Elektrotechnik und Elektronik. Implementierung einer automatisierten Klassifikation zur Zustandsüberwachung von Glasfassaden mittels drohnengestützter Bildgebung und Deep Learning.",exp2_role:"Forschungspraktikant",exp2_desc:"F&E-Einrichtung für KI- und IoT-Innovation. Entwicklung leichtgewichtiger CNN-Modelle (MBConvNet-CNS) und deren Anwendung bei der Klassifikation von Pflanzenblattkrankheiten.",exp3_role:"Forschungspraktikant",exp3_desc:"Implementierung von Stereo-/Tiefenkameras für unbemannte Luftfahrzeuge (UAVs) unter der Abteilung für Weltraum der indischen Regierung.",label_edu:"Akademischer Werdegang",title_edu:"Ausbildung",edu1_deg:"M.Sc. in IT, Digitalisierung & Nachhaltigkeit",edu2_deg:"B.Tech in Informatik (KI & Robotik)",edu3_deg:"12. Klasse — CBSE Mittelstufe",edu4_deg:"10. Klasse — CBSE Oberschule",label_pub:"Forschungsergebnisse",title_pub:"Publikationen",pub1_title:"Drohnengestützte Bildgebung und automatisierte Klassifikation zur Zustandsüberwachung von Glasfassaden",pub1_det:"2025 IEEE International Conference on Automatic Control and Intelligent Systems, S. 333-338",pub2_title:"MBConvNet-CNS: Eine leichtgewichtige CNN-Architektur zur Erkennung von Pflanzenkrankheiten",pub2_det:"2024 12th International Conference on Intelligent Systems and Embedded Design, S. 1-6",label_proj:"Was ich gebaut habe",title_proj:"Projekte",p1_name:"Baltic-ECA-Net: Ultraleichtes Aufmerksamkeitsnetzwerk zur Algenblüten-Erkennung",p1_desc:"Echtzeit-Erkennung von Algenblüten mittels Efficient Channel Attention und Ghost Modules — optimiert für Edge-Geräte.",p2_name:"DiveSSI: Blockchain-basierte SSI für Tauchzertifikate",p2_desc:"Revolution der Tauchzertifizierung mit Self-Sovereign Identity, Smart Contracts und dezentraler Speicherung auf IPFS.",p3_name:"ML-basierter Sprachlern-Assistent",p3_desc:"Personalisiert Lernpfade basierend auf Nutzerverhalten und passt sich der individuellen Lernkurve an.",p4_name:"Drohnenerkennungs- und Verfolgungssystem",p4_desc:"Echtzeit-Drohnenerkennung und -verfolgung mit YOLOv5 Deep Learning und Arduino-gesteuerter Servo-Nachführung.",p5_name:"Ferngesteuerter Roboter für gefährliche Umgebungen",p5_desc:"Ferngesteuertes Robotersystem für gefährliche oder unzugängliche Bereiche mittels Bluetooth und Schrittmotoren.",p6_name:"Intelligentes Heim-Energiemanagement",p6_desc:"IoT-gesteuerte Energieoptimierung mit Echtzeitüberwachung, Kostenreduktion und skalierbarer Sensorintegration.",p7_name:"Automatisches Arduino-Parkplatzsystem",p7_desc:"Automatisiertes Parksystem mit Näherungserkennung, Platzzuweisung und servogesteuerten Schranken.",p8_name:"Intelligenter Bodenreinigungsroboter",p8_desc:"Autonomer Reinigungsroboter mit Saug- und Wischfunktion sowie Hindernisvermeidung per Ultraschallsensor.",view_gh:"Auf GitHub ansehen",view_proto:"Prototyp ansehen",label_skills:"Technologien",title_skills:"Kompetenzen & Tools",sk_lang:"Programmiersprachen",sk_cloud:"Cloud & DevOps",sk_hw:"Hardware & IoT",sk_domains:"Fachgebiete",sk_spoken:"Sprachen (gesprochen)",label_cert:"Verifizierte Nachweise",title_cert:"Zertifizierungen",label_contact:"Kontakt aufnehmen",title_contact:"In Kontakt treten",c_email:"E-Mail",c_phone_ch:"Telefon (CH)",c_phone_in:"Telefon (IN)",location:"Zug, Schweiz",footer:"© 2026 Nilabh Pandey. Mit Leidenschaft gestaltet."},
+fr:{nav_about:"À propos",nav_exp:"Expérience",nav_edu:"Formation",nav_pub:"Publications",nav_proj:"Projets",nav_skills:"Compétences",nav_contact:"Contact",hero_tag:"Disponible pour de nouvelles opportunités",hero_title:'Construire le<br><span class="gradient-text">futur avec l\'IA</span><br>& la robotique',hero_desc:"Chercheur en IA & étudiant en Master à la HSLU, Suisse — alliant vision par ordinateur, imagerie par drone et apprentissage automatique avec l'innovation concrète. De l'ISRO aux publications IEEE, transformer la recherche en impact.",hero_cta:"Me contacter",hero_cta2:"Voir les projets",stat_pub:"Publications IEEE",stat_proj:"Projets techniques",stat_roles:"Postes de recherche",badge_loc:"Suisse",label_about:"Qui suis-je",title_about:"À propos de moi",about_text:'<p>Je suis étudiant en Master en <strong>IT, Digitalisation & Durabilité</strong> à la Haute école de Lucerne (HSLU), Suisse. Fort d\'une expérience de recherche en <strong>IA, Robotique et Vision par ordinateur</strong>, j\'apporte un mélange unique de rigueur académique et de compétences pratiques en ingénierie.</p><br><p>Mon parcours m\'a mené de la conception de <strong>systèmes d\'imagerie par drone à l\'ISRO</strong> (l\'agence spatiale indienne) au développement de la <strong>surveillance automatisée de façades vitrées</strong> à l\'Universiti Teknologi PETRONAS en Malaisie. Je suis passionné par le déploiement de modèles d\'IA légers et efficaces sur des appareils embarqués.</p><br><p>Avec des travaux publiés lors de <strong>conférences IEEE</strong> et une expertise en Python, PyTorch, TensorFlow et systèmes embarqués, je fais le pont entre la recherche en apprentissage profond et les applications robotiques réelles.</p>',hl_ai:"IA & Robotique",hl_ai_d:"Vision par ordinateur, CNN, YOLO, IA embarquée",hl_drone:"Technologie drone",hl_drone_d:"Imagerie UAV, profondeur stéréo, systèmes autonomes",hl_research:"Recherche",hl_research_d:"2 articles IEEE, stage ISRO, UTP",hl_bc_d:"SSI, Smart Contracts, Solidity, IPFS",label_exp:"Où j'ai travaillé",title_exp:"Expérience",exp1_role:"Chercheur en IA & Drones",exp1_desc:"Département de génie électrique et électronique. Mise en œuvre d'une classification automatisée pour la surveillance de l'état des façades vitrées à l'aide de l'imagerie par drone et du deep learning.",exp2_role:"Stagiaire de recherche",exp2_desc:"Centre de R&D pour l'innovation en IA et IoT. Développement de modèles CNN légers (MBConvNet-CNS) et leur application à la classification des maladies foliaires.",exp3_role:"Stagiaire de recherche",exp3_desc:"Mise en œuvre de caméras stéréo/de profondeur pour véhicules aériens sans pilote (UAV) au sein du Département spatial du gouvernement indien.",label_edu:"Parcours académique",title_edu:"Formation",edu1_deg:"M.Sc. en IT, Digitalisation & Durabilité",edu2_deg:"B.Tech en Informatique (IA & Robotique)",edu3_deg:"Terminale — CBSE (équivalent Bac)",edu4_deg:"Seconde — CBSE (équivalent Brevet)",label_pub:"Production scientifique",title_pub:"Publications",pub1_title:"Imagerie par drone et classification automatisée pour la surveillance de l'état des façades vitrées",pub1_det:"2025 IEEE International Conference on Automatic Control and Intelligent Systems, pp. 333-338",pub2_title:"MBConvNet-CNS : une architecture CNN légère pour la détection des maladies des plantes",pub2_det:"2024 12th International Conference on Intelligent Systems and Embedded Design, pp. 1-6",label_proj:"Ce que j'ai construit",title_proj:"Projets",p1_name:"Baltic-ECA-Net : réseau d'attention ultra-léger pour la détection d'efflorescences algales",p1_desc:"Détection en temps réel des efflorescences algales à l'aide de l'Efficient Channel Attention et des Ghost Modules — optimisé pour les appareils embarqués.",p2_name:"DiveSSI : SSI basée sur la blockchain pour les certifications de plongée",p2_desc:"Révolutionner les certifications de plongée avec l'identité auto-souveraine, les Smart Contracts et le stockage décentralisé IPFS.",p3_name:"Assistant d'apprentissage des langues basé sur le ML",p3_desc:"Personnalise les parcours d'apprentissage en fonction du comportement de l'utilisateur, en s'adaptant à la courbe d'apprentissage unique de chacun.",p4_name:"Système de détection et suivi de drones",p4_desc:"Détection et suivi de drones en temps réel avec YOLOv5 et suivi servo alimenté par Arduino.",p5_name:"Robot téléopéré pour environnements dangereux",p5_desc:"Système robotique télécommandé pour zones dangereuses ou inaccessibles via communication Bluetooth et moteurs pas à pas.",p6_name:"Système intelligent de gestion énergétique domestique",p6_desc:"Optimisation énergétique IoT avec surveillance en temps réel, algorithmes de réduction des coûts et intégration évolutive de capteurs.",p7_name:"Système de parking automatique Arduino",p7_desc:"Système de stationnement automatisé avec détection de proximité, allocation de places et barrières à servo.",p8_name:"Robot nettoyeur de sol intelligent",p8_desc:"Rover autonome de nettoyage avec aspiration et lavage, évitement d'obstacles par capteurs ultrasoniques.",view_gh:"Voir sur GitHub",view_proto:"Voir le prototype",label_skills:"Stack technique",title_skills:"Compétences & Outils",sk_lang:"Langages",sk_cloud:"Cloud & DevOps",sk_hw:"Matériel & IoT",sk_domains:"Domaines",sk_spoken:"Langues (parlées)",label_cert:"Certifications vérifiées",title_cert:"Certifications",label_contact:"Restons en contact",title_contact:"Me contacter",c_email:"E-mail",c_phone_ch:"Téléphone (CH)",c_phone_in:"Téléphone (IN)",location:"Zoug, Suisse",footer:"© 2026 Nilabh Pandey. Conçu avec passion."},
+pt:{nav_about:"Sobre",nav_exp:"Experiência",nav_edu:"Formação",nav_pub:"Publicações",nav_proj:"Projetos",nav_skills:"Habilidades",nav_contact:"Contato",hero_tag:"Disponível para oportunidades",hero_title:'Construindo o<br><span class="gradient-text">futuro com IA</span><br>& Robótica',hero_desc:"Pesquisador de IA & mestrando na HSLU, Suíça — unindo visão computacional, imagens por drone e aprendizado de máquina com inovação real. Do ISRO às publicações IEEE, transformando pesquisa em impacto.",hero_cta:"Entre em contato",hero_cta2:"Ver projetos",stat_pub:"Publicações IEEE",stat_proj:"Projetos técnicos",stat_roles:"Cargos de pesquisa",badge_loc:"Suíça",label_about:"Quem sou eu",title_about:"Sobre mim",about_text:'<p>Sou mestrando em <strong>TI, Digitalização & Sustentabilidade</strong> na Universidade de Ciências Aplicadas de Lucerna (HSLU), Suíça. Com experiência em pesquisa em <strong>IA, Robótica e Visão Computacional</strong>, trago uma combinação única de rigor acadêmico e engenharia prática.</p><br><p>Minha trajetória me levou desde a construção de <strong>sistemas de imagem por drone no ISRO</strong> (agência espacial da Índia) até o desenvolvimento de <strong>monitoramento automatizado de fachadas de vidro</strong> na Universiti Teknologi PETRONAS, na Malásia. Sou apaixonado por implementar modelos de IA leves e eficientes em dispositivos de borda.</p><br><p>Com trabalhos publicados em <strong>conferências IEEE</strong> e expertise em Python, PyTorch, TensorFlow e sistemas embarcados, faço a ponte entre pesquisa em deep learning e aplicações robóticas reais.</p>',hl_ai:"IA & Robótica",hl_ai_d:"Visão computacional, CNNs, YOLO, IA de borda",hl_drone:"Tecnologia de drones",hl_drone_d:"Imagem UAV, profundidade estéreo, sistemas autônomos",hl_research:"Pesquisa",hl_research_d:"2 artigos IEEE, estágio ISRO, UTP",hl_bc_d:"SSI, Smart Contracts, Solidity, IPFS",label_exp:"Onde trabalhei",title_exp:"Experiência",exp1_role:"Pesquisador de IA & Drones",exp1_desc:"Departamento de Engenharia Elétrica e Eletrônica. Implementação de classificação automatizada para monitoramento de fachadas de vidro usando imagens por drone e deep learning.",exp2_role:"Estagiário de pesquisa",exp2_desc:"Centro de P&D para inovação em IA e IoT. Desenvolvimento de modelos CNN leves (MBConvNet-CNS) e sua aplicação na classificação de doenças foliares.",exp3_role:"Estagiário de pesquisa",exp3_desc:"Implementação de câmeras estéreo/de profundidade para veículos aéreos não tripulados (VANTs) no Departamento Espacial do governo da Índia.",label_edu:"Trajetória acadêmica",title_edu:"Formação",edu1_deg:"M.Sc. em TI, Digitalização & Sustentabilidade",edu2_deg:"B.Tech em Ciência da Computação (IA & Robótica)",edu3_deg:"12ª série — CBSE (equivalente ao Ensino Médio)",edu4_deg:"10ª série — CBSE (equivalente ao Ensino Fundamental)",label_pub:"Produção científica",title_pub:"Publicações",pub1_title:"Imagem por drone e classificação automatizada para monitoramento de fachadas de vidro",pub1_det:"2025 IEEE International Conference on Automatic Control and Intelligent Systems, pp. 333-338",pub2_title:"MBConvNet-CNS: uma arquitetura CNN leve para detecção de doenças em plantas",pub2_det:"2024 12th International Conference on Intelligent Systems and Embedded Design, pp. 1-6",label_proj:"O que construí",title_proj:"Projetos",p1_name:"Baltic-ECA-Net: rede de atenção ultraleve para detecção de floração de algas",p1_desc:"Detecção em tempo real de floração de algas usando Efficient Channel Attention e Ghost Modules — otimizado para dispositivos de borda.",p2_name:"DiveSSI: SSI baseada em blockchain para certificações de mergulho",p2_desc:"Revolucionando certificações de mergulho com identidade auto-soberana, Smart Contracts e armazenamento descentralizado no IPFS.",p3_name:"Assistente de aprendizado de idiomas baseado em ML",p3_desc:"Personaliza caminhos de aprendizado com base no comportamento do usuário, adaptando-se à curva de aprendizado individual.",p4_name:"Sistema de detecção e rastreamento de drones",p4_desc:"Detecção e rastreamento de drones em tempo real usando YOLOv5 com rastreamento servo alimentado por Arduino.",p5_name:"Robô teleoperado para ambientes perigosos",p5_desc:"Sistema robótico de controle remoto para áreas perigosas ou inacessíveis usando comunicação Bluetooth e motores de passo.",p6_name:"Sistema inteligente de gerenciamento de energia residencial",p6_desc:"Otimização energética IoT com monitoramento em tempo real, algoritmos de redução de custos e integração escalável de sensores.",p7_name:"Sistema de estacionamento automático com Arduino",p7_desc:"Sistema automatizado com detecção por proximidade, alocação de vagas e cancelas controladas por servo.",p8_name:"Robô inteligente de limpeza de pisos",p8_desc:"Rover autônomo de limpeza com aspiração e esfregão, desvio de obstáculos por sensores ultrassônicos.",view_gh:"Ver no GitHub",view_proto:"Ver protótipo",label_skills:"Stack técnico",title_skills:"Habilidades & Ferramentas",sk_lang:"Linguagens",sk_cloud:"Cloud & DevOps",sk_hw:"Hardware & IoT",sk_domains:"Domínios",sk_spoken:"Idiomas (falados)",label_cert:"Credenciais verificadas",title_cert:"Certificações",label_contact:"Vamos conversar",title_contact:"Entre em contato",c_email:"E-mail",c_phone_ch:"Telefone (CH)",c_phone_in:"Telefone (IN)",location:"Zug, Suíça",footer:"© 2026 Nilabh Pandey. Criado com propósito."},
+es:{nav_about:"Sobre mí",nav_exp:"Experiencia",nav_edu:"Educación",nav_pub:"Publicaciones",nav_proj:"Proyectos",nav_skills:"Habilidades",nav_contact:"Contacto",hero_tag:"Disponible para oportunidades",hero_title:'Construyendo el<br><span class="gradient-text">futuro con IA</span><br>& Robótica',hero_desc:"Investigador de IA & estudiante de máster en HSLU, Suiza — combinando visión por computadora, imágenes con drones y aprendizaje automático con innovación real. Del ISRO a publicaciones IEEE, convirtiendo investigación en impacto.",hero_cta:"Contáctame",hero_cta2:"Ver proyectos",stat_pub:"Publicaciones IEEE",stat_proj:"Proyectos técnicos",stat_roles:"Puestos de investigación",badge_loc:"Suiza",label_about:"Quién soy",title_about:"Sobre mí",about_text:'<p>Soy estudiante de máster en <strong>TI, Digitalización y Sostenibilidad</strong> en la Universidad de Ciencias Aplicadas de Lucerna (HSLU), Suiza. Con experiencia investigadora en <strong>IA, Robótica y Visión por Computadora</strong>, aporto una combinación única de rigor académico e ingeniería práctica.</p><br><p>Mi trayectoria me ha llevado desde la construcción de <strong>sistemas de imagen con drones en ISRO</strong> (la agencia espacial india) hasta el desarrollo de <strong>monitoreo automatizado de fachadas de vidrio</strong> en la Universiti Teknologi PETRONAS en Malasia. Me apasiona desplegar modelos de IA ligeros y eficientes en dispositivos de borde.</p><br><p>Con trabajo publicado en <strong>conferencias IEEE</strong> y experiencia en Python, PyTorch, TensorFlow y sistemas embebidos, conecto la investigación en aprendizaje profundo con aplicaciones robóticas reales.</p>',hl_ai:"IA & Robótica",hl_ai_d:"Visión por computadora, CNNs, YOLO, IA de borde",hl_drone:"Tecnología de drones",hl_drone_d:"Imágenes UAV, profundidad estéreo, sistemas autónomos",hl_research:"Investigación",hl_research_d:"2 artículos IEEE, pasantía ISRO, UTP",hl_bc_d:"SSI, Smart Contracts, Solidity, IPFS",label_exp:"Dónde he trabajado",title_exp:"Experiencia",exp1_role:"Investigador de IA y drones",exp1_desc:"Departamento de Ingeniería Eléctrica y Electrónica. Implementación de clasificación automatizada para el monitoreo del estado de fachadas de vidrio mediante imágenes de drones y aprendizaje profundo.",exp2_role:"Pasante de investigación",exp2_desc:"Centro de I+D para innovación en IA e IoT. Desarrollo de modelos CNN ligeros (MBConvNet-CNS) y su aplicación en la clasificación de enfermedades foliares.",exp3_role:"Pasante de investigación",exp3_desc:"Implementación de cámaras estéreo/de profundidad para vehículos aéreos no tripulados (UAV) en el Departamento Espacial del gobierno de India.",label_edu:"Trayectoria académica",title_edu:"Educación",edu1_deg:"M.Sc. en TI, Digitalización y Sostenibilidad",edu2_deg:"B.Tech en Ciencias de la Computación (IA y Robótica)",edu3_deg:"12.º grado — CBSE (equivalente a Bachillerato)",edu4_deg:"10.º grado — CBSE (equivalente a ESO)",label_pub:"Producción científica",title_pub:"Publicaciones",pub1_title:"Imágenes con drones y clasificación automatizada para el monitoreo de fachadas de vidrio",pub1_det:"2025 IEEE International Conference on Automatic Control and Intelligent Systems, pp. 333-338",pub2_title:"MBConvNet-CNS: una arquitectura CNN ligera para la detección de enfermedades en plantas",pub2_det:"2024 12th International Conference on Intelligent Systems and Embedded Design, pp. 1-6",label_proj:"Lo que he construido",title_proj:"Proyectos",p1_name:"Baltic-ECA-Net: red de atención ultraligera para detección de floraciones de algas",p1_desc:"Detección en tiempo real de floraciones de algas usando Efficient Channel Attention y Ghost Modules — optimizado para dispositivos de borde.",p2_name:"DiveSSI: SSI con blockchain para certificaciones de buceo",p2_desc:"Revolucionando las certificaciones de buceo con identidad auto-soberana, Smart Contracts y almacenamiento descentralizado en IPFS.",p3_name:"Asistente de aprendizaje de idiomas basado en ML",p3_desc:"Personaliza rutas de aprendizaje según el comportamiento del usuario, adaptándose a la curva de aprendizaje única de cada persona.",p4_name:"Sistema de detección y seguimiento de drones",p4_desc:"Detección y seguimiento de drones en tiempo real con YOLOv5 y seguimiento servo con Arduino.",p5_name:"Robot teleoperado para entornos peligrosos",p5_desc:"Sistema robótico de control remoto para áreas peligrosas o inaccesibles mediante comunicación Bluetooth y motores paso a paso.",p6_name:"Sistema inteligente de gestión energética del hogar",p6_desc:"Optimización energética IoT con monitoreo en tiempo real, algoritmos de reducción de costes e integración escalable de sensores.",p7_name:"Sistema de aparcamiento automático con Arduino",p7_desc:"Sistema automatizado con detección de proximidad, asignación de plazas y barreras controladas por servo.",p8_name:"Robot inteligente de limpieza de suelos",p8_desc:"Rover autónomo de limpieza con aspiración y fregado, evasión de obstáculos mediante sensores ultrasónicos.",view_gh:"Ver en GitHub",view_proto:"Ver prototipo",label_skills:"Stack técnico",title_skills:"Habilidades y herramientas",sk_lang:"Lenguajes",sk_cloud:"Cloud y DevOps",sk_hw:"Hardware e IoT",sk_domains:"Dominios",sk_spoken:"Idiomas (hablados)",label_cert:"Credenciales verificadas",title_cert:"Certificaciones",label_contact:"Conectemos",title_contact:"Contacto",c_email:"Correo",c_phone_ch:"Teléfono (CH)",c_phone_in:"Teléfono (IN)",location:"Zug, Suiza",footer:"© 2026 Nilabh Pandey. Creado con propósito."},
+hi:{nav_about:"परिचय",nav_exp:"अनुभव",nav_edu:"शिक्षा",nav_pub:"प्रकाशन",nav_proj:"प्रोजेक्ट",nav_skills:"कौशल",nav_contact:"संपर्क",hero_tag:"अवसरों के लिए उपलब्ध",hero_title:'<span class="gradient-text">AI और रोबोटिक्स</span><br>से भविष्य<br>का निर्माण',hero_desc:"HSLU, स्विट्ज़रलैंड में AI शोधकर्ता और मास्टर छात्र — कंप्यूटर विज़न, ड्रोन इमेजिंग और मशीन लर्निंग को वास्तविक नवाचार के साथ जोड़ते हुए। ISRO से IEEE प्रकाशनों तक, शोध को प्रभाव में बदलना।",hero_cta:"संपर्क करें",hero_cta2:"प्रोजेक्ट देखें",stat_pub:"IEEE प्रकाशन",stat_proj:"तकनीकी प्रोजेक्ट",stat_roles:"शोध भूमिकाएँ",badge_loc:"स्विट्ज़रलैंड",label_about:"मैं कौन हूँ",title_about:"मेरे बारे में",about_text:'<p>मैं <strong>IT, डिजिटलाइज़ेशन और सस्टेनेबिलिटी</strong> में मास्टर छात्र हूँ, ल्यूसर्न यूनिवर्सिटी ऑफ अप्लाइड साइंसेज (HSLU), स्विट्ज़रलैंड में। <strong>AI, रोबोटिक्स और कंप्यूटर विज़न</strong> में शोध अनुभव के साथ, मैं शैक्षणिक कठोरता और व्यावहारिक इंजीनियरिंग का अनूठा संयोजन लाता हूँ।</p><br><p>मेरी यात्रा मुझे <strong>ISRO में ड्रोन-आधारित इमेजिंग सिस्टम</strong> (भारत की अंतरिक्ष एजेंसी) बनाने से लेकर मलेशिया की Universiti Teknologi PETRONAS में <strong>स्वचालित ग्लास फ़ेसाड मॉनिटरिंग</strong> विकसित करने तक ले गई है। मुझे एज डिवाइसों पर हल्के, कुशल AI मॉडल तैनात करने का जुनून है।</p><br><p><strong>IEEE सम्मेलनों</strong> में प्रकाशित कार्य और Python, PyTorch, TensorFlow और एम्बेडेड सिस्टम में विशेषज्ञता के साथ, मैं डीप लर्निंग शोध और वास्तविक रोबोटिक अनुप्रयोगों के बीच का सेतु हूँ।</p>',hl_ai:"AI और रोबोटिक्स",hl_ai_d:"कंप्यूटर विज़न, CNN, YOLO, एज AI",hl_drone:"ड्रोन तकनीक",hl_drone_d:"UAV इमेजिंग, स्टीरियो डेप्थ, स्वायत्त प्रणालियाँ",hl_research:"शोध",hl_research_d:"2 IEEE पेपर, ISRO इंटर्नशिप, UTP",hl_bc_d:"SSI, स्मार्ट कॉन्ट्रैक्ट, Solidity, IPFS",label_exp:"मैंने कहाँ काम किया",title_exp:"अनुभव",exp1_role:"AI और ड्रोन शोधकर्ता",exp1_desc:"इलेक्ट्रिकल और इलेक्ट्रॉनिक्स इंजीनियरिंग विभाग। ड्रोन-आधारित इमेजिंग और डीप लर्निंग का उपयोग करके ग्लास फ़ेसाड की स्थिति निगरानी के लिए स्वचालित वर्गीकरण का कार्यान्वयन।",exp2_role:"शोध प्रशिक्षु",exp2_desc:"AI और IoT नवाचार के लिए R&D सुविधा। हल्के CNN मॉडल (MBConvNet-CNS) का विकास और पौधों की पत्ती रोग वर्गीकरण में उनका अनुप्रयोग।",exp3_role:"शोध प्रशिक्षु",exp3_desc:"भारत सरकार के अंतरिक्ष विभाग के अंतर्गत मानव रहित हवाई वाहनों (UAV) के लिए स्टीरियो/डेप्थ कैमरों का कार्यान्वयन।",label_edu:"शैक्षणिक यात्रा",title_edu:"शिक्षा",edu1_deg:"M.Sc. IT, डिजिटलाइज़ेशन और सस्टेनेबिलिटी में",edu2_deg:"B.Tech कंप्यूटर साइंस (AI और रोबोटिक्स) में",edu3_deg:"कक्षा 12वीं — CBSE इंटरमीडिएट",edu4_deg:"कक्षा 10वीं — CBSE हाई स्कूल",label_pub:"शोध प्रकाशन",title_pub:"प्रकाशन",pub1_title:"ग्लास फ़ेसाड स्थिति निगरानी के लिए ड्रोन-आधारित इमेजिंग और स्वचालित वर्गीकरण",pub1_det:"2025 IEEE International Conference on Automatic Control and Intelligent Systems, पृ. 333-338",pub2_title:"MBConvNet-CNS: पौधों की बीमारी पहचान के लिए एक हल्की CNN आर्किटेक्चर",pub2_det:"2024 12th International Conference on Intelligent Systems and Embedded Design, पृ. 1-6",label_proj:"मैंने क्या बनाया",title_proj:"प्रोजेक्ट",p1_name:"Baltic-ECA-Net: शैवाल प्रस्फुटन पहचान के लिए अल्ट्रा-लाइटवेट अटेंशन नेटवर्क",p1_desc:"Efficient Channel Attention और Ghost Modules का उपयोग करके रियल-टाइम शैवाल प्रस्फुटन पहचान — एज डिवाइसों के लिए अनुकूलित।",p2_name:"DiveSSI: डाइविंग प्रमाणपत्रों के लिए ब्लॉकचेन-संचालित SSI",p2_desc:"सेल्फ-सॉवरेन आइडेंटिटी, स्मार्ट कॉन्ट्रैक्ट और IPFS पर विकेंद्रीकृत स्टोरेज के साथ डाइविंग प्रमाणन में क्रांति।",p3_name:"ML-आधारित भाषा सीखने का सहायक",p3_desc:"उपयोगकर्ता व्यवहार के आधार पर सीखने के रास्ते को व्यक्तिगत बनाता है, प्रत्येक शिक्षार्थी की अनूठी लर्निंग कर्व के अनुसार ढलता है।",p4_name:"ड्रोन पहचान और ट्रैकिंग प्रणाली",p4_desc:"YOLOv5 डीप लर्निंग और Arduino-संचालित सर्वो ट्रैकिंग का उपयोग करके रियल-टाइम ड्रोन पहचान और ट्रैकिंग।",p5_name:"खतरनाक वातावरण के लिए टेलीऑपरेटेड रोबोट",p5_desc:"ब्लूटूथ संचार और स्टेपर मोटर्स का उपयोग करके खतरनाक या दुर्गम क्षेत्रों के लिए रिमोट-कंट्रोल्ड रोबोटिक प्रणाली।",p6_name:"स्मार्ट होम ऊर्जा प्रबंधन प्रणाली",p6_desc:"रियल-टाइम मॉनिटरिंग, लागत कमी एल्गोरिदम और स्केलेबल सेंसर एकीकरण के साथ IoT-संचालित ऊर्जा अनुकूलन।",p7_name:"ऑटोमैटिक Arduino कार पार्किंग सिस्टम",p7_desc:"निकटता-आधारित वाहन पहचान, स्लॉट आवंटन और सर्वो-नियंत्रित बैरियर गेट के साथ स्वचालित पार्किंग प्रणाली।",p8_name:"स्मार्ट फ़्लोर क्लीनिंग रोबोट",p8_desc:"वैक्यूमिंग और मॉपिंग क्षमता वाला स्वायत्त फ़्लोर-क्लीनिंग रोवर, अल्ट्रासोनिक सेंसर द्वारा बाधा निवारण।",view_gh:"GitHub पर देखें",view_proto:"प्रोटोटाइप देखें",label_skills:"तकनीकी स्टैक",title_skills:"कौशल और उपकरण",sk_lang:"प्रोग्रामिंग भाषाएँ",sk_cloud:"क्लाउड और DevOps",sk_hw:"हार्डवेयर और IoT",sk_domains:"विषय क्षेत्र",sk_spoken:"भाषाएँ (बोली जाने वाली)",label_cert:"सत्यापित प्रमाणपत्र",title_cert:"प्रमाणपत्र",label_contact:"जुड़ें",title_contact:"संपर्क करें",c_email:"ईमेल",c_phone_ch:"फ़ोन (CH)",c_phone_in:"फ़ोन (IN)",location:"ज़ुग, स्विट्ज़रलैंड",footer:"© 2026 निलाभ पांडेय। उद्देश्य के साथ निर्मित।"}
+};
 
-    <script>
-    // ═══════════════════════════════════════════
-    // TRANSLATIONS
-    // ═══════════════════════════════════════════
-    const T = {
-    en: {
-        nav_about:"About", nav_exp:"Experience", nav_edu:"Education", nav_pub:"Publications", nav_proj:"Projects", nav_skills:"Skills", nav_contact:"Contact",
-        hero_tag:"Available for Opportunities",
-        hero_title:'Building the<br><span class="gradient-text">Future with AI</span><br>& Robotics',
-        hero_desc:"AI Researcher & MS student at HSLU, Switzerland — blending computer vision, drone-based imaging, and machine learning with real-world innovation. From ISRO to IEEE publications, turning research into impact.",
-        hero_cta:"Get in Touch", hero_cta2:"View Projects",
-        stat_pub:"IEEE Publications", stat_proj:"Technical Projects", stat_roles:"Research Roles",
-        badge_loc:"Switzerland",
-        label_about:"Who I Am", title_about:"About Me",
-        about_text:'<p>I am a Master\'s student in <strong>IT, Digitalization &amp; Sustainability</strong> at Lucerne University of Applied Sciences and Arts (HSLU), Switzerland. With research experience spanning <strong>AI, Robotics, and Computer Vision</strong>, I bring a unique blend of academic rigor and hands-on engineering.</p><br><p>My journey has taken me from building <strong>drone-based imaging systems at ISRO</strong> (India\'s space agency) to developing <strong>automated glass facade monitoring</strong> at Universiti Teknologi PETRONAS in Malaysia. I\'m passionate about deploying lightweight, efficient AI models on edge devices — making intelligence accessible where it matters most.</p><br><p>With published work in <strong>IEEE conferences</strong> and expertise across Python, PyTorch, TensorFlow, and embedded systems, I bridge the gap between deep learning research and real-world robotic applications.</p>',
-        hl_ai:"AI & Robotics", hl_ai_d:"Computer Vision, CNNs, YOLO, Edge AI",
-        hl_drone:"Drone Tech", hl_drone_d:"UAV imaging, stereo depth, autonomous systems",
-        hl_research:"Research", hl_research_d:"2 IEEE papers, ISRO internship, UTP",
-        hl_bc_d:"SSI, Smart Contracts, Solidity, IPFS",
-        label_exp:"Where I've Worked", title_exp:"Experience",
-        exp1_role:"AI & Drone Researcher", exp1_desc:"Department of Electrical and Electronics Engineering. Worked on the implementation of Automated Classification for Glass Facade Condition Monitoring using drone-based imaging and deep learning.",
-        exp2_role:"Research Intern", exp2_desc:"R&D facility for AI and IoT innovation. Developed lightweight CNN models (MBConvNet-CNS) and their application in plant leaf disease classification.",
-        exp3_role:"Research Intern", exp3_desc:"Worked on the implementation of Stereo/Depth Cameras for Unmanned Aerial Vehicles (UAVs) under the Department of Space, Government of India.",
-        label_edu:"Academic Journey", title_edu:"Education",
-        edu1_deg:"M.Sc. in IT, Digitalization & Sustainability", edu2_deg:"B.Tech in Computer Science (AI & Robotics)", edu3_deg:"Class 12th — CBSE Intermediate", edu4_deg:"Class 10th — CBSE High School",
-        label_pub:"Research Output", title_pub:"Publications",
-        pub1_title:"Drone-Based Imaging and Automated Classification for Glass Facade Condition Monitoring",
-        pub1_det:"2025 IEEE International Conference on Automatic Control and Intelligent Systems, pp. 333-338",
-        pub2_title:"MBConvNet-CNS: A Lightweight Convolutional Neural Network (CNN) Architecture for Plant Disease Detection",
-        pub2_det:"2024 12th International Conference on Intelligent Systems and Embedded Design, pp. 1-6",
-        label_proj:"What I've Built", title_proj:"Projects",
-        p1_name:"Baltic-ECA-Net: Ultra-Lightweight Attention Network for Algal Bloom Detection",
-        p1_desc:"Real-time algal bloom detection using Efficient Channel Attention and Ghost Modules — optimized for edge devices.",
-        p2_name:"DiveSSI: Blockchain-Powered SSI for Diving Certifications",
-        p2_desc:"Revolutionizing diving certifications with Self-Sovereign Identity, Smart Contracts, and decentralized storage on IPFS.",
-        p3_name:"ML-based Language Learning Assistant",
-        p3_desc:"Personalizes learning paths based on user behavior, adapting to each learner's unique curve using ML models.",
-        p4_name:"Drone Detection & Tracking System",
-        p4_desc:"Real-time drone detection and tracking using YOLOv5 deep learning with Arduino-powered servo tracking.",
-        p5_name:"Teleoperated Robot for Hazardous Environments",
-        p5_desc:"Remote-controlled robotic system for dangerous or inaccessible areas using Bluetooth communication and stepper motors.",
-        p6_name:"Smart Home Energy Management System",
-        p6_desc:"IoT-driven energy optimization with real-time monitoring, cost reduction algorithms, and scalable sensor integration.",
-        p7_name:"Automatic Arduino Car Parking System",
-        p7_desc:"Automated parking system with proximity-based vehicle detection, slot allocation, and servo-controlled barrier gates.",
-        p8_name:"Smart Floor Cleaning Robot",
-        p8_desc:"Autonomous floor-cleaning rover with vacuuming and mopping capabilities, obstacle avoidance via ultrasonic sensors.",
-        view_gh:"View on GitHub", view_proto:"View Prototype",
-        label_skills:"Tech Stack", title_skills:"Skills & Tools",
-        sk_lang:"Languages", sk_cloud:"Cloud & DevOps", sk_hw:"Hardware & IoT", sk_domains:"Domains", sk_spoken:"Languages (Spoken)",
-        label_cert:"Verified Credentials", title_cert:"Certifications",
-        label_contact:"Let's Connect", title_contact:"Get in Touch",
-        c_email:"Email", c_phone_ch:"Phone (CH)", c_phone_in:"Phone (IN)", location:"Zug, Switzerland",
-        footer:"© 2026 Nilabh Pandey. Crafted with purpose."
-    },
-    de: {
-        nav_about:"Über mich", nav_exp:"Erfahrung", nav_edu:"Ausbildung", nav_pub:"Publikationen", nav_proj:"Projekte", nav_skills:"Kompetenzen", nav_contact:"Kontakt",
-        hero_tag:"Offen für neue Möglichkeiten",
-        hero_title:'Die <span class="gradient-text">Zukunft mit KI</span><br>& Robotik gestalten',
-        hero_desc:"KI-Forscher & Masterstudent an der HSLU, Schweiz — vereint Computer Vision, drohnengestützte Bildgebung und maschinelles Lernen mit realer Innovation. Von ISRO bis zu IEEE-Publikationen: Forschung mit Wirkung.",
-        hero_cta:"Kontakt aufnehmen", hero_cta2:"Projekte ansehen",
-        stat_pub:"IEEE-Publikationen", stat_proj:"Technische Projekte", stat_roles:"Forschungsstellen",
-        badge_loc:"Schweiz",
-        label_about:"Wer ich bin", title_about:"Über mich",
-        about_text:'<p>Ich bin Masterstudent in <strong>IT, Digitalisierung & Nachhaltigkeit</strong> an der Hochschule Luzern (HSLU), Schweiz. Mit Forschungserfahrung in <strong>KI, Robotik und Computer Vision</strong> bringe ich eine Kombination aus akademischer Strenge und praktischer Ingenieurskunst mit.</p><br><p>Mein Weg führte mich vom Aufbau <strong>drohnengestützter Bildgebungssysteme bei ISRO</strong> (Indiens Weltraumagentur) bis zur Entwicklung <strong>automatisierter Glasfassaden-Überwachung</strong> an der Universiti Teknologi PETRONAS in Malaysia. Meine Leidenschaft gilt dem Einsatz leichtgewichtiger, effizienter KI-Modelle auf Edge-Geräten.</p><br><p>Mit Veröffentlichungen auf <strong>IEEE-Konferenzen</strong> und Expertise in Python, PyTorch, TensorFlow und eingebetteten Systemen schliesse ich die Lücke zwischen Deep-Learning-Forschung und realen Roboteranwendungen.</p>',
-        hl_ai:"KI & Robotik", hl_ai_d:"Computer Vision, CNNs, YOLO, Edge-KI",
-        hl_drone:"Drohnentechnik", hl_drone_d:"UAV-Bildgebung, Stereo-Tiefe, autonome Systeme",
-        hl_research:"Forschung", hl_research_d:"2 IEEE-Paper, ISRO-Praktikum, UTP",
-        hl_bc_d:"SSI, Smart Contracts, Solidity, IPFS",
-        label_exp:"Wo ich gearbeitet habe", title_exp:"Erfahrung",
-        exp1_role:"KI- & Drohnen-Forscher", exp1_desc:"Fakultät für Elektrotechnik und Elektronik. Implementierung einer automatisierten Klassifikation zur Zustandsüberwachung von Glasfassaden mittels drohnengestützter Bildgebung und Deep Learning.",
-        exp2_role:"Forschungspraktikant", exp2_desc:"F&E-Einrichtung für KI- und IoT-Innovation. Entwicklung leichtgewichtiger CNN-Modelle (MBConvNet-CNS) und deren Anwendung bei der Klassifikation von Pflanzenblattkrankheiten.",
-        exp3_role:"Forschungspraktikant", exp3_desc:"Implementierung von Stereo-/Tiefenkameras für unbemannte Luftfahrzeuge (UAVs) unter der Abteilung für Weltraum der indischen Regierung.",
-        label_edu:"Akademischer Werdegang", title_edu:"Ausbildung",
-        edu1_deg:"M.Sc. in IT, Digitalisierung & Nachhaltigkeit", edu2_deg:"B.Tech in Informatik (KI & Robotik)", edu3_deg:"12. Klasse — CBSE Mittelstufe", edu4_deg:"10. Klasse — CBSE Oberschule",
-        label_pub:"Forschungsergebnisse", title_pub:"Publikationen",
-        pub1_title:"Drohnengestützte Bildgebung und automatisierte Klassifikation zur Zustandsüberwachung von Glasfassaden",
-        pub1_det:"2025 IEEE International Conference on Automatic Control and Intelligent Systems, S. 333-338",
-        pub2_title:"MBConvNet-CNS: Eine leichtgewichtige CNN-Architektur zur Erkennung von Pflanzenkrankheiten",
-        pub2_det:"2024 12th International Conference on Intelligent Systems and Embedded Design, S. 1-6",
-        label_proj:"Was ich gebaut habe", title_proj:"Projekte",
-        p1_name:"Baltic-ECA-Net: Ultraleichtes Aufmerksamkeitsnetzwerk zur Algenblüten-Erkennung",
-        p1_desc:"Echtzeit-Erkennung von Algenblüten mittels Efficient Channel Attention und Ghost Modules — optimiert für Edge-Geräte.",
-        p2_name:"DiveSSI: Blockchain-basierte SSI für Tauchzertifikate",
-        p2_desc:"Revolution der Tauchzertifizierung mit Self-Sovereign Identity, Smart Contracts und dezentraler Speicherung auf IPFS.",
-        p3_name:"ML-basierter Sprachlern-Assistent",
-        p3_desc:"Personalisiert Lernpfade basierend auf Nutzerverhalten und passt sich der individuellen Lernkurve an.",
-        p4_name:"Drohnenerkennungs- und Verfolgungssystem",
-        p4_desc:"Echtzeit-Drohnenerkennung und -verfolgung mit YOLOv5 Deep Learning und Arduino-gesteuerter Servo-Nachführung.",
-        p5_name:"Ferngesteuerter Roboter für gefährliche Umgebungen",
-        p5_desc:"Ferngesteuertes Robotersystem für gefährliche oder unzugängliche Bereiche mittels Bluetooth und Schrittmotoren.",
-        p6_name:"Intelligentes Heim-Energiemanagement",
-        p6_desc:"IoT-gesteuerte Energieoptimierung mit Echtzeitüberwachung, Kostenreduktion und skalierbarer Sensorintegration.",
-        p7_name:"Automatisches Arduino-Parkplatzsystem",
-        p7_desc:"Automatisiertes Parksystem mit Näherungserkennung, Platzzuweisung und servogesteuerten Schranken.",
-        p8_name:"Intelligenter Bodenreinigungsroboter",
-        p8_desc:"Autonomer Reinigungsroboter mit Saug- und Wischfunktion sowie Hindernisvermeidung per Ultraschallsensor.",
-        view_gh:"Auf GitHub ansehen", view_proto:"Prototyp ansehen",
-        label_skills:"Technologien", title_skills:"Kompetenzen & Tools",
-        sk_lang:"Programmiersprachen", sk_cloud:"Cloud & DevOps", sk_hw:"Hardware & IoT", sk_domains:"Fachgebiete", sk_spoken:"Sprachen (gesprochen)",
-        label_cert:"Verifizierte Nachweise", title_cert:"Zertifizierungen",
-        label_contact:"Kontakt aufnehmen", title_contact:"In Kontakt treten",
-        c_email:"E-Mail", c_phone_ch:"Telefon (CH)", c_phone_in:"Telefon (IN)", location:"Zug, Schweiz",
-        footer:"© 2026 Nilabh Pandey. Mit Leidenschaft gestaltet."
-    },
-    fr: {
-        nav_about:"À propos", nav_exp:"Expérience", nav_edu:"Formation", nav_pub:"Publications", nav_proj:"Projets", nav_skills:"Compétences", nav_contact:"Contact",
-        hero_tag:"Disponible pour de nouvelles opportunités",
-        hero_title:'Construire le<br><span class="gradient-text">futur avec l\'IA</span><br>& la robotique',
-        hero_desc:"Chercheur en IA & étudiant en Master à la HSLU, Suisse — alliant vision par ordinateur, imagerie par drone et apprentissage automatique avec l'innovation concrète. De l'ISRO aux publications IEEE, transformer la recherche en impact.",
-        hero_cta:"Me contacter", hero_cta2:"Voir les projets",
-        stat_pub:"Publications IEEE", stat_proj:"Projets techniques", stat_roles:"Postes de recherche",
-        badge_loc:"Suisse",
-        label_about:"Qui suis-je", title_about:"À propos de moi",
-        about_text:'<p>Je suis étudiant en Master en <strong>IT, Digitalisation & Durabilité</strong> à la Haute école de Lucerne (HSLU), Suisse. Fort d\'une expérience de recherche en <strong>IA, Robotique et Vision par ordinateur</strong>, j\'apporte un mélange unique de rigueur académique et de compétences pratiques en ingénierie.</p><br><p>Mon parcours m\'a mené de la conception de <strong>systèmes d\'imagerie par drone à l\'ISRO</strong> (l\'agence spatiale indienne) au développement de la <strong>surveillance automatisée de façades vitrées</strong> à l\'Universiti Teknologi PETRONAS en Malaisie. Je suis passionné par le déploiement de modèles d\'IA légers et efficaces sur des appareils embarqués.</p><br><p>Avec des travaux publiés lors de <strong>conférences IEEE</strong> et une expertise en Python, PyTorch, TensorFlow et systèmes embarqués, je fais le pont entre la recherche en apprentissage profond et les applications robotiques réelles.</p>',
-        hl_ai:"IA & Robotique", hl_ai_d:"Vision par ordinateur, CNN, YOLO, IA embarquée",
-        hl_drone:"Technologie drone", hl_drone_d:"Imagerie UAV, profondeur stéréo, systèmes autonomes",
-        hl_research:"Recherche", hl_research_d:"2 articles IEEE, stage ISRO, UTP",
-        hl_bc_d:"SSI, Smart Contracts, Solidity, IPFS",
-        label_exp:"Où j'ai travaillé", title_exp:"Expérience",
-        exp1_role:"Chercheur en IA & Drones", exp1_desc:"Département de génie électrique et électronique. Mise en œuvre d'une classification automatisée pour la surveillance de l'état des façades vitrées à l'aide de l'imagerie par drone et du deep learning.",
-        exp2_role:"Stagiaire de recherche", exp2_desc:"Centre de R&D pour l'innovation en IA et IoT. Développement de modèles CNN légers (MBConvNet-CNS) et leur application à la classification des maladies foliaires.",
-        exp3_role:"Stagiaire de recherche", exp3_desc:"Mise en œuvre de caméras stéréo/de profondeur pour véhicules aériens sans pilote (UAV) au sein du Département spatial du gouvernement indien.",
-        label_edu:"Parcours académique", title_edu:"Formation",
-        edu1_deg:"M.Sc. en IT, Digitalisation & Durabilité", edu2_deg:"B.Tech en Informatique (IA & Robotique)", edu3_deg:"Terminale — CBSE (équivalent Bac)", edu4_deg:"Seconde — CBSE (équivalent Brevet)",
-        label_pub:"Production scientifique", title_pub:"Publications",
-        pub1_title:"Imagerie par drone et classification automatisée pour la surveillance de l'état des façades vitrées",
-        pub1_det:"2025 IEEE International Conference on Automatic Control and Intelligent Systems, pp. 333-338",
-        pub2_title:"MBConvNet-CNS : une architecture CNN légère pour la détection des maladies des plantes",
-        pub2_det:"2024 12th International Conference on Intelligent Systems and Embedded Design, pp. 1-6",
-        label_proj:"Ce que j'ai construit", title_proj:"Projets",
-        p1_name:"Baltic-ECA-Net : réseau d'attention ultra-léger pour la détection d'efflorescences algales",
-        p1_desc:"Détection en temps réel des efflorescences algales à l'aide de l'Efficient Channel Attention et des Ghost Modules — optimisé pour les appareils embarqués.",
-        p2_name:"DiveSSI : SSI basée sur la blockchain pour les certifications de plongée",
-        p2_desc:"Révolutionner les certifications de plongée avec l'identité auto-souveraine, les Smart Contracts et le stockage décentralisé IPFS.",
-        p3_name:"Assistant d'apprentissage des langues basé sur le ML",
-        p3_desc:"Personnalise les parcours d'apprentissage en fonction du comportement de l'utilisateur, en s'adaptant à la courbe d'apprentissage unique de chacun.",
-        p4_name:"Système de détection et suivi de drones",
-        p4_desc:"Détection et suivi de drones en temps réel avec YOLOv5 et suivi servo alimenté par Arduino.",
-        p5_name:"Robot téléopéré pour environnements dangereux",
-        p5_desc:"Système robotique télécommandé pour zones dangereuses ou inaccessibles via communication Bluetooth et moteurs pas à pas.",
-        p6_name:"Système intelligent de gestion énergétique domestique",
-        p6_desc:"Optimisation énergétique IoT avec surveillance en temps réel, algorithmes de réduction des coûts et intégration évolutive de capteurs.",
-        p7_name:"Système de parking automatique Arduino",
-        p7_desc:"Système de stationnement automatisé avec détection de proximité, allocation de places et barrières à servo.",
-        p8_name:"Robot nettoyeur de sol intelligent",
-        p8_desc:"Rover autonome de nettoyage avec aspiration et lavage, évitement d'obstacles par capteurs ultrasoniques.",
-        view_gh:"Voir sur GitHub", view_proto:"Voir le prototype",
-        label_skills:"Stack technique", title_skills:"Compétences & Outils",
-        sk_lang:"Langages", sk_cloud:"Cloud & DevOps", sk_hw:"Matériel & IoT", sk_domains:"Domaines", sk_spoken:"Langues (parlées)",
-        label_cert:"Certifications vérifiées", title_cert:"Certifications",
-        label_contact:"Restons en contact", title_contact:"Me contacter",
-        c_email:"E-mail", c_phone_ch:"Téléphone (CH)", c_phone_in:"Téléphone (IN)", location:"Zoug, Suisse",
-        footer:"© 2026 Nilabh Pandey. Conçu avec passion."
-    },
-    pt: {
-        nav_about:"Sobre", nav_exp:"Experiência", nav_edu:"Formação", nav_pub:"Publicações", nav_proj:"Projetos", nav_skills:"Habilidades", nav_contact:"Contato",
-        hero_tag:"Disponível para oportunidades",
-        hero_title:'Construindo o<br><span class="gradient-text">futuro com IA</span><br>& Robótica',
-        hero_desc:"Pesquisador de IA & mestrando na HSLU, Suíça — unindo visão computacional, imagens por drone e aprendizado de máquina com inovação real. Do ISRO às publicações IEEE, transformando pesquisa em impacto.",
-        hero_cta:"Entre em contato", hero_cta2:"Ver projetos",
-        stat_pub:"Publicações IEEE", stat_proj:"Projetos técnicos", stat_roles:"Cargos de pesquisa",
-        badge_loc:"Suíça",
-        label_about:"Quem sou eu", title_about:"Sobre mim",
-        about_text:'<p>Sou mestrando em <strong>TI, Digitalização & Sustentabilidade</strong> na Universidade de Ciências Aplicadas e Artes de Lucerna (HSLU), Suíça. Com experiência em pesquisa em <strong>IA, Robótica e Visão Computacional</strong>, trago uma combinação única de rigor acadêmico e engenharia prática.</p><br><p>Minha trajetória me levou desde a construção de <strong>sistemas de imagem por drone no ISRO</strong> (agência espacial da Índia) até o desenvolvimento de <strong>monitoramento automatizado de fachadas de vidro</strong> na Universiti Teknologi PETRONAS, na Malásia. Sou apaixonado por implementar modelos de IA leves e eficientes em dispositivos de borda.</p><br><p>Com trabalhos publicados em <strong>conferências IEEE</strong> e expertise em Python, PyTorch, TensorFlow e sistemas embarcados, faço a ponte entre pesquisa em deep learning e aplicações robóticas reais.</p>',
-        hl_ai:"IA & Robótica", hl_ai_d:"Visão computacional, CNNs, YOLO, IA de borda",
-        hl_drone:"Tecnologia de drones", hl_drone_d:"Imagem UAV, profundidade estéreo, sistemas autônomos",
-        hl_research:"Pesquisa", hl_research_d:"2 artigos IEEE, estágio ISRO, UTP",
-        hl_bc_d:"SSI, Smart Contracts, Solidity, IPFS",
-        label_exp:"Onde trabalhei", title_exp:"Experiência",
-        exp1_role:"Pesquisador de IA & Drones", exp1_desc:"Departamento de Engenharia Elétrica e Eletrônica. Implementação de classificação automatizada para monitoramento de fachadas de vidro usando imagens por drone e deep learning.",
-        exp2_role:"Estagiário de pesquisa", exp2_desc:"Centro de P&D para inovação em IA e IoT. Desenvolvimento de modelos CNN leves (MBConvNet-CNS) e sua aplicação na classificação de doenças foliares.",
-        exp3_role:"Estagiário de pesquisa", exp3_desc:"Implementação de câmeras estéreo/de profundidade para veículos aéreos não tripulados (VANTs) no Departamento Espacial do governo da Índia.",
-        label_edu:"Trajetória acadêmica", title_edu:"Formação",
-        edu1_deg:"M.Sc. em TI, Digitalização & Sustentabilidade", edu2_deg:"B.Tech em Ciência da Computação (IA & Robótica)", edu3_deg:"12ª série — CBSE (equivalente ao Ensino Médio)", edu4_deg:"10ª série — CBSE (equivalente ao Ensino Fundamental)",
-        label_pub:"Produção científica", title_pub:"Publicações",
-        pub1_title:"Imagem por drone e classificação automatizada para monitoramento de fachadas de vidro",
-        pub1_det:"2025 IEEE International Conference on Automatic Control and Intelligent Systems, pp. 333-338",
-        pub2_title:"MBConvNet-CNS: uma arquitetura CNN leve para detecção de doenças em plantas",
-        pub2_det:"2024 12th International Conference on Intelligent Systems and Embedded Design, pp. 1-6",
-        label_proj:"O que construí", title_proj:"Projetos",
-        p1_name:"Baltic-ECA-Net: rede de atenção ultraleve para detecção de floração de algas",
-        p1_desc:"Detecção em tempo real de floração de algas usando Efficient Channel Attention e Ghost Modules — otimizado para dispositivos de borda.",
-        p2_name:"DiveSSI: SSI baseada em blockchain para certificações de mergulho",
-        p2_desc:"Revolucionando certificações de mergulho com identidade auto-soberana, Smart Contracts e armazenamento descentralizado no IPFS.",
-        p3_name:"Assistente de aprendizado de idiomas baseado em ML",
-        p3_desc:"Personaliza caminhos de aprendizado com base no comportamento do usuário, adaptando-se à curva de aprendizado individual.",
-        p4_name:"Sistema de detecção e rastreamento de drones",
-        p4_desc:"Detecção e rastreamento de drones em tempo real usando YOLOv5 com rastreamento servo alimentado por Arduino.",
-        p5_name:"Robô teleoperado para ambientes perigosos",
-        p5_desc:"Sistema robótico de controle remoto para áreas perigosas ou inacessíveis usando comunicação Bluetooth e motores de passo.",
-        p6_name:"Sistema inteligente de gerenciamento de energia residencial",
-        p6_desc:"Otimização energética IoT com monitoramento em tempo real, algoritmos de redução de custos e integração escalável de sensores.",
-        p7_name:"Sistema de estacionamento automático com Arduino",
-        p7_desc:"Sistema automatizado com detecção por proximidade, alocação de vagas e cancelas controladas por servo.",
-        p8_name:"Robô inteligente de limpeza de pisos",
-        p8_desc:"Rover autônomo de limpeza com aspiração e esfregão, desvio de obstáculos por sensores ultrassônicos.",
-        view_gh:"Ver no GitHub", view_proto:"Ver protótipo",
-        label_skills:"Stack técnico", title_skills:"Habilidades & Ferramentas",
-        sk_lang:"Linguagens", sk_cloud:"Cloud & DevOps", sk_hw:"Hardware & IoT", sk_domains:"Domínios", sk_spoken:"Idiomas (falados)",
-        label_cert:"Credenciais verificadas", title_cert:"Certificações",
-        label_contact:"Vamos conversar", title_contact:"Entre em contato",
-        c_email:"E-mail", c_phone_ch:"Telefone (CH)", c_phone_in:"Telefone (IN)", location:"Zug, Suíça",
-        footer:"© 2026 Nilabh Pandey. Criado com propósito."
-    },
-    es: {
-        nav_about:"Sobre mí", nav_exp:"Experiencia", nav_edu:"Educación", nav_pub:"Publicaciones", nav_proj:"Proyectos", nav_skills:"Habilidades", nav_contact:"Contacto",
-        hero_tag:"Disponible para oportunidades",
-        hero_title:'Construyendo el<br><span class="gradient-text">futuro con IA</span><br>& Robótica',
-        hero_desc:"Investigador de IA & estudiante de máster en HSLU, Suiza — combinando visión por computadora, imágenes con drones y aprendizaje automático con innovación real. Del ISRO a publicaciones IEEE, convirtiendo investigación en impacto.",
-        hero_cta:"Contáctame", hero_cta2:"Ver proyectos",
-        stat_pub:"Publicaciones IEEE", stat_proj:"Proyectos técnicos", stat_roles:"Puestos de investigación",
-        badge_loc:"Suiza",
-        label_about:"Quién soy", title_about:"Sobre mí",
-        about_text:'<p>Soy estudiante de máster en <strong>TI, Digitalización y Sostenibilidad</strong> en la Universidad de Ciencias Aplicadas de Lucerna (HSLU), Suiza. Con experiencia investigadora en <strong>IA, Robótica y Visión por Computadora</strong>, aporto una combinación única de rigor académico e ingeniería práctica.</p><br><p>Mi trayectoria me ha llevado desde la construcción de <strong>sistemas de imagen con drones en ISRO</strong> (la agencia espacial india) hasta el desarrollo de <strong>monitoreo automatizado de fachadas de vidrio</strong> en la Universiti Teknologi PETRONAS en Malasia. Me apasiona desplegar modelos de IA ligeros y eficientes en dispositivos de borde.</p><br><p>Con trabajo publicado en <strong>conferencias IEEE</strong> y experiencia en Python, PyTorch, TensorFlow y sistemas embebidos, conecto la investigación en aprendizaje profundo con aplicaciones robóticas reales.</p>',
-        hl_ai:"IA & Robótica", hl_ai_d:"Visión por computadora, CNNs, YOLO, IA de borde",
-        hl_drone:"Tecnología de drones", hl_drone_d:"Imágenes UAV, profundidad estéreo, sistemas autónomos",
-        hl_research:"Investigación", hl_research_d:"2 artículos IEEE, pasantía ISRO, UTP",
-        hl_bc_d:"SSI, Smart Contracts, Solidity, IPFS",
-        label_exp:"Dónde he trabajado", title_exp:"Experiencia",
-        exp1_role:"Investigador de IA y drones", exp1_desc:"Departamento de Ingeniería Eléctrica y Electrónica. Implementación de clasificación automatizada para el monitoreo del estado de fachadas de vidrio mediante imágenes de drones y aprendizaje profundo.",
-        exp2_role:"Pasante de investigación", exp2_desc:"Centro de I+D para innovación en IA e IoT. Desarrollo de modelos CNN ligeros (MBConvNet-CNS) y su aplicación en la clasificación de enfermedades foliares.",
-        exp3_role:"Pasante de investigación", exp3_desc:"Implementación de cámaras estéreo/de profundidad para vehículos aéreos no tripulados (UAV) en el Departamento Espacial del gobierno de India.",
-        label_edu:"Trayectoria académica", title_edu:"Educación",
-        edu1_deg:"M.Sc. en TI, Digitalización y Sostenibilidad", edu2_deg:"B.Tech en Ciencias de la Computación (IA y Robótica)", edu3_deg:"12.º grado — CBSE (equivalente a Bachillerato)", edu4_deg:"10.º grado — CBSE (equivalente a ESO)",
-        label_pub:"Producción científica", title_pub:"Publicaciones",
-        pub1_title:"Imágenes con drones y clasificación automatizada para el monitoreo de fachadas de vidrio",
-        pub1_det:"2025 IEEE International Conference on Automatic Control and Intelligent Systems, pp. 333-338",
-        pub2_title:"MBConvNet-CNS: una arquitectura CNN ligera para la detección de enfermedades en plantas",
-        pub2_det:"2024 12th International Conference on Intelligent Systems and Embedded Design, pp. 1-6",
-        label_proj:"Lo que he construido", title_proj:"Proyectos",
-        p1_name:"Baltic-ECA-Net: red de atención ultraligera para detección de floraciones de algas",
-        p1_desc:"Detección en tiempo real de floraciones de algas usando Efficient Channel Attention y Ghost Modules — optimizado para dispositivos de borde.",
-        p2_name:"DiveSSI: SSI con blockchain para certificaciones de buceo",
-        p2_desc:"Revolucionando las certificaciones de buceo con identidad auto-soberana, Smart Contracts y almacenamiento descentralizado en IPFS.",
-        p3_name:"Asistente de aprendizaje de idiomas basado en ML",
-        p3_desc:"Personaliza rutas de aprendizaje según el comportamiento del usuario, adaptándose a la curva de aprendizaje única de cada persona.",
-        p4_name:"Sistema de detección y seguimiento de drones",
-        p4_desc:"Detección y seguimiento de drones en tiempo real con YOLOv5 y seguimiento servo con Arduino.",
-        p5_name:"Robot teleoperado para entornos peligrosos",
-        p5_desc:"Sistema robótico de control remoto para áreas peligrosas o inaccesibles mediante comunicación Bluetooth y motores paso a paso.",
-        p6_name:"Sistema inteligente de gestión energética del hogar",
-        p6_desc:"Optimización energética IoT con monitoreo en tiempo real, algoritmos de reducción de costes e integración escalable de sensores.",
-        p7_name:"Sistema de aparcamiento automático con Arduino",
-        p7_desc:"Sistema automatizado con detección de proximidad, asignación de plazas y barreras controladas por servo.",
-        p8_name:"Robot inteligente de limpieza de suelos",
-        p8_desc:"Rover autónomo de limpieza con aspiración y fregado, evasión de obstáculos mediante sensores ultrasónicos.",
-        view_gh:"Ver en GitHub", view_proto:"Ver prototipo",
-        label_skills:"Stack técnico", title_skills:"Habilidades y herramientas",
-        sk_lang:"Lenguajes", sk_cloud:"Cloud y DevOps", sk_hw:"Hardware e IoT", sk_domains:"Dominios", sk_spoken:"Idiomas (hablados)",
-        label_cert:"Credenciales verificadas", title_cert:"Certificaciones",
-        label_contact:"Conectemos", title_contact:"Contacto",
-        c_email:"Correo", c_phone_ch:"Teléfono (CH)", c_phone_in:"Teléfono (IN)", location:"Zug, Suiza",
-        footer:"© 2026 Nilabh Pandey. Creado con propósito."
-    },
-    hi: {
-        nav_about:"परिचय", nav_exp:"अनुभव", nav_edu:"शिक्षा", nav_pub:"प्रकाशन", nav_proj:"प्रोजेक्ट", nav_skills:"कौशल", nav_contact:"संपर्क",
-        hero_tag:"अवसरों के लिए उपलब्ध",
-        hero_title:'<span class="gradient-text">AI और रोबोटिक्स</span><br>से भविष्य<br>का निर्माण',
-        hero_desc:"HSLU, स्विट्ज़रलैंड में AI शोधकर्ता और मास्टर छात्र — कंप्यूटर विज़न, ड्रोन इमेजिंग और मशीन लर्निंग को वास्तविक नवाचार के साथ जोड़ते हुए। ISRO से IEEE प्रकाशनों तक, शोध को प्रभाव में बदलना।",
-        hero_cta:"संपर्क करें", hero_cta2:"प्रोजेक्ट देखें",
-        stat_pub:"IEEE प्रकाशन", stat_proj:"तकनीकी प्रोजेक्ट", stat_roles:"शोध भूमिकाएँ",
-        badge_loc:"स्विट्ज़रलैंड",
-        label_about:"मैं कौन हूँ", title_about:"मेरे बारे में",
-        about_text:'<p>मैं <strong>IT, डिजिटलाइज़ेशन और सस्टेनेबिलिटी</strong> में मास्टर छात्र हूँ, ल्यूसर्न यूनिवर्सिटी ऑफ अप्लाइड साइंसेज (HSLU), स्विट्ज़रलैंड में। <strong>AI, रोबोटिक्स और कंप्यूटर विज़न</strong> में शोध अनुभव के साथ, मैं शैक्षणिक कठोरता और व्यावहारिक इंजीनियरिंग का अनूठा संयोजन लाता हूँ।</p><br><p>मेरी यात्रा मुझे <strong>ISRO में ड्रोन-आधारित इमेजिंग सिस्टम</strong> (भारत की अंतरिक्ष एजेंसी) बनाने से लेकर मलेशिया की Universiti Teknologi PETRONAS में <strong>स्वचालित ग्लास फ़ेसाड मॉनिटरिंग</strong> विकसित करने तक ले गई है। मुझे एज डिवाइसों पर हल्के, कुशल AI मॉडल तैनात करने का जुनून है।</p><br><p><strong>IEEE सम्मेलनों</strong> में प्रकाशित कार्य और Python, PyTorch, TensorFlow और एम्बेडेड सिस्टम में विशेषज्ञता के साथ, मैं डीप लर्निंग शोध और वास्तविक रोबोटिक अनुप्रयोगों के बीच का सेतु हूँ।</p>',
-        hl_ai:"AI और रोबोटिक्स", hl_ai_d:"कंप्यूटर विज़न, CNN, YOLO, एज AI",
-        hl_drone:"ड्रोन तकनीक", hl_drone_d:"UAV इमेजिंग, स्टीरियो डेप्थ, स्वायत्त प्रणालियाँ",
-        hl_research:"शोध", hl_research_d:"2 IEEE पेपर, ISRO इंटर्नशिप, UTP",
-        hl_bc_d:"SSI, स्मार्ट कॉन्ट्रैक्ट, Solidity, IPFS",
-        label_exp:"मैंने कहाँ काम किया", title_exp:"अनुभव",
-        exp1_role:"AI और ड्रोन शोधकर्ता", exp1_desc:"इलेक्ट्रिकल और इलेक्ट्रॉनिक्स इंजीनियरिंग विभाग। ड्रोन-आधारित इमेजिंग और डीप लर्निंग का उपयोग करके ग्लास फ़ेसाड की स्थिति निगरानी के लिए स्वचालित वर्गीकरण का कार्यान्वयन।",
-        exp2_role:"शोध प्रशिक्षु", exp2_desc:"AI और IoT नवाचार के लिए R&D सुविधा। हल्के CNN मॉडल (MBConvNet-CNS) का विकास और पौधों की पत्ती रोग वर्गीकरण में उनका अनुप्रयोग।",
-        exp3_role:"शोध प्रशिक्षु", exp3_desc:"भारत सरकार के अंतरिक्ष विभाग के अंतर्गत मानव रहित हवाई वाहनों (UAV) के लिए स्टीरियो/डेप्थ कैमरों का कार्यान्वयन।",
-        label_edu:"शैक्षणिक यात्रा", title_edu:"शिक्षा",
-        edu1_deg:"M.Sc. IT, डिजिटलाइज़ेशन और सस्टेनेबिलिटी में", edu2_deg:"B.Tech कंप्यूटर साइंस (AI और रोबोटिक्स) में", edu3_deg:"कक्षा 12वीं — CBSE इंटरमीडिएट", edu4_deg:"कक्षा 10वीं — CBSE हाई स्कूल",
-        label_pub:"शोध प्रकाशन", title_pub:"प्रकाशन",
-        pub1_title:"ग्लास फ़ेसाड स्थिति निगरानी के लिए ड्रोन-आधारित इमेजिंग और स्वचालित वर्गीकरण",
-        pub1_det:"2025 IEEE International Conference on Automatic Control and Intelligent Systems, पृ. 333-338",
-        pub2_title:"MBConvNet-CNS: पौधों की बीमारी पहचान के लिए एक हल्की CNN आर्किटेक्चर",
-        pub2_det:"2024 12th International Conference on Intelligent Systems and Embedded Design, पृ. 1-6",
-        label_proj:"मैंने क्या बनाया", title_proj:"प्रोजेक्ट",
-        p1_name:"Baltic-ECA-Net: शैवाल प्रस्फुटन पहचान के लिए अल्ट्रा-लाइटवेट अटेंशन नेटवर्क",
-        p1_desc:"Efficient Channel Attention और Ghost Modules का उपयोग करके रियल-टाइम शैवाल प्रस्फुटन पहचान — एज डिवाइसों के लिए अनुकूलित।",
-        p2_name:"DiveSSI: डाइविंग प्रमाणपत्रों के लिए ब्लॉकचेन-संचालित SSI",
-        p2_desc:"सेल्फ-सॉवरेन आइडेंटिटी, स्मार्ट कॉन्ट्रैक्ट और IPFS पर विकेंद्रीकृत स्टोरेज के साथ डाइविंग प्रमाणन में क्रांति।",
-        p3_name:"ML-आधारित भाषा सीखने का सहायक",
-        p3_desc:"उपयोगकर्ता व्यवहार के आधार पर सीखने के रास्ते को व्यक्तिगत बनाता है, प्रत्येक शिक्षार्थी की अनूठी लर्निंग कर्व के अनुसार ढलता है।",
-        p4_name:"ड्रोन पहचान और ट्रैकिंग प्रणाली",
-        p4_desc:"YOLOv5 डीप लर्निंग और Arduino-संचालित सर्वो ट्रैकिंग का उपयोग करके रियल-टाइम ड्रोन पहचान और ट्रैकिंग।",
-        p5_name:"खतरनाक वातावरण के लिए टेलीऑपरेटेड रोबोट",
-        p5_desc:"ब्लूटूथ संचार और स्टेपर मोटर्स का उपयोग करके खतरनाक या दुर्गम क्षेत्रों के लिए रिमोट-कंट्रोल्ड रोबोटिक प्रणाली।",
-        p6_name:"स्मार्ट होम ऊर्जा प्रबंधन प्रणाली",
-        p6_desc:"रियल-टाइम मॉनिटरिंग, लागत कमी एल्गोरिदम और स्केलेबल सेंसर एकीकरण के साथ IoT-संचालित ऊर्जा अनुकूलन।",
-        p7_name:"ऑटोमैटिक Arduino कार पार्किंग सिस्टम",
-        p7_desc:"निकटता-आधारित वाहन पहचान, स्लॉट आवंटन और सर्वो-नियंत्रित बैरियर गेट के साथ स्वचालित पार्किंग प्रणाली।",
-        p8_name:"स्मार्ट फ़्लोर क्लीनिंग रोबोट",
-        p8_desc:"वैक्यूमिंग और मॉपिंग क्षमता वाला स्वायत्त फ़्लोर-क्लीनिंग रोवर, अल्ट्रासोनिक सेंसर द्वारा बाधा निवारण।",
-        view_gh:"GitHub पर देखें", view_proto:"प्रोटोटाइप देखें",
-        label_skills:"तकनीकी स्टैक", title_skills:"कौशल और उपकरण",
-        sk_lang:"प्रोग्रामिंग भाषाएँ", sk_cloud:"क्लाउड और DevOps", sk_hw:"हार्डवेयर और IoT", sk_domains:"विषय क्षेत्र", sk_spoken:"भाषाएँ (बोली जाने वाली)",
-        label_cert:"सत्यापित प्रमाणपत्र", title_cert:"प्रमाणपत्र",
-        label_contact:"जुड़ें", title_contact:"संपर्क करें",
-        c_email:"ईमेल", c_phone_ch:"फ़ोन (CH)", c_phone_in:"फ़ोन (IN)", location:"ज़ुग, स्विट्ज़रलैंड",
-        footer:"© 2026 निलाभ पांडेय। उद्देश्य के साथ निर्मित।"
-    }
-    };
+const FLAGS={en:'🇬🇧',de:'🇩🇪',fr:'🇫🇷',pt:'🇧🇷',es:'🇪🇸',hi:'🇮🇳'};
 
-    // ═══════════════════════════════════════════
-    // i18n ENGINE
-    // ═══════════════════════════════════════════
-    function setLang(lang) {
-        if (!T[lang]) return;
-        document.documentElement.setAttribute('data-lang', lang);
-        document.documentElement.setAttribute('lang', lang);
-        localStorage.setItem('lang', lang);
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            if (T[lang][key] !== undefined) el.textContent = T[lang][key];
-        });
-        document.querySelectorAll('[data-i18n-html]').forEach(el => {
-            const key = el.getAttribute('data-i18n-html');
-            if (T[lang][key] !== undefined) el.innerHTML = T[lang][key];
-        });
-        document.querySelectorAll('.lang-select').forEach(s => s.value = lang);
-    }
+function setLang(lang){
+    if(!T[lang])return;
+    document.documentElement.setAttribute('data-lang',lang);
+    document.documentElement.setAttribute('lang',lang);
+    localStorage.setItem('lang',lang);
+    document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(T[lang][k]!==undefined)el.textContent=T[lang][k]});
+    document.querySelectorAll('[data-i18n-html]').forEach(el=>{const k=el.getAttribute('data-i18n-html');if(T[lang][k]!==undefined)el.innerHTML=T[lang][k]});
+    // Update all flag buttons
+    document.querySelectorAll('.lang-btn').forEach(b=>b.innerHTML=FLAGS[lang]+' <span class="arrow">▼</span>');
+    document.querySelectorAll('.lang-option').forEach(o=>{o.classList.toggle('active',o.getAttribute('data-lang')===lang)});
+}
 
-    // ═══════════════════════════════════════════
-    // CURSOR
-    // ═══════════════════════════════════════════
-    const dot=document.getElementById('cursorDot'),ring=document.getElementById('cursorRing'),glow=document.getElementById('cursorGlow');
-    let mouseX=0,mouseY=0,ringX=0,ringY=0,glowX=0,glowY=0;
-    document.addEventListener('mousemove',e=>{mouseX=e.clientX;mouseY=e.clientY;dot.style.left=mouseX+'px';dot.style.top=mouseY+'px'});
-    function animateCursor(){ringX+=(mouseX-ringX)*.15;ringY+=(mouseY-ringY)*.15;glowX+=(mouseX-glowX)*.08;glowY+=(mouseY-glowY)*.08;ring.style.left=ringX+'px';ring.style.top=ringY+'px';glow.style.left=glowX+'px';glow.style.top=glowY+'px';requestAnimationFrame(animateCursor)}animateCursor();
-    document.querySelectorAll('a,button,select,.project-card,.highlight-card,.skill-pill,.cert-card,.edu-card,.contact-card,.timeline-item,.pub-card').forEach(el=>{el.addEventListener('mouseenter',()=>{dot.classList.add('hover');ring.classList.add('hover')});el.addEventListener('mouseleave',()=>{dot.classList.remove('hover');ring.classList.remove('hover')})});
+// ── Flag dropdown logic ──
+document.querySelectorAll('.lang-switcher').forEach(switcher=>{
+    const btn=switcher.querySelector('.lang-btn');
+    const dd=switcher.querySelector('.lang-dropdown');
+    btn.addEventListener('click',e=>{e.stopPropagation();document.querySelectorAll('.lang-dropdown').forEach(d=>d!==dd&&d.classList.remove('open'));dd.classList.toggle('open')});
+    dd.querySelectorAll('.lang-option').forEach(opt=>{
+        opt.addEventListener('click',()=>{setLang(opt.getAttribute('data-lang'));dd.classList.remove('open')});
+    });
+});
+document.addEventListener('click',()=>document.querySelectorAll('.lang-dropdown').forEach(d=>d.classList.remove('open')));
 
-    // ═══════════════════════════════════════════
-    // THEME
-    // ═══════════════════════════════════════════
-    function toggleTheme(){const h=document.documentElement,n=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem('theme',n)}
-    document.querySelectorAll('.theme-toggle').forEach(b=>b.addEventListener('click',toggleTheme));
-    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+// ── Cursor ──
+const dot=document.getElementById('cursorDot'),ring=document.getElementById('cursorRing'),glow=document.getElementById('cursorGlow');
+let mouseX=0,mouseY=0,ringX=0,ringY=0,glowX=0,glowY=0;
+document.addEventListener('mousemove',e=>{mouseX=e.clientX;mouseY=e.clientY;dot.style.left=mouseX+'px';dot.style.top=mouseY+'px'});
+function animateCursor(){ringX+=(mouseX-ringX)*.15;ringY+=(mouseY-ringY)*.15;glowX+=(mouseX-glowX)*.08;glowY+=(mouseY-glowY)*.08;ring.style.left=ringX+'px';ring.style.top=ringY+'px';glow.style.left=glowX+'px';glow.style.top=glowY+'px';requestAnimationFrame(animateCursor)}animateCursor();
+document.querySelectorAll('a,button,.project-card,.highlight-card,.skill-pill,.cert-card,.edu-card,.contact-card,.timeline-item,.pub-card,.lang-option').forEach(el=>{el.addEventListener('mouseenter',()=>{dot.classList.add('hover');ring.classList.add('hover')});el.addEventListener('mouseleave',()=>{dot.classList.remove('hover');ring.classList.remove('hover')})});
 
-    // ═══════════════════════════════════════════
-    // LANGUAGE INIT
-    // ═══════════════════════════════════════════
-    document.querySelectorAll('.lang-select').forEach(s=>s.addEventListener('change',e=>setLang(e.target.value)));
-    const savedLang=localStorage.getItem('lang');
-    if(savedLang&&T[savedLang]){setLang(savedLang)}
+// ── Theme ──
+function toggleTheme(){const h=document.documentElement,n=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem('theme',n)}
+document.querySelectorAll('.theme-toggle').forEach(b=>b.addEventListener('click',toggleTheme));
+const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
 
-    // Show mobile lang selector
-    const mls=document.getElementById('langSelectMobile');
-    if(window.innerWidth<=768&&mls)mls.style.display='block';
-    window.addEventListener('resize',()=>{if(mls)mls.style.display=window.innerWidth<=768?'block':'none'});
+// ── Restore saved language ──
+const savedLang=localStorage.getItem('lang');if(savedLang&&T[savedLang])setLang(savedLang);
 
-    // ═══════════════════════════════════════════
-    // MOBILE MENU
-    // ═══════════════════════════════════════════
-    document.getElementById('hamburgerBtn').addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('open'));
-    document.getElementById('mobileClose').addEventListener('click',closeMobile);
-    function closeMobile(){document.getElementById('mobileMenu').classList.remove('open')}
+// ── Mobile menu ──
+document.getElementById('hamburgerBtn').addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('open'));
+document.getElementById('mobileClose').addEventListener('click',closeMobile);
+function closeMobile(){document.getElementById('mobileMenu').classList.remove('open')}
 
-    // ═══════════════════════════════════════════
-    // SCROLL REVEAL
-    // ═══════════════════════════════════════════
-    const observer=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);observer.unobserve(e.target)}})},{threshold:.1});
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+// ── Scroll reveal ──
+const observer=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);observer.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
-    // ═══════════════════════════════════════════
-    // PARTICLES
-    // ═══════════════════════════════════════════
-    const canvas=document.getElementById('particles-canvas'),ctx=canvas.getContext('2d');let particles=[];
-    function resizeCanvas(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}resizeCanvas();window.addEventListener('resize',resizeCanvas);
-    class Particle{constructor(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.size=Math.random()*1.5+.5;this.speedX=(Math.random()-.5)*.4;this.speedY=(Math.random()-.5)*.4;this.opacity=Math.random()*.4+.1;this.color=Math.random()>.5?'255,107,43':'139,92,246'}update(){this.x+=this.speedX;this.y+=this.speedY;if(this.x<0||this.x>canvas.width)this.speedX*=-1;if(this.y<0||this.y>canvas.height)this.speedY*=-1}draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fillStyle=`rgba(${this.color},${this.opacity})`;ctx.fill()}}
-    function initParticles(){particles=[];const c=Math.min(60,Math.floor(canvas.width*canvas.height/20000));for(let i=0;i<c;i++)particles.push(new Particle())}initParticles();
-    function drawLines(){for(let i=0;i<particles.length;i++)for(let j=i+1;j<particles.length;j++){const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<150){ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle=`rgba(139,92,246,${.1*(1-d/150)})`;ctx.lineWidth=.5;ctx.stroke()}}}
-    function animateParticles(){ctx.clearRect(0,0,canvas.width,canvas.height);particles.forEach(p=>{p.update();p.draw()});drawLines();requestAnimationFrame(animateParticles)}animateParticles();
+// ── Particles ──
+const canvas=document.getElementById('particles-canvas'),ctx=canvas.getContext('2d');let particles=[];
+function resizeCanvas(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}resizeCanvas();window.addEventListener('resize',resizeCanvas);
+class Particle{constructor(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.size=Math.random()*1.5+.5;this.speedX=(Math.random()-.5)*.4;this.speedY=(Math.random()-.5)*.4;this.opacity=Math.random()*.4+.1;this.color=Math.random()>.5?'255,107,43':'139,92,246'}update(){this.x+=this.speedX;this.y+=this.speedY;if(this.x<0||this.x>canvas.width)this.speedX*=-1;if(this.y<0||this.y>canvas.height)this.speedY*=-1}draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fillStyle=`rgba(${this.color},${this.opacity})`;ctx.fill()}}
+function initParticles(){particles=[];const c=Math.min(60,Math.floor(canvas.width*canvas.height/20000));for(let i=0;i<c;i++)particles.push(new Particle())}initParticles();
+function drawLines(){for(let i=0;i<particles.length;i++)for(let j=i+1;j<particles.length;j++){const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<150){ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle=`rgba(139,92,246,${.1*(1-d/150)})`;ctx.lineWidth=.5;ctx.stroke()}}}
+function animateParticles(){ctx.clearRect(0,0,canvas.width,canvas.height);particles.forEach(p=>{p.update();p.draw()});drawLines();requestAnimationFrame(animateParticles)}animateParticles();
 
-    // ═══════════════════════════════════════════
-    // NAV ACTIVE
-    // ═══════════════════════════════════════════
-    const sections=document.querySelectorAll('section[id]'),navLinks=document.querySelectorAll('.nav-links a[href^="#"]');
-    window.addEventListener('scroll',()=>{let c='';sections.forEach(s=>{if(scrollY>=s.offsetTop-100)c=s.getAttribute('id')});navLinks.forEach(l=>{l.style.color=l.getAttribute('href')==='#'+c?'var(--accent)':''})});
-    </script>
+// ── Nav active state ──
+const sections=document.querySelectorAll('section[id]'),navLinks=document.querySelectorAll('.nav-links a[href^="#"]');
+window.addEventListener('scroll',()=>{let c='';sections.forEach(s=>{if(scrollY>=s.offsetTop-100)c=s.getAttribute('id')});navLinks.forEach(l=>{l.style.color=l.getAttribute('href')==='#'+c?'var(--accent)':''})});
+</script>
 </body>
 </html>
