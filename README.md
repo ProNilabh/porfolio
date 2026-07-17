@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing AI research, robotics projects, IEEE publications, and professional experience — designed as a "mission control" interface inspired by the drone imaging and object-detection work it presents.
 
-**Live:** [https://nilabhpandy.com](https://nilabhpandy.com)
+**Live:** [https://nilabhpandey.com](https://nilabhpandey.com)
 
 ## Features
 
