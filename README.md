@@ -1,17 +1,21 @@
 # Nilabh Pandey — Portfolio
 
-Personal portfolio website showcasing AI research, robotics projects, IEEE publications, and professional experience.
+Personal portfolio website showcasing AI research, robotics projects, IEEE publications, and professional experience — designed as a "mission control" interface inspired by the drone imaging and object-detection work it presents.
 
 **Live:** [https://nilabhpandy.com](https://nilabhpandy.com)
 
 ## Features
 
-- **Multi-language support** — English, German, French, Portuguese, Spanish, and Hindi with instant switching and persistent selection
-- **Dark / Light mode** — Dark by default, toggle saved across sessions
-- **Interactive cursor** — Custom dot + ring cursor with glow trail and hover effects
-- **Particle network** — Animated orange & purple particle background with connecting lines
-- **Scroll animations** — Section reveal on scroll with staggered timing
-- **Fully responsive** — Optimized for desktop, tablet, and mobile with a dedicated mobile menu
+- **Multi-language support** — English, German, French, Portuguese, Spanish, and Hindi with instant switching, translated page titles, and persistent selection (works on mobile too)
+- **Dark / Light mode** — Dark by default, toggle saved across sessions, with a theme-aware starfield and browser theme-color
+- **Detection-frame hero** — The name renders inside an animated YOLO-style bounding box with corner brackets and a confidence label, plus a decode/scramble intro and a typewriter role rotator
+- **Starfield background** — Orange & purple constellation with connecting lines, mouse parallax, twinkling, and occasional shooting stars (pauses when the tab is hidden)
+- **Scanning portrait** — Photo framed by target brackets with a sensor sweep and a telemetry readout strip
+- **Micro-interactions** — Cursor-tracking spotlight on every card, subtle 3D tilt, magnetic buttons, count-up hero stats, animated tech ticker, scroll progress bar, and staggered blur-reveal on scroll
+- **Custom cursor** — Dot + glow ring, enabled only on precise pointers (mouse/trackpad), so touch devices are unaffected
+- **Fully responsive** — Dedicated mobile menu with staggered links; language and theme controls stay visible on small screens
+- **Accessible & robust** — Respects `prefers-reduced-motion`, visible keyboard focus, skip-to-content link, ARIA labels, safe `localStorage` (no crash in private browsing), and a graceful placeholder if the profile photo is missing
+- **SEO ready** — Open Graph / Twitter cards, canonical URL, JSON-LD person schema
 
 ## Sections
 
@@ -24,9 +28,18 @@ Hero · About · Experience · Education · Publications · Projects · Skills &
 3. Go to **Settings → Pages → Source** and select `Deploy from a branch` (main)
 4. Your site will be live at `https://<your-username>.github.io`
 
+## Customizing
+
+Everything lives in `index.html`:
+
+- **Text & translations** — edit the `T` object near the top of the `<script>` block; every language uses the same keys
+- **Projects, experience, education, certifications** — edit the corresponding `<section>` markup; card styling is automatic
+- **Project links** — GitHub buttons currently point to the profile (`github.com/pronilabh`); swap in individual repository URLs when ready
+- **Colors & fonts** — change the CSS variables in `:root`, `[data-theme="dark"]`, and `[data-theme="light"]`
+
 ## Tech
 
-Single-file HTML/CSS/JS — no build tools, no frameworks, no dependencies. Fonts loaded from Google Fonts CDN.
+Single-file HTML/CSS/JS — no build tools, no frameworks, no dependencies. Fonts (Space Grotesk, Manrope, IBM Plex Mono) loaded from Google Fonts CDN.
 
 ## Languages
 
@@ -39,7 +52,7 @@ Single-file HTML/CSS/JS — no build tools, no frameworks, no dependencies. Font
 | ES | Spanish | 🇪🇸 |
 | HI | Hindi | 🇮🇳 |
 
-Language preference is stored in `localStorage` and restored automatically on return visits.
+Language and theme preferences are stored in `localStorage` and restored automatically on return visits.
 
 ## License
 
