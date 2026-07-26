@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nilabh Pandey — AI &amp; Robotics Engineer</title>
-    <meta name="description" content="Portfolio of Nilabh Pandey — AI & robotics researcher at HSLU, Switzerland. Computer vision, drone-based imaging, edge AI, IEEE publications, and hands-on engineering projects.">
+    <meta name="description" id="metaDesc" content="Portfolio of Nilabh Pandey — AI & robotics researcher at HSLU, Switzerland. Computer vision, drone-based imaging, edge AI, IEEE publications, and hands-on engineering projects.">
     <meta name="theme-color" id="metaTheme" content="#07070C">
-    <link rel="canonical" href="https://nilabhpandey.com/">
+    <link rel="canonical" href="https://nilabhpandy.com/">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nilabhpandey.com/">
+    <meta property="og:url" content="https://nilabhpandy.com/">
     <meta property="og:title" content="Nilabh Pandey — AI & Robotics Engineer">
     <meta property="og:description" content="AI & robotics researcher at HSLU, Switzerland. Computer vision, drones, edge AI, IEEE publications.">
-    <meta property="og:image" content="https://nilabhpandey.com/Nilabh_Pandey_Image.jpg">
+    <meta property="og:image" content="https://nilabhpandy.com/Nilabh_Pandey_Image.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A12'/%3E%3Cpath d='M12 20v-8h8M52 44v8h-8' stroke='%23FF6B2B' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='32' fill='%23F0F0F5'%3EN%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Person","name":"Nilabh Pandey","url":"https://nilabhpandey.com/","jobTitle":"AI & Robotics Researcher","sameAs":["https://linkedin.com/in/nilabh-pandey","https://github.com/pronilabh"]}
+    {"@context":"https://schema.org","@type":"Person","name":"Nilabh Pandey","url":"https://nilabhpandy.com/","jobTitle":"AI & Robotics Researcher","sameAs":["https://linkedin.com/in/nilabh-pandey","https://github.com/pronilabh"]}
     </script>
     <style>
         /* ═══════════ TOKENS ═══════════ */
@@ -186,7 +186,9 @@
 
         .hero-tagline { font-family:var(--font-d); font-weight:500; font-size:clamp(1.22rem,2.6vw,1.66rem);
             letter-spacing:-.01em; color:var(--text-2); line-height:1.4; animation:riseIn .7s var(--ease) .16s both; }
-        .grad { background:linear-gradient(92deg,var(--accent),var(--violet)); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:700; }
+        .grad { background:linear-gradient(92deg,var(--accent),var(--violet),var(--accent)); background-size:200% auto;
+            -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:700; animation:gradShift 7s linear infinite; }
+        @keyframes gradShift { to { background-position:200% center; } }
         .role-line { font-family:var(--font-m); font-size:.93rem; margin:16px 0 18px; min-height:1.6em; color:var(--accent); animation:riseIn .7s var(--ease) .24s both; }
         .role-line .pr { color:var(--muted); margin-right:8px; }
         .caret { display:inline-block; width:9px; height:1.15em; margin-left:3px; vertical-align:text-bottom; background:var(--accent); animation:blink 1s steps(1) infinite; }
@@ -418,6 +420,77 @@
         }
 
         /* ═══════════ REDUCED MOTION ═══════════ */
+
+        /* ═══════════ POLISH: ANCHORS + SELECTION + GRAIN ═══════════ */
+        section[id] { scroll-margin-top:88px; }
+        ::selection { background:rgba(255,107,43,.35); color:var(--text); }
+        .grain { position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.03; mix-blend-mode:overlay;
+            background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E"); }
+        [data-theme="light"] .grain { opacity:.045; mix-blend-mode:multiply; }
+
+        /* ═══════════ BOOT SEQUENCE ═══════════ */
+        #boot { position:fixed; inset:0; z-index:400; background:var(--bg); display:grid; place-items:center;
+            transition:opacity .45s ease, visibility .45s; }
+        #boot.done { opacity:0; visibility:hidden; }
+        .boot-in { display:flex; flex-direction:column; align-items:center; gap:16px; font-family:var(--font-m); }
+        .boot-brand { font-size:.95rem; letter-spacing:.3em; color:var(--text); }
+        .boot-brand b { color:var(--accent); font-weight:600; }
+        .boot-line { width:212px; height:2px; background:var(--line); border-radius:2px; overflow:hidden; }
+        .boot-line i { display:block; height:100%; width:0; background:linear-gradient(90deg,var(--accent),var(--violet)); animation:bootFill 1.2s var(--ease) forwards; }
+        @keyframes bootFill { to { width:100%; } }
+        .boot-status { font-size:.66rem; letter-spacing:.24em; color:var(--muted); }
+
+        /* ═══════════ PROJECT FILTER ═══════════ */
+        .filterbar { display:flex; flex-wrap:wrap; gap:10px; margin:-16px 0 32px; position:relative; z-index:2; }
+        .fbtn { font-family:var(--font-m); font-size:.7rem; font-weight:500; letter-spacing:.09em; text-transform:uppercase;
+            color:var(--text-2); background:var(--card); border:1px solid var(--line); border-radius:999px; padding:9px 16px;
+            cursor:pointer; transition:color .25s, border-color .25s, background .25s, transform .25s, box-shadow .25s; }
+        .fbtn:hover { color:var(--text); border-color:var(--line-2); transform:translateY(-1px); }
+        .fbtn.active { color:#fff; background:linear-gradient(120deg,var(--accent),var(--violet)); border-color:transparent; box-shadow:var(--shadow-a); }
+        .proj-card.gone { display:none !important; }
+        @keyframes popIn { from { opacity:0; transform:translateY(12px) scale(.97); } to { opacity:1; transform:none; } }
+        .proj-card.pop { animation:popIn .4s var(--ease); }
+
+        /* ═══════════ GHOST INDEX ON PROJECT CARDS ═══════════ */
+        .proj-grid { counter-reset:proj; }
+        .proj-card { counter-increment:proj; }
+        .proj-card::after { content:counter(proj,decimal-leading-zero); position:absolute; top:12px; right:18px;
+            font-family:var(--font-m); font-size:2rem; font-weight:600; letter-spacing:.02em;
+            color:var(--text); opacity:.06; pointer-events:none; }
+        [data-theme="light"] .proj-card::after { opacity:.08; }
+
+        /* ═══════════ SKILL COUNT BADGE ═══════════ */
+        .sk-count { font-family:var(--font-m); font-size:.62rem; font-weight:500; color:var(--muted);
+            border:1px solid var(--line); border-radius:6px; padding:2px 7px; margin-left:10px; letter-spacing:.06em; }
+
+        /* ═══════════ COPY EMAIL + TOAST ═══════════ */
+        .ccwrap { position:relative; display:flex; }
+        .ccwrap .contact-card { flex:1; padding-right:60px; }
+        .copy-btn { position:absolute; top:50%; right:12px; transform:translateY(-50%); width:38px; height:38px;
+            display:grid; place-items:center; border-radius:10px; border:1px solid var(--line); background:var(--card-2);
+            color:var(--text-2); cursor:pointer; transition:color .25s, border-color .25s, transform .2s; z-index:2; }
+        .copy-btn:hover { color:var(--accent); border-color:var(--line-2); }
+        .copy-btn:active { transform:translateY(-50%) scale(.92); }
+        .copy-btn svg { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+        .toast { position:fixed; left:50%; bottom:30px; transform:translate(-50%,16px); background:var(--card);
+            border:1px solid var(--line-2); color:var(--text); padding:11px 22px; border-radius:12px; font-size:.9rem;
+            font-weight:600; box-shadow:var(--shadow); opacity:0; pointer-events:none; transition:opacity .3s, transform .3s; z-index:250; }
+        .toast.show { opacity:1; transform:translate(-50%,0); }
+
+        /* ═══════════ PRINT ═══════════ */
+        @media print {
+            html { --bg:#fff; --bg-2:#fff; --card:#fff; --card-2:#fff; --text:#111; --text-2:#333; --muted:#555;
+                --line:#ddd; --line-2:#bbb; --shadow:none; --shadow-a:none; --shadow-v:none; }
+            #stars,.aurora,.grid-layer,.scanlines,.grain,#progress,.cursor-dot,.cursor-ring,.nav,.mmenu,#btt,.marquee,
+            .scroll-hint,.det-tag,.pscan,.tele,.fchip,.filterbar,.copy-btn,#boot,.toast,.hero-cta,.chip-live,.caret { display:none !important; }
+            .grad { background:none; color:#111; -webkit-text-fill-color:#111; animation:none; }
+            .reveal,.hero-inner { opacity:1 !important; transform:none !important; filter:none !important; }
+            .card { break-inside:avoid; }
+            section { padding:26px 0 !important; }
+            .hero { min-height:auto; }
+            a { color:#111; }
+        }
+
         @media (prefers-reduced-motion:reduce) {
             *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
             html { scroll-behavior:auto; }
@@ -429,7 +502,9 @@
     </style>
 </head>
 <body>
+    <noscript><style>#boot{display:none!important}.reveal{opacity:1!important;transform:none!important;filter:none!important}</style></noscript>
     <a class="skip" href="#main">Skip to content</a>
+    <div id="boot" aria-hidden="true"><div class="boot-in"><span class="boot-brand">NILABH<b>.</b>PANDEY</span><span class="boot-line"><i></i></span><span class="boot-status" id="bootStatus">INITIALIZING</span></div></div>
     <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
     <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
@@ -438,6 +513,7 @@
     <div class="aurora b" aria-hidden="true"></div>
     <div class="grid-layer" aria-hidden="true"></div>
     <div class="scanlines" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
     <div class="progress" id="progress" aria-hidden="true"></div>
 
     <!-- SVG flag symbols (crisp on every platform, no emoji dependency) -->
@@ -562,7 +638,7 @@
                 <div class="fchip gpa"><span aria-hidden="true">&#127891;</span><span>GPA</span><b>3.76/4</b></div>
                 <div class="fchip loc"><span aria-hidden="true">&#128205;</span><b data-i18n="badge_loc">Switzerland</b></div>
                 </div>
-                <div class="tele" aria-hidden="true"><span>LAT <b>47.17&deg;N</b></span><span>LON <b>8.51&deg;E</b></span><span>ALT <b>425M</b></span><span>SYS <b>NOMINAL</b></span></div>
+                <div class="tele" aria-hidden="true"><span>LAT <b>47.17&deg;N</b></span><span>LON <b>8.51&deg;E</b></span><span>ALT <b>425M</b></span><span>SYS <b>NOMINAL</b></span><span>T <b id="teleClock">--:--:--</b></span></div>
             </div>
         </div>
         <a class="scroll-hint" href="#about"><span data-i18n="hero_scroll">scroll</span><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
@@ -643,15 +719,22 @@
                 <div class="eyebrow"><span class="idx">05</span><span data-i18n="label_proj">What I've Built</span></div>
                 <h2 class="title" data-i18n="title_proj">Projects</h2>
             </div>
+            <div class="filterbar reveal" role="group" aria-label="Project filter">
+                <button class="fbtn active" data-f="all" aria-pressed="true" data-i18n="f_all">All</button>
+                <button class="fbtn" data-f="ai" aria-pressed="false" data-i18n="f_ai">AI &amp; ML</button>
+                <button class="fbtn" data-f="rob" aria-pressed="false" data-i18n="f_rob">Robotics &amp; Drones</button>
+                <button class="fbtn" data-f="iot" aria-pressed="false" data-i18n="f_iot">IoT &amp; Embedded</button>
+                <button class="fbtn" data-f="bc" aria-pressed="false" data-i18n="f_bc">Blockchain</button>
+            </div>
             <div class="proj-grid">
-                <div class="card hov-a proj-card reveal"><div class="proj-top"><span class="proj-year">2025</span></div><div class="proj-name" data-i18n="p1_name">Baltic-ECA-Net: Ultra-Lightweight Attention Network for Algal Bloom Detection</div><div class="proj-desc" data-i18n="p1_desc">Real-time algal bloom detection using Efficient Channel Attention and Ghost Modules &mdash; optimized for edge devices.</div><div class="proj-tags"><span class="tag">Machine Learning</span><span class="tag">Ghost Modules</span><span class="tag">ECA</span><span class="tag">Image Processing</span></div><a href="https://github.com/pronilabh" target="_blank" rel="noopener" class="proj-link"><span data-i18n="view_gh">View on GitHub</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-                <div class="card hov-a proj-card reveal"><div class="proj-top"><span class="proj-year">2025</span></div><div class="proj-name" data-i18n="p2_name">DiveSSI: Blockchain-Powered SSI for Diving Certifications</div><div class="proj-desc" data-i18n="p2_desc">Revolutionizing diving certifications with Self-Sovereign Identity, Smart Contracts, and decentralized storage on IPFS.</div><div class="proj-tags"><span class="tag">Blockchain</span><span class="tag">SSI</span><span class="tag">Solidity</span><span class="tag">IPFS</span></div><a href="https://github.com/pronilabh" target="_blank" rel="noopener" class="proj-link"><span data-i18n="view_proto">View Prototype</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-                <div class="card hov-a proj-card reveal"><div class="proj-top"><span class="proj-year">2024</span></div><div class="proj-name" data-i18n="p3_name">ML-based Language Learning Assistant</div><div class="proj-desc" data-i18n="p3_desc">Personalizes learning paths based on user behavior, adapting to each learner's unique curve using ML models.</div><div class="proj-tags"><span class="tag">Scikit-Learn</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span></div><a href="https://github.com/pronilabh" target="_blank" rel="noopener" class="proj-link"><span data-i18n="view_gh">View on GitHub</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-                <div class="card hov-a proj-card reveal"><div class="proj-top"><span class="proj-year">2024</span></div><div class="proj-name" data-i18n="p4_name">Drone Detection &amp; Tracking System</div><div class="proj-desc" data-i18n="p4_desc">Real-time drone detection and tracking using YOLOv5 deep learning with Arduino-powered servo tracking.</div><div class="proj-tags"><span class="tag">PyTorch</span><span class="tag">YOLOv5</span><span class="tag">OpenCV</span><span class="tag">Arduino</span></div><a href="https://github.com/pronilabh" target="_blank" rel="noopener" class="proj-link"><span data-i18n="view_gh">View on GitHub</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-                <div class="card hov-a proj-card reveal"><div class="proj-top"><span class="proj-year">2024</span></div><div class="proj-name" data-i18n="p5_name">Teleoperated Robot for Hazardous Environments</div><div class="proj-desc" data-i18n="p5_desc">Remote-controlled robotic system for dangerous or inaccessible areas using Bluetooth communication and stepper motors.</div><div class="proj-tags"><span class="tag">Arduino</span><span class="tag">HC-05</span><span class="tag">Servo</span><span class="tag">Sensors</span></div></div>
-                <div class="card hov-a proj-card reveal"><div class="proj-top"><span class="proj-year">2024</span></div><div class="proj-name" data-i18n="p6_name">Smart Home Energy Management System</div><div class="proj-desc" data-i18n="p6_desc">IoT-driven energy optimization with real-time monitoring, cost reduction algorithms, and scalable sensor integration.</div><div class="proj-tags"><span class="tag">IoT</span><span class="tag">DHT22</span><span class="tag">Arduino</span><span class="tag">IR Sensor</span></div></div>
-                <div class="card hov-a proj-card reveal"><div class="proj-top"><span class="proj-year">2023</span></div><div class="proj-name" data-i18n="p7_name">Automatic Arduino Car Parking System</div><div class="proj-desc" data-i18n="p7_desc">Automated parking system with proximity-based vehicle detection, slot allocation, and servo-controlled barrier gates.</div><div class="proj-tags"><span class="tag">Arduino</span><span class="tag">IR Sensor</span><span class="tag">Servo</span></div></div>
-                <div class="card hov-a proj-card reveal"><div class="proj-top"><span class="proj-year">2022</span></div><div class="proj-name" data-i18n="p8_name">Smart Floor Cleaning Robot</div><div class="proj-desc" data-i18n="p8_desc">Autonomous floor-cleaning rover with vacuuming and mopping capabilities, obstacle avoidance via ultrasonic sensors.</div><div class="proj-tags"><span class="tag">HC-SR04</span><span class="tag">L298N</span><span class="tag">Arduino</span></div></div>
+                <div class="card hov-a proj-card reveal" data-cat="ai"><div class="proj-top"><span class="proj-year">2025</span></div><div class="proj-name" data-i18n="p1_name">Baltic-ECA-Net: Ultra-Lightweight Attention Network for Algal Bloom Detection</div><div class="proj-desc" data-i18n="p1_desc">Real-time algal bloom detection using Efficient Channel Attention and Ghost Modules &mdash; optimized for edge devices.</div><div class="proj-tags"><span class="tag">Machine Learning</span><span class="tag">Ghost Modules</span><span class="tag">ECA</span><span class="tag">Image Processing</span></div><a href="https://github.com/pronilabh" target="_blank" rel="noopener" class="proj-link"><span data-i18n="view_gh">View on GitHub</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+                <div class="card hov-a proj-card reveal" data-cat="bc"><div class="proj-top"><span class="proj-year">2025</span></div><div class="proj-name" data-i18n="p2_name">DiveSSI: Blockchain-Powered SSI for Diving Certifications</div><div class="proj-desc" data-i18n="p2_desc">Revolutionizing diving certifications with Self-Sovereign Identity, Smart Contracts, and decentralized storage on IPFS.</div><div class="proj-tags"><span class="tag">Blockchain</span><span class="tag">SSI</span><span class="tag">Solidity</span><span class="tag">IPFS</span></div><a href="https://github.com/pronilabh" target="_blank" rel="noopener" class="proj-link"><span data-i18n="view_proto">View Prototype</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+                <div class="card hov-a proj-card reveal" data-cat="ai"><div class="proj-top"><span class="proj-year">2024</span></div><div class="proj-name" data-i18n="p3_name">ML-based Language Learning Assistant</div><div class="proj-desc" data-i18n="p3_desc">Personalizes learning paths based on user behavior, adapting to each learner's unique curve using ML models.</div><div class="proj-tags"><span class="tag">Scikit-Learn</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span></div><a href="https://github.com/pronilabh" target="_blank" rel="noopener" class="proj-link"><span data-i18n="view_gh">View on GitHub</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+                <div class="card hov-a proj-card reveal" data-cat="ai rob"><div class="proj-top"><span class="proj-year">2024</span></div><div class="proj-name" data-i18n="p4_name">Drone Detection &amp; Tracking System</div><div class="proj-desc" data-i18n="p4_desc">Real-time drone detection and tracking using YOLOv5 deep learning with Arduino-powered servo tracking.</div><div class="proj-tags"><span class="tag">PyTorch</span><span class="tag">YOLOv5</span><span class="tag">OpenCV</span><span class="tag">Arduino</span></div><a href="https://github.com/pronilabh" target="_blank" rel="noopener" class="proj-link"><span data-i18n="view_gh">View on GitHub</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+                <div class="card hov-a proj-card reveal" data-cat="rob"><div class="proj-top"><span class="proj-year">2024</span></div><div class="proj-name" data-i18n="p5_name">Teleoperated Robot for Hazardous Environments</div><div class="proj-desc" data-i18n="p5_desc">Remote-controlled robotic system for dangerous or inaccessible areas using Bluetooth communication and stepper motors.</div><div class="proj-tags"><span class="tag">Arduino</span><span class="tag">HC-05</span><span class="tag">Servo</span><span class="tag">Sensors</span></div></div>
+                <div class="card hov-a proj-card reveal" data-cat="iot"><div class="proj-top"><span class="proj-year">2024</span></div><div class="proj-name" data-i18n="p6_name">Smart Home Energy Management System</div><div class="proj-desc" data-i18n="p6_desc">IoT-driven energy optimization with real-time monitoring, cost reduction algorithms, and scalable sensor integration.</div><div class="proj-tags"><span class="tag">IoT</span><span class="tag">DHT22</span><span class="tag">Arduino</span><span class="tag">IR Sensor</span></div></div>
+                <div class="card hov-a proj-card reveal" data-cat="iot"><div class="proj-top"><span class="proj-year">2023</span></div><div class="proj-name" data-i18n="p7_name">Automatic Arduino Car Parking System</div><div class="proj-desc" data-i18n="p7_desc">Automated parking system with proximity-based vehicle detection, slot allocation, and servo-controlled barrier gates.</div><div class="proj-tags"><span class="tag">Arduino</span><span class="tag">IR Sensor</span><span class="tag">Servo</span></div></div>
+                <div class="card hov-a proj-card reveal" data-cat="rob iot"><div class="proj-top"><span class="proj-year">2022</span></div><div class="proj-name" data-i18n="p8_name">Smart Floor Cleaning Robot</div><div class="proj-desc" data-i18n="p8_desc">Autonomous floor-cleaning rover with vacuuming and mopping capabilities, obstacle avoidance via ultrasonic sensors.</div><div class="proj-tags"><span class="tag">HC-SR04</span><span class="tag">L298N</span><span class="tag">Arduino</span></div></div>
             </div>
         </div>
     </section>
@@ -697,7 +780,7 @@
                 <h2 class="title" data-i18n="title_contact">Get in Touch</h2>
             </div>
             <div class="contact-cards reveal">
-                <a href="mailto:nilabhpandey7@gmail.com" class="card hov-a contact-card"><div class="cc-icon" aria-hidden="true">&#9993;&#65039;</div><div><div class="cc-label" data-i18n="c_email">Email</div><div class="cc-value">nilabhpandey7@gmail.com</div></div></a>
+                <div class="ccwrap"><a href="mailto:nilabhpandey7@gmail.com" class="card hov-a contact-card"><div class="cc-icon" aria-hidden="true">&#9993;&#65039;</div><div><div class="cc-label" data-i18n="c_email">Email</div><div class="cc-value">nilabhpandey7@gmail.com</div></div></a><button class="copy-btn" id="copyEmail" type="button" aria-label="Copy email" title="Copy email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div>
                 <a href="https://linkedin.com/in/nilabh-pandey" target="_blank" rel="noopener" class="card hov-a contact-card"><div class="cc-icon" aria-hidden="true">&#128188;</div><div><div class="cc-label">LinkedIn</div><div class="cc-value">Nilabh Pandey</div></div></a>
             </div>
             <div class="loc-line reveal">&#128205; <span data-i18n="location">Zug, Switzerland</span></div>
@@ -717,6 +800,8 @@
     </footer>
 
     <button class="btt" id="btt" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script>
     (function () {
@@ -786,6 +871,9 @@
         label_cert: "Verified Credentials", title_cert: "Certifications",
         label_contact: "Let's Connect", title_contact: "Get in Touch",
         c_email: "Email", location: "Zug, Switzerland",
+        meta_desc: "AI researcher and robotics engineer in Switzerland — drone imaging, computer vision, and IEEE-published research. Portfolio of Nilabh Pandey.",
+        f_all: "All", f_ai: "AI & ML", f_rob: "Robotics & Drones", f_iot: "IoT & Embedded", f_bc: "Blockchain",
+        copied: "Copied!", copy_email: "Copy email",
         footer_note: "Crafted with purpose.", btt: "Back to top"
     },
     de: {
@@ -838,6 +926,9 @@
         label_cert: "Verifizierte Nachweise", title_cert: "Zertifizierungen",
         label_contact: "Kontakt aufnehmen", title_contact: "In Kontakt treten",
         c_email: "E-Mail", location: "Zug, Schweiz",
+        meta_desc: "KI-Forscher und Robotik-Ingenieur in der Schweiz — Drohnenbildgebung, Computer Vision und IEEE-publizierte Forschung. Portfolio von Nilabh Pandey.",
+        f_all: "Alle", f_ai: "KI & ML", f_rob: "Robotik & Drohnen", f_iot: "IoT & Embedded", f_bc: "Blockchain",
+        copied: "Kopiert!", copy_email: "E-Mail kopieren",
         footer_note: "Mit Sorgfalt gebaut.", btt: "Nach oben"
     },
     fr: {
@@ -890,6 +981,9 @@
         label_cert: "Certifications vérifiées", title_cert: "Certifications",
         label_contact: "Restons en contact", title_contact: "Me contacter",
         c_email: "E-mail", location: "Zoug, Suisse",
+        meta_desc: "Chercheur en IA et ingénieur en robotique en Suisse — imagerie par drone, vision par ordinateur et recherche publiée IEEE. Portfolio de Nilabh Pandey.",
+        f_all: "Tous", f_ai: "IA & ML", f_rob: "Robotique & Drones", f_iot: "IoT & Embarqué", f_bc: "Blockchain",
+        copied: "Copié !", copy_email: "Copier l'e-mail",
         footer_note: "Conçu avec passion.", btt: "Retour en haut"
     },
     pt: {
@@ -942,6 +1036,9 @@
         label_cert: "Credenciais verificadas", title_cert: "Certificações",
         label_contact: "Vamos conversar", title_contact: "Entre em contato",
         c_email: "E-mail", location: "Zug, Suíça",
+        meta_desc: "Pesquisador de IA e engenheiro de robótica na Suíça — imagens por drone, visão computacional e pesquisa publicada na IEEE. Portfólio de Nilabh Pandey.",
+        f_all: "Todos", f_ai: "IA & ML", f_rob: "Robótica & Drones", f_iot: "IoT & Embarcados", f_bc: "Blockchain",
+        copied: "Copiado!", copy_email: "Copiar e-mail",
         footer_note: "Criado com propósito.", btt: "Voltar ao topo"
     },
     es: {
@@ -994,6 +1091,9 @@
         label_cert: "Credenciales verificadas", title_cert: "Certificaciones",
         label_contact: "Conectemos", title_contact: "Contacto",
         c_email: "Correo", location: "Zug, Suiza",
+        meta_desc: "Investigador de IA e ingeniero en robótica en Suiza — imágenes con drones, visión por computadora e investigación publicada en IEEE. Portafolio de Nilabh Pandey.",
+        f_all: "Todos", f_ai: "IA & ML", f_rob: "Robótica y Drones", f_iot: "IoT y Embebidos", f_bc: "Blockchain",
+        copied: "¡Copiado!", copy_email: "Copiar correo",
         footer_note: "Creado con propósito.", btt: "Volver arriba"
     },
     hi: {
@@ -1046,6 +1146,9 @@
         label_cert: "सत्यापित प्रमाणपत्र", title_cert: "प्रमाणपत्र",
         label_contact: "जुड़ें", title_contact: "संपर्क करें",
         c_email: "ईमेल", location: "ज़ुग, स्विट्ज़रलैंड",
+        meta_desc: "स्विट्ज़रलैंड में AI शोधकर्ता और रोबोटिक्स इंजीनियर — ड्रोन इमेजिंग, कंप्यूटर विज़न और IEEE-प्रकाशित शोध। निलाभ पांडेय का पोर्टफोलियो।",
+        f_all: "सभी", f_ai: "AI और ML", f_rob: "रोबोटिक्स और ड्रोन", f_iot: "IoT और एम्बेडेड", f_bc: "ब्लॉकचेन",
+        copied: "कॉपी हो गया!", copy_email: "ईमेल कॉपी करें",
         footer_note: "उद्देश्य के साथ निर्मित।", btt: "ऊपर जाएँ"
     }
     };
@@ -1061,6 +1164,8 @@
         document.documentElement.setAttribute('lang', lang);
         store.set('lang', lang);
         document.title = T[lang].meta_title;
+        var mdesc = document.getElementById('metaDesc');
+        if (mdesc) mdesc.setAttribute('content', T[lang].meta_desc);
         document.querySelectorAll('[data-i18n]').forEach(function (el) {
             var key = el.getAttribute('data-i18n');
             if (T[lang][key] !== undefined) el.textContent = T[lang][key];
@@ -1071,6 +1176,8 @@
         });
         var btt = document.getElementById('btt');
         if (btt) btt.setAttribute('aria-label', T[lang].btt);
+        var cb = document.getElementById('copyEmail');
+        if (cb) { cb.setAttribute('aria-label', T[lang].copy_email); cb.setAttribute('title', T[lang].copy_email); }
         var flagId = lang === 'hi' ? 'in' : lang;
         var useEl = document.querySelector('#langBtnFlag use');
         if (useEl) useEl.setAttribute('href', '#flag-' + flagId);
@@ -1415,11 +1522,19 @@
     ═══════════════════════════════════════════ */
     var progress = document.getElementById('progress');
     var btt = document.getElementById('btt');
+    var heroInner = document.querySelector('.hero-inner');
+    var scrollHint = document.querySelector('.scroll-hint');
     window.addEventListener('scroll', function () {
         var h = document.documentElement;
         var max = h.scrollHeight - h.clientHeight;
         if (progress) progress.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
         if (btt) btt.classList.toggle('show', h.scrollTop > 620);
+        if (!REDUCED && heroInner) {
+            var hy = Math.min(h.scrollTop, 640);
+            heroInner.style.transform = 'translateY(' + (hy * 0.16) + 'px)';
+            heroInner.style.opacity = Math.max(1 - hy / 780, 0);
+        }
+        if (scrollHint) scrollHint.style.opacity = h.scrollTop > 140 ? '0' : '';
     }, { passive: true });
     if (btt) btt.addEventListener('click', function () {
         window.scrollTo({ top: 0, behavior: REDUCED ? 'auto' : 'smooth' });
@@ -1439,6 +1554,135 @@
         });
     }, { rootMargin: '-40% 0px -55% 0px' });
     document.querySelectorAll('main section[id]').forEach(function (s) { sectionObs.observe(s); });
+
+    /* ═══════════════════════════════════════════
+       BOOT SEQUENCE (once per session)
+    ═══════════════════════════════════════════ */
+    (function () {
+        var b = document.getElementById('boot');
+        if (!b) return;
+        var seen = null;
+        try { seen = sessionStorage.getItem('booted'); } catch (e) {}
+        if (REDUCED || seen) { if (b.parentNode) b.parentNode.removeChild(b); return; }
+        try { sessionStorage.setItem('booted', '1'); } catch (e) {}
+        var st = document.getElementById('bootStatus');
+        var steps = ['INITIALIZING', 'LOADING MODULES', 'CALIBRATING SENSORS', 'SYSTEMS ONLINE'];
+        var i = 0, done = false;
+        var kill = function () {
+            if (done) return;
+            done = true;
+            b.classList.add('done');
+            setTimeout(function () { if (b.parentNode) b.parentNode.removeChild(b); }, 500);
+        };
+        var iv = setInterval(function () {
+            i++;
+            if (i < steps.length) { if (st) st.textContent = steps[i]; }
+            else { clearInterval(iv); kill(); }
+        }, 280);
+        setTimeout(kill, 1700);
+    })();
+
+    /* ═══════════════════════════════════════════
+       PROJECT FILTER
+    ═══════════════════════════════════════════ */
+    var fbtns = document.querySelectorAll('.fbtn');
+    var pcards = document.querySelectorAll('.proj-card');
+    fbtns.forEach(function (b) {
+        b.addEventListener('click', function () {
+            var f = b.getAttribute('data-f');
+            fbtns.forEach(function (x) {
+                var on = x === b;
+                x.classList.toggle('active', on);
+                x.setAttribute('aria-pressed', on ? 'true' : 'false');
+            });
+            pcards.forEach(function (c) {
+                var cat = c.getAttribute('data-cat') || '';
+                var show = f === 'all' || cat.indexOf(f) !== -1;
+                c.classList.toggle('gone', !show);
+                if (show && !REDUCED) {
+                    c.classList.remove('pop');
+                    void c.offsetWidth;
+                    c.classList.add('pop');
+                }
+            });
+        });
+    });
+
+    /* ═══════════════════════════════════════════
+       COPY EMAIL + TOAST
+    ═══════════════════════════════════════════ */
+    var toastEl = document.getElementById('toast');
+    var toastT = null;
+    var showToast = function (msg) {
+        if (!toastEl) return;
+        toastEl.textContent = msg;
+        toastEl.classList.add('show');
+        clearTimeout(toastT);
+        toastT = setTimeout(function () { toastEl.classList.remove('show'); }, 1700);
+    };
+    var copyBtn = document.getElementById('copyEmail');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var em = 'nilabhpandey7@gmail.com';
+            var ok = function () { showToast(T[LANG].copied); };
+            var fallback = function () {
+                var ta = document.createElement('textarea');
+                ta.value = em;
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.select();
+                try { document.execCommand('copy'); ok(); } catch (err) {}
+                document.body.removeChild(ta);
+            };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(em).then(ok, fallback);
+            } else fallback();
+        });
+    }
+
+    /* ═══════════════════════════════════════════
+       LIVE TELEMETRY CLOCK (Europe/Zurich)
+    ═══════════════════════════════════════════ */
+    var teleClock = document.getElementById('teleClock');
+    if (teleClock) {
+        var clockFmt = null;
+        try {
+            clockFmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Zurich', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+        } catch (e) {}
+        var tickClock = function () {
+            teleClock.textContent = clockFmt ? clockFmt.format(new Date()) : new Date().toTimeString().slice(0, 8);
+        };
+        tickClock();
+        setInterval(tickClock, 1000);
+    }
+
+    /* ═══════════════════════════════════════════
+       SKILL COUNT BADGES
+    ═══════════════════════════════════════════ */
+    document.querySelectorAll('.skill-group').forEach(function (g) {
+        var n = g.querySelectorAll('.pill').length;
+        var t = g.querySelector('.sg-title');
+        if (t && n) {
+            var s = document.createElement('span');
+            s.className = 'sk-count';
+            s.textContent = (n < 10 ? '0' : '') + n;
+            t.appendChild(s);
+        }
+    });
+
+    /* ═══════════════════════════════════════════
+       HERO NAME: CLICK TO RE-SCAN
+    ═══════════════════════════════════════════ */
+    if (heroName && !REDUCED) {
+        heroName.style.cursor = 'pointer';
+        heroName.addEventListener('click', function () {
+            delete heroName.dataset.scrambled;
+            scramble(heroName);
+        });
+    }
 
     /* ═══════════════════════════════════════════
        INIT
