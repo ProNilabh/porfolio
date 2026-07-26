@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing AI research, robotics projects, IEEE publications, and professional experience — designed as a "mission control" interface inspired by the drone imaging and object-detection work it presents.
 
-**Live:** [https://nilabhpandey.com](https://nilabhpandey.com)
+**Live:** [https://nilabhpandy.com](https://nilabhpandy.com)
 
 ## Features
 
@@ -11,11 +11,17 @@ Personal portfolio website showcasing AI research, robotics projects, IEEE publi
 - **Detection-frame hero** — The name renders inside an animated YOLO-style bounding box with corner brackets and a confidence label, plus a decode/scramble intro and a typewriter role rotator
 - **Starfield background** — Orange & purple constellation with connecting lines, mouse parallax, twinkling, and occasional shooting stars (pauses when the tab is hidden)
 - **Scanning portrait** — Photo framed by target brackets with a sensor sweep and a telemetry readout strip
-- **Micro-interactions** — Cursor-tracking spotlight on every card, subtle 3D tilt, magnetic buttons, count-up hero stats, animated tech ticker, scroll progress bar, and staggered blur-reveal on scroll
+- **Boot sequence** — A quick mission-control "systems online" intro, shown once per session
+- **Filterable projects** — One-tap filters (AI & ML / Robotics & Drones / IoT & Embedded / Blockchain) with animated re-flow and sequential numbering that renumbers as you filter
+- **Live telemetry** — The hero readout includes a real-time Zurich clock alongside coordinates and system status
+- **Copy email** — One-click copy button on the contact card with a translated confirmation toast
+- **Micro-interactions** — Cursor-tracking spotlight on every card, subtle 3D tilt, magnetic buttons, count-up hero stats, skill-count badges, animated tech ticker, shimmering gradient text, hero parallax on scroll, scroll progress bar, staggered blur-reveal, and click the hero name to re-run the decode effect
 - **Custom cursor** — Dot + glow ring, enabled only on precise pointers (mouse/trackpad), so touch devices are unaffected
 - **Fully responsive** — Dedicated mobile menu with staggered links; language and theme controls stay visible on small screens
 - **Accessible & robust** — Respects `prefers-reduced-motion`, visible keyboard focus, skip-to-content link, ARIA labels, safe `localStorage` (no crash in private browsing), and a graceful placeholder if the profile photo is missing
-- **SEO ready** — Open Graph / Twitter cards, canonical URL, JSON-LD person schema
+- **SEO ready** — Open Graph / Twitter cards, canonical URL, JSON-LD person schema, and a meta description that switches language with the site
+- **Print-friendly** — A dedicated print stylesheet turns the page into a clean, resume-style document
+- **Works without JavaScript** — Full content remains readable thanks to a noscript fallback
 
 ## Sections
 
