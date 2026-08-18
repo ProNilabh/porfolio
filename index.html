@@ -178,11 +178,6 @@
         .hero-name .corner:nth-child(3) { bottom:-2px; left:-4px; border-right:0; border-top:0; animation-delay:1.1s; }
         .hero-name .corner:nth-child(4) { bottom:-2px; right:-4px; border-left:0; border-top:0; animation-delay:1.2s; }
         @keyframes cornerIn { from { opacity:0; transform:scale(.4); } to { opacity:1; transform:none; } }
-        .det-tag { position:absolute; top:auto; bottom:calc(100% - 3px); left:-4px; font-family:var(--font-m); font-size:clamp(.55rem,1.1vw,.66rem);
-            letter-spacing:.1em; text-transform:uppercase; color:var(--accent); background:var(--card);
-            border:1px solid var(--accent); border-bottom:0; border-radius:6px 6px 0 0; padding:3px 9px 2px;
-            opacity:0; animation:tagIn .4s var(--ease) 1.35s forwards; }
-        @keyframes tagIn { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
 
         .hero-tagline { font-family:var(--font-d); font-weight:500; font-size:clamp(1.22rem,2.6vw,1.66rem);
             letter-spacing:-.01em; color:var(--text-2); line-height:1.4; animation:riseIn .7s var(--ease) .16s both; }
@@ -215,18 +210,11 @@
         .pframe img { width:100%; height:100%; object-fit:cover; object-position:top; }
         .pframe::before { content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
             background:linear-gradient(to top,var(--bg) 0%,transparent 34%); opacity:.85; }
-        .pscan { position:absolute; left:0; right:0; height:30%; top:-32%; z-index:2; pointer-events:none;
-            background:linear-gradient(180deg,transparent 0%,var(--accent-soft) 42%,rgba(255,107,43,.30) 50%,var(--accent-soft) 58%,transparent 100%);
-            animation:scan 4.6s var(--ease) 1.6s infinite; }
-        @keyframes scan { 0% { top:-32%; } 60%,100% { top:112%; } }
         .pcorner { position:absolute; width:20px; height:20px; border:2.5px solid var(--accent); z-index:3; opacity:0; animation:cornerIn .45s var(--ease) .8s forwards; }
         .pcorner.tl { top:-7px; left:-7px; border-right:0; border-bottom:0; }
         .pcorner.tr { top:-7px; right:-7px; border-left:0; border-bottom:0; animation-delay:.9s; }
         .pcorner.bl { bottom:-7px; left:-7px; border-right:0; border-top:0; animation-delay:1s; }
         .pcorner.br { bottom:-7px; right:-7px; border-left:0; border-top:0; animation-delay:1.1s; }
-        .tele { margin-top:16px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;
-            font-family:var(--font-m); font-size:.63rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
-        .tele b { color:var(--accent); font-weight:500; }
         .fchip { position:absolute; z-index:4; display:flex; align-items:center; gap:7px; padding:9px 14px;
             background:var(--card); border:1px solid var(--line-2); border-radius:12px;
             font-family:var(--font-m); font-size:.72rem; white-space:nowrap; box-shadow:var(--shadow);
@@ -290,18 +278,27 @@
         .hl-title { font-weight:800; font-size:.92rem; margin-bottom:3px; }
         .hl-desc { font-size:.78rem; color:var(--muted); line-height:1.6; }
 
-        /* ═══════════ EXPERIENCE ═══════════ */
-        .xlog { position:relative; padding-left:36px; display:grid; gap:18px; }
-        .xlog::before { content:''; position:absolute; left:8px; top:8px; bottom:8px; width:2px; border-radius:2px;
-            background:linear-gradient(to bottom,var(--accent),var(--violet) 60%,transparent); }
-        .xitem { padding:22px 26px; }
-        .xitem::after { content:''; position:absolute; left:-34px; top:27px; width:12px; height:12px; border-radius:50%;
-            background:var(--accent); box-shadow:0 0 0 3px var(--bg-2),0 0 12px var(--accent-glow); }
-        section:not(.alt) .xitem::after { box-shadow:0 0 0 3px var(--bg),0 0 12px var(--accent-glow); }
-        .xdate { font-family:var(--font-m); font-size:.72rem; color:var(--accent); letter-spacing:.06em; margin-bottom:7px; }
-        .xrole { font-family:var(--font-d); font-weight:700; font-size:1.08rem; margin-bottom:3px; }
-        .xorg { font-size:.86rem; color:var(--text-2); margin-bottom:8px; }
-        .xdesc { font-size:.87rem; color:var(--muted); line-height:1.75; }
+        /* ═══════════ EXPERIENCE TABS ═══════════ */
+        .xp { display:grid; grid-template-columns:236px 1fr; padding:0; overflow:hidden; }
+        .xp-tabs { display:flex; flex-direction:column; gap:6px; padding:12px; background:var(--card-2); border-right:1px solid var(--line); }
+        .xp-tab { position:relative; text-align:left; display:flex; flex-direction:column; gap:3px; padding:13px 15px 13px 19px;
+            border:1px solid transparent; border-radius:12px; cursor:pointer; transition:background .25s,border-color .25s; }
+        .xp-tab .xp-co { font-family:var(--font-d); font-weight:700; font-size:.9rem; color:var(--text-2); transition:color .25s; }
+        .xp-tab .xp-loc { font-family:var(--font-m); font-size:.6rem; letter-spacing:.09em; text-transform:uppercase; color:var(--muted); }
+        .xp-tab:hover .xp-co { color:var(--text); }
+        .xp-tab.act { background:var(--card); border-color:var(--line-2); }
+        .xp-tab.act::before { content:''; position:absolute; left:0; top:11px; bottom:11px; width:3px; border-radius:3px;
+            background:linear-gradient(180deg,var(--accent),var(--violet)); }
+        .xp-tab.act .xp-co { color:var(--accent); }
+        .xp-panes { padding:28px 32px; min-height:232px; }
+        .xp-pane { display:none; }
+        .xp-pane.act { display:block; animation:paneIn .35s var(--ease); }
+        @keyframes paneIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+        .xdate { font-family:var(--font-m); font-size:.72rem; color:var(--accent); letter-spacing:.06em; margin-bottom:8px; }
+        .xrole { font-family:var(--font-d); font-weight:700; font-size:1.18rem; margin-bottom:4px; }
+        .xorg { font-size:.86rem; color:var(--text-2); margin-bottom:12px; }
+        .xdesc { font-size:.88rem; color:var(--muted); line-height:1.8; max-width:58ch; }
+
 
         /* ═══════════ EDUCATION ═══════════ */
         .edu-grid { display:grid; gap:14px; }
@@ -342,9 +339,6 @@
         .proj-link:hover { gap:11px; }
         .proj-link svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
 
-        /* ═══════════ SKILLS ═══════════ */
-        .skills-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; }
-        .skill-group { padding:24px; }
 
         /* ═══════════ SKILLS TERMINAL ═══════════ */
         .xterm { max-width:880px; margin:0 auto; padding:0; overflow:hidden; font-family:var(--font-m); }
@@ -384,13 +378,6 @@
             animation:fspin 5.5s linear infinite; opacity:.85; }
         @keyframes fspin { to { --fang:360deg; } }
         .feat-badge { position:absolute; top:-11px; left:18px; z-index:2; font-family:var(--font-m); font-size:.6rem; letter-spacing:.14em; color:var(--accent); background:var(--card); border:1px solid var(--accent); border-radius:999px; padding:3px 11px; }
-        .sg-title { font-family:var(--font-m); font-size:.7rem; color:var(--accent); text-transform:uppercase; letter-spacing:.18em;
-            margin-bottom:15px; padding-bottom:11px; border-bottom:1px solid var(--line); }
-        .pills { display:flex; flex-wrap:wrap; gap:8px; }
-        .pill { font-size:.8rem; color:var(--text-2); background:var(--bg); border:1.5px solid var(--line); border-radius:999px; padding:6px 14px;
-            transition:border-color .3s,color .3s,background .3s,box-shadow .3s,transform .3s; }
-        section.alt .pill { background:var(--card-2); }
-        .pill:hover { border-color:var(--accent); color:var(--accent); background:var(--accent-soft); box-shadow:0 0 12px var(--accent-glow); transform:translateY(-1px); }
 
         /* ═══════════ CERTIFICATIONS ═══════════ */
         .certs-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:14px; }
@@ -498,9 +485,6 @@
             color:var(--text); opacity:.06; pointer-events:none; }
         [data-theme="light"] .proj-card::after { opacity:.08; }
 
-        /* ═══════════ SKILL COUNT BADGE ═══════════ */
-        .sk-count { font-family:var(--font-m); font-size:.62rem; font-weight:500; color:var(--muted);
-            border:1px solid var(--line); border-radius:6px; padding:2px 7px; margin-left:10px; letter-spacing:.06em; }
 
         /* ═══════════ COPY EMAIL + TOAST ═══════════ */
         .ccwrap { position:relative; display:flex; }
@@ -516,15 +500,61 @@
             font-weight:600; box-shadow:var(--shadow); opacity:0; pointer-events:none; transition:opacity .3s, transform .3s; z-index:250; }
         .toast.show { opacity:1; transform:translate(-50%,0); }
 
+        /* ═══════════ SHOW MORE PROJECTS ═══════════ */
+        .proj-morewrap { display:flex; justify-content:center; margin-top:30px; }
+        #projMore svg { transition:transform .3s var(--ease); }
+        #projMore.open svg { transform:rotate(180deg); }
+
+        /* ═══════════ MOBILE POLISH ═══════════ */
+        @media (max-width:768px) {
+            .hero { min-height:auto; }
+            .hero-inner { gap:22px; padding:30px 20px 52px; text-align:center; }
+            .pframe { width:min(218px,60vw); }
+            .hero-name { margin:20px 0 8px; }
+            .hero-desc { margin-left:auto; margin-right:auto; font-size:.95rem; }
+            .hero-cta { justify-content:center; }
+            .stats { justify-content:center; gap:24px; margin-top:26px; padding-top:20px; }
+            .stat-n { font-size:1.45rem; }
+            .stat-l { font-size:.7rem; }
+            .container { padding:0 20px; }
+            section { padding:60px 0; }
+            .head { margin-bottom:30px; }
+            .title { font-size:clamp(1.55rem,6.4vw,2rem); }
+            .proj-card { padding:20px; }
+            .proj-card::after { font-size:1.5rem; top:10px; right:14px; }
+            .xt-body { padding:18px 16px 16px; }
+            .chip { font-size:.74rem; padding:6px 12px; }
+            .xp { grid-template-columns:1fr; }
+            .xp-tabs { flex-direction:row; overflow-x:auto; border-right:0; border-bottom:1px solid var(--line); scrollbar-width:none; }
+            .xp-tabs::-webkit-scrollbar { display:none; }
+            .xp-tab { flex:0 0 auto; padding:10px 14px; }
+            .xp-tab.act::before { left:14px; right:14px; top:auto; bottom:-1px; width:auto; height:2.5px;
+                background:linear-gradient(90deg,var(--accent),var(--violet)); }
+            .xp-panes { padding:20px 18px 22px; min-height:0; }
+            .certs-grid { grid-template-columns:none; grid-auto-flow:column; grid-auto-columns:min(76%,300px);
+                overflow-x:auto; scroll-snap-type:x mandatory; padding:2px 2px 10px; scrollbar-width:none; -webkit-overflow-scrolling:touch; }
+            .certs-grid::-webkit-scrollbar { display:none; }
+            .cert-card { scroll-snap-align:start; }
+            .marquee { padding:11px 0; }
+            .mq-set { gap:1.8rem; padding-right:1.8rem; font-size:.68rem; }
+            .btt { right:16px; bottom:16px; width:42px; height:42px; }
+            .nav-inner { padding:0 18px; }
+            .logo { font-size:.92rem; }
+        }
+
         /* ═══════════ PRINT ═══════════ */
         @media print {
             html { --bg:#fff; --bg-2:#fff; --card:#fff; --card-2:#fff; --text:#111; --text-2:#333; --muted:#555;
                 --line:#ddd; --line-2:#bbb; --shadow:none; --shadow-a:none; --shadow-v:none; }
             #stars,.aurora,.grid-layer,.scanlines,.grain,#progress,.cursor-dot,.cursor-ring,.nav,.mmenu,#btt,.marquee,
-            .scroll-hint,.det-tag,.pscan,.tele,.fchip,.filterbar,.copy-btn,#boot,.toast,.hero-cta,.chip-live,.caret { display:none !important; }
+            .scroll-hint,.fchip,.filterbar,.proj-morewrap,.copy-btn,#boot,.toast,.hero-cta,.chip-live,.caret { display:none !important; }
             .grad { background:none; color:#111; -webkit-text-fill-color:#111; animation:none; }
             .reveal,.hero-inner { opacity:1 !important; transform:none !important; filter:none !important; }
             .card { break-inside:avoid; }
+            .proj-card { display:flex !important; }
+            .xp { display:block; }
+            .xp-tabs { display:none !important; }
+            .xp-pane { display:block !important; padding-bottom:14px; }
             section { padding:26px 0 !important; }
             .hero { min-height:auto; }
             a { color:#111; }
@@ -533,10 +563,9 @@
         @media (prefers-reduced-motion:reduce) {
             *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
             html { scroll-behavior:auto; }
-            .pscan,.mq-track,.scroll-hint svg { animation:none !important; }
-            .pscan { display:none; }
+            .mq-track,.scroll-hint svg { animation:none !important; }
             .reveal { opacity:1; transform:none; filter:none; }
-            .hero-name .corner,.pcorner,.det-tag { opacity:1; }
+            .hero-name .corner,.pcorner { opacity:1; }
             .xt-caret,.xt-sig i,.fring { animation:none !important; }
             .chip { animation:none !important; opacity:1; transform:none; }
         }
@@ -652,12 +681,11 @@
                 <div class="chip-live"><span class="dot" aria-hidden="true"></span><span data-i18n="hero_tag">Available for Opportunities</span></div>
                 <h1 class="hero-name">
                     <span class="corner" aria-hidden="true"></span><span class="corner" aria-hidden="true"></span><span class="corner" aria-hidden="true"></span><span class="corner" aria-hidden="true"></span>
-                    <span class="det-tag" aria-hidden="true">researcher &middot; conf 0.99</span>
                     <span id="heroName" data-scramble data-i18n="name_full">Nilabh Pandey</span>
                 </h1>
                 <p class="hero-tagline" data-i18n-html="hero_tagline">I build AI systems that <span class='grad'>see, fly &amp; learn</span>.</p>
                 <p class="role-line"><span class="pr" aria-hidden="true">&gt;</span><span id="roleText">AI Researcher</span><span class="caret" aria-hidden="true"></span></p>
-                <p class="hero-desc" data-i18n="hero_desc">AI Researcher &amp; MS student at HSLU, Switzerland — blending computer vision, drone-based imaging, and machine learning with real-world innovation. From ISRO to IEEE publications, turning research into impact.</p>
+                <p class="hero-desc" data-i18n="hero_desc">MS student at HSLU, Switzerland &mdash; from ISRO drone imaging to IEEE-published research.</p>
                 <div class="hero-cta">
                     <a href="#contact" class="btn btn-primary magnetic"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg><span data-i18n="hero_cta">Get in Touch</span></a>
                     <a href="#projects" class="btn btn-outline magnetic"><span data-i18n="hero_cta2">View Projects</span><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
@@ -674,12 +702,10 @@
                 <div class="pframe">
                     <img src="Nilabh_Pandey_Image.jpg" alt="Nilabh Pandey smiling outdoors, wearing a navy blazer over a light blue shirt" data-i18n-alt="alt_photo" fetchpriority="high" decoding="async"
                          onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 350 400%22%3E%3Crect width=%22350%22 height=%22400%22 fill=%22%230F0F1A%22/%3E%3Cpath d=%22M28 46V28h18M322 354v18h-18%22 stroke=%22%23FF6B2B%22 stroke-width=%225%22 fill=%22none%22/%3E%3Ctext x=%22175%22 y=%22218%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2286%22 font-weight=%22700%22 fill=%22%233A3B55%22%3ENP%3C/text%3E%3C/svg%3E'">
-                    <span class="pscan" aria-hidden="true"></span>
                 </div>
                 <div class="fchip gpa"><span aria-hidden="true">&#127891;</span><span>GPA</span><b>3.76/4</b></div>
                 <div class="fchip loc"><span aria-hidden="true">&#128205;</span><b data-i18n="badge_loc">Switzerland</b></div>
                 </div>
-                <div class="tele" aria-hidden="true"><span>LAT <b>47.17&deg;N</b></span><span>LON <b>8.51&deg;E</b></span><span>ALT <b>425M</b></span><span>SYS <b>NOMINAL</b></span><span>T <b id="teleClock">--:--:--</b></span></div>
             </div>
         </div>
         <a class="scroll-hint" href="#about"><span data-i18n="hero_scroll">scroll</span><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
@@ -700,9 +726,8 @@
             </div>
             <div class="about-grid">
                 <div class="about-text reveal" data-i18n-html="about_text">
-                    <p>I am a Master's student in <strong>IT, Digitalization &amp; Sustainability</strong> at Lucerne University of Applied Sciences and Arts (HSLU), Switzerland. With research experience spanning <strong>AI, Robotics, and Computer Vision</strong>, I bring a unique blend of academic rigor and hands-on engineering.</p>
-                    <p>My journey has taken me from building <strong>drone-based imaging systems at ISRO</strong> (India's space agency) to developing <strong>automated glass facade monitoring</strong> at Universiti Teknologi PETRONAS in Malaysia. I'm passionate about deploying lightweight, efficient AI models on edge devices — making intelligence accessible where it matters most.</p>
-                    <p>With published work in <strong>IEEE conferences</strong> and expertise across Python, PyTorch, TensorFlow, and embedded systems, I bridge the gap between deep learning research and real-world robotic applications.</p>
+                    <p>I'm a Master's student in <strong>IT, Digitalization &amp; Sustainability</strong> at HSLU, Switzerland, with research experience across <strong>AI, robotics, and computer vision</strong> &mdash; from drone-based imaging at <strong>ISRO</strong> to automated glass facade monitoring at UTP Malaysia.</p>
+                    <p>With two <strong>IEEE publications</strong> and hands-on depth in Python, PyTorch, and embedded systems, I focus on lightweight AI that runs where it matters: on edge devices in the real world.</p>
                 </div>
                 <div class="hl-grid reveal">
                     <div class="card hov-a hl-card"><div class="hl-icon" aria-hidden="true">&#129302;</div><div class="hl-title" data-i18n="hl_ai">AI &amp; Robotics</div><div class="hl-desc" data-i18n="hl_ai_d">Computer Vision, CNNs, YOLO, Edge AI</div></div>
@@ -720,10 +745,17 @@
                 <div class="eyebrow"><span class="idx">02</span><span data-i18n="label_exp">Where I've Worked</span></div>
                 <h2 class="title" data-i18n="title_exp">Experience</h2>
             </div>
-            <div class="xlog">
-                <div class="card hov-a xitem reveal"><div class="xdate">Jan 2025 &mdash; May 2025</div><div class="xrole" data-i18n="exp1_role">AI &amp; Drone Researcher</div><div class="xorg">Universiti Teknologi PETRONAS &middot; Seri Iskandar, Malaysia</div><div class="xdesc" data-i18n="exp1_desc">Department of Electrical and Electronics Engineering. Worked on the implementation of Automated Classification for Glass Facade Condition Monitoring using drone-based imaging and deep learning.</div></div>
-                <div class="card hov-a xitem reveal"><div class="xdate">Aug 2024 &mdash; Dec 2024</div><div class="xrole" data-i18n="exp2_role">Research Intern</div><div class="xorg">Centre for Cyber Physical Systems (CCPS) &middot; VIT Chennai, India</div><div class="xdesc" data-i18n="exp2_desc">R&amp;D facility for AI and IoT innovation. Developed lightweight CNN models (MBConvNet-CNS) and their application in plant leaf disease classification.</div></div>
-                <div class="card hov-a xitem reveal"><div class="xdate">May 2024 &mdash; Jul 2024</div><div class="xrole" data-i18n="exp3_role">Research Intern</div><div class="xorg">NESAC (ISRO) &middot; Department of Space, Govt. of India &middot; Shillong</div><div class="xdesc" data-i18n="exp3_desc">Worked on the implementation of Stereo/Depth Cameras for Unmanned Aerial Vehicles (UAVs) under the Department of Space, Government of India.</div></div>
+            <div class="xp card reveal" id="xpBox">
+                <div class="xp-tabs" role="tablist" aria-label="Research positions">
+                    <button class="xp-tab act" type="button" role="tab" aria-selected="true"><span class="xp-co">UTP</span><span class="xp-loc">Malaysia</span></button>
+                    <button class="xp-tab" type="button" role="tab" aria-selected="false"><span class="xp-co">CCPS &middot; VIT</span><span class="xp-loc">Chennai, India</span></button>
+                    <button class="xp-tab" type="button" role="tab" aria-selected="false"><span class="xp-co">NESAC &middot; ISRO</span><span class="xp-loc">Shillong, India</span></button>
+                </div>
+                <div class="xp-panes">
+                    <div class="xp-pane act"><div class="xdate">Jan 2025 &mdash; May 2025</div><h3 class="xrole" data-i18n="exp1_role">AI &amp; Drone Researcher</h3><div class="xorg">Universiti Teknologi PETRONAS &middot; Seri Iskandar, Malaysia</div><p class="xdesc" data-i18n="exp1_desc">Department of Electrical and Electronics Engineering. Worked on the implementation of Automated Classification for Glass Facade Condition Monitoring using drone-based imaging and deep learning.</p></div>
+                    <div class="xp-pane"><div class="xdate">Aug 2024 &mdash; Dec 2024</div><h3 class="xrole" data-i18n="exp2_role">Research Intern</h3><div class="xorg">Centre for Cyber Physical Systems (CCPS) &middot; VIT Chennai, India</div><p class="xdesc" data-i18n="exp2_desc">R&amp;D facility for AI and IoT innovation. Developed lightweight CNN models (MBConvNet-CNS) and their application in plant leaf disease classification.</p></div>
+                    <div class="xp-pane"><div class="xdate">May 2024 &mdash; Jul 2024</div><h3 class="xrole" data-i18n="exp3_role">Research Intern</h3><div class="xorg">NESAC (ISRO) &middot; Department of Space, Govt. of India &middot; Shillong</div><p class="xdesc" data-i18n="exp3_desc">Worked on the implementation of Stereo/Depth Cameras for Unmanned Aerial Vehicles (UAVs) under the Department of Space, Government of India.</p></div>
+                </div>
             </div>
         </div>
     </section>
@@ -777,6 +809,7 @@
                 <div class="card hov-a proj-card reveal" data-cat="iot"><div class="proj-top"><span class="proj-year">2023</span></div><div class="proj-name" data-i18n="p7_name">Automatic Arduino Car Parking System</div><div class="proj-desc" data-i18n="p7_desc">Automated parking system with proximity-based vehicle detection, slot allocation, and servo-controlled barrier gates.</div><div class="proj-tags"><span class="tag">Arduino</span><span class="tag">IR Sensor</span><span class="tag">Servo</span></div></div>
                 <div class="card hov-a proj-card reveal" data-cat="rob iot"><div class="proj-top"><span class="proj-year">2022</span></div><div class="proj-name" data-i18n="p8_name">Smart Floor Cleaning Robot</div><div class="proj-desc" data-i18n="p8_desc">Autonomous floor-cleaning rover with vacuuming and mopping capabilities, obstacle avoidance via ultrasonic sensors.</div><div class="proj-tags"><span class="tag">HC-SR04</span><span class="tag">L298N</span><span class="tag">Arduino</span></div></div>
             </div>
+            <div class="proj-morewrap reveal"><button class="btn btn-outline" id="projMore" type="button" aria-expanded="false"><span data-i18n="p_more">Show all projects</span><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button></div>
         </div>
     </section>
 
@@ -881,12 +914,12 @@
         hero_tag: "Available for Opportunities",
         hero_tagline: "I build AI systems that <span class='grad'>see, fly &amp; learn</span>.",
         roles: ["AI Researcher", "Drone & CV Engineer", "MS Student @ HSLU", "IEEE Author", "Robotics Builder"],
-        hero_desc: "AI Researcher & MS student at HSLU, Switzerland — blending computer vision, drone-based imaging, and machine learning with real-world innovation. From ISRO to IEEE publications, turning research into impact.",
+        hero_desc: "MS student at HSLU, Switzerland — from ISRO drone imaging to IEEE-published research.",
         hero_cta: "Get in Touch", hero_cta2: "View Projects", hero_scroll: "scroll",
         stat_pub: "IEEE Publications", stat_proj: "Technical Projects", stat_roles: "Research Roles",
         badge_loc: "Switzerland",
         label_about: "Who I Am", title_about: "About Me",
-        about_text: "<p>I am a Master's student in <strong>IT, Digitalization &amp; Sustainability</strong> at Lucerne University of Applied Sciences and Arts (HSLU), Switzerland. With research experience spanning <strong>AI, Robotics, and Computer Vision</strong>, I bring a unique blend of academic rigor and hands-on engineering.</p><p>My journey has taken me from building <strong>drone-based imaging systems at ISRO</strong> (India's space agency) to developing <strong>automated glass facade monitoring</strong> at Universiti Teknologi PETRONAS in Malaysia. I'm passionate about deploying lightweight, efficient AI models on edge devices — making intelligence accessible where it matters most.</p><p>With published work in <strong>IEEE conferences</strong> and expertise across Python, PyTorch, TensorFlow, and embedded systems, I bridge the gap between deep learning research and real-world robotic applications.</p>",
+        about_text: "<p>I'm a Master's student in <strong>IT, Digitalization &amp; Sustainability</strong> at HSLU, Switzerland, with research experience across <strong>AI, robotics, and computer vision</strong> — from drone-based imaging at <strong>ISRO</strong> to automated glass facade monitoring at UTP Malaysia.</p><p>With two <strong>IEEE publications</strong> and hands-on depth in Python, PyTorch, and embedded systems, I focus on lightweight AI that runs where it matters: on edge devices in the real world.</p>",
         hl_ai: "AI & Robotics", hl_ai_d: "Computer Vision, CNNs, YOLO, Edge AI",
         hl_drone: "Drone Tech", hl_drone_d: "UAV imaging, stereo depth, autonomous systems",
         hl_research: "Research", hl_research_d: "2 IEEE papers, ISRO internship, UTP",
@@ -926,7 +959,7 @@
         label_contact: "Let's Connect", title_contact: "Get in Touch",
         c_email: "Email", location: "Zug, Switzerland",
         meta_desc: "AI researcher and robotics engineer in Switzerland — drone imaging, computer vision, and IEEE-published research. Portfolio of Nilabh Pandey.",
-        f_all: "All", f_ai: "AI & ML", f_rob: "Robotics & Drones", f_iot: "IoT & Embedded", f_bc: "Blockchain",
+        f_all: "All", f_ai: "AI & ML", f_rob: "Robotics & Drones", f_iot: "IoT & Embedded", f_bc: "Blockchain", p_more: "Show all projects", p_less: "Show less",
         copied: "Copied!", copy_email: "Copy email", xt_loaded: "modules loaded",
         logo_name: "nilabhpandey", name_full: "Nilabh Pandey", alt_photo: "Nilabh Pandey smiling outdoors, wearing a navy blazer over a light blue shirt", footer_note: "Crafted with purpose.", btt: "Back to top"
     },
@@ -936,12 +969,12 @@
         hero_tag: "Offen für neue Möglichkeiten",
         hero_tagline: "Ich baue KI-Systeme, die <span class='grad'>sehen, fliegen &amp; lernen</span>.",
         roles: ["KI-Forscher", "Drohnen- & CV-Ingenieur", "MS-Student @ HSLU", "IEEE-Autor", "Robotik-Entwickler"],
-        hero_desc: "KI-Forscher & Masterstudent an der HSLU, Schweiz — vereint Computer Vision, drohnengestützte Bildgebung und maschinelles Lernen mit realer Innovation. Von ISRO bis zu IEEE-Publikationen: Forschung mit Wirkung.",
+        hero_desc: "MS-Student an der HSLU, Schweiz — von ISRO-Drohnenbildgebung bis zu IEEE-publizierter Forschung.",
         hero_cta: "Kontakt aufnehmen", hero_cta2: "Projekte ansehen", hero_scroll: "scrollen",
         stat_pub: "IEEE-Publikationen", stat_proj: "Technische Projekte", stat_roles: "Forschungsstellen",
         badge_loc: "Schweiz",
         label_about: "Wer ich bin", title_about: "Über mich",
-        about_text: "<p>Ich bin Masterstudent in <strong>IT, Digitalisierung &amp; Nachhaltigkeit</strong> an der Hochschule Luzern (HSLU), Schweiz. Mit Forschungserfahrung in <strong>KI, Robotik und Computer Vision</strong> verbinde ich akademische Strenge mit praktischer Ingenieurskunst.</p><p>Mein Weg führte mich vom Aufbau <strong>drohnengestützter Bildgebungssysteme bei ISRO</strong> (Indiens Weltraumagentur) bis zur Entwicklung <strong>automatisierter Glasfassaden-Überwachung</strong> an der Universiti Teknologi PETRONAS in Malaysia. Meine Leidenschaft gilt dem Einsatz leichtgewichtiger, effizienter KI-Modelle auf Edge-Geräten — Intelligenz dort, wo sie am meisten bewirkt.</p><p>Mit Veröffentlichungen auf <strong>IEEE-Konferenzen</strong> und Expertise in Python, PyTorch, TensorFlow und eingebetteten Systemen schliesse ich die Lücke zwischen Deep-Learning-Forschung und realen Roboteranwendungen.</p>",
+        about_text: "<p>Ich bin Masterstudent in <strong>IT, Digitalisierung &amp; Nachhaltigkeit</strong> an der HSLU, Schweiz, mit Forschungserfahrung in <strong>KI, Robotik und Computer Vision</strong> — von drohnengestützter Bildgebung bei <strong>ISRO</strong> bis zur automatisierten Glasfassaden-Überwachung an der UTP in Malaysia.</p><p>Mit zwei <strong>IEEE-Publikationen</strong> und praktischer Tiefe in Python, PyTorch und eingebetteten Systemen konzentriere ich mich auf leichtgewichtige KI, die dort läuft, wo es zählt: auf Edge-Geräten in der realen Welt.</p>",
         hl_ai: "KI & Robotik", hl_ai_d: "Computer Vision, CNNs, YOLO, Edge-KI",
         hl_drone: "Drohnentechnik", hl_drone_d: "UAV-Bildgebung, Stereo-Tiefe, autonome Systeme",
         hl_research: "Forschung", hl_research_d: "2 IEEE-Paper, ISRO-Praktikum, UTP",
@@ -981,7 +1014,7 @@
         label_contact: "Kontakt aufnehmen", title_contact: "In Kontakt treten",
         c_email: "E-Mail", location: "Zug, Schweiz",
         meta_desc: "KI-Forscher und Robotik-Ingenieur in der Schweiz — Drohnenbildgebung, Computer Vision und IEEE-publizierte Forschung. Portfolio von Nilabh Pandey.",
-        f_all: "Alle", f_ai: "KI & ML", f_rob: "Robotik & Drohnen", f_iot: "IoT & Embedded", f_bc: "Blockchain",
+        f_all: "Alle", f_ai: "KI & ML", f_rob: "Robotik & Drohnen", f_iot: "IoT & Embedded", f_bc: "Blockchain", p_more: "Alle Projekte anzeigen", p_less: "Weniger anzeigen",
         copied: "Kopiert!", copy_email: "E-Mail kopieren", xt_loaded: "Module geladen",
         logo_name: "nilabhpandey", name_full: "Nilabh Pandey", alt_photo: "Nilabh Pandey lächelt im Freien, in marineblauem Blazer und hellblauem Hemd", footer_note: "Mit Sorgfalt gebaut.", btt: "Nach oben"
     },
@@ -991,12 +1024,12 @@
         hero_tag: "Disponible pour de nouvelles opportunités",
         hero_tagline: "Je conçois des systèmes d'IA qui <span class='grad'>voient, volent et apprennent</span>.",
         roles: ["Chercheur en IA", "Ingénieur drones & vision", "Étudiant MS @ HSLU", "Auteur IEEE", "Créateur robotique"],
-        hero_desc: "Chercheur en IA & étudiant en Master à la HSLU, Suisse — alliant vision par ordinateur, imagerie par drone et apprentissage automatique avec l'innovation concrète. De l'ISRO aux publications IEEE, transformer la recherche en impact.",
+        hero_desc: "Étudiant en MS à la HSLU, Suisse — de l'imagerie par drone à l'ISRO aux publications IEEE.",
         hero_cta: "Me contacter", hero_cta2: "Voir les projets", hero_scroll: "défiler",
         stat_pub: "Publications IEEE", stat_proj: "Projets techniques", stat_roles: "Postes de recherche",
         badge_loc: "Suisse",
         label_about: "Qui suis-je", title_about: "À propos de moi",
-        about_text: "<p>Je suis étudiant en Master en <strong>IT, Digitalisation &amp; Durabilité</strong> à la Haute école de Lucerne (HSLU), Suisse. Fort d'une expérience de recherche en <strong>IA, Robotique et Vision par ordinateur</strong>, j'apporte un mélange unique de rigueur académique et de compétences pratiques en ingénierie.</p><p>Mon parcours m'a mené de la conception de <strong>systèmes d'imagerie par drone à l'ISRO</strong> (l'agence spatiale indienne) au développement de la <strong>surveillance automatisée de façades vitrées</strong> à l'Universiti Teknologi PETRONAS en Malaisie. Je suis passionné par le déploiement de modèles d'IA légers et efficaces sur des appareils embarqués.</p><p>Avec des travaux publiés lors de <strong>conférences IEEE</strong> et une expertise en Python, PyTorch, TensorFlow et systèmes embarqués, je fais le pont entre la recherche en apprentissage profond et les applications robotiques réelles.</p>",
+        about_text: "<p>Je suis étudiant en Master en <strong>IT, Digitalisation &amp; Durabilité</strong> à la HSLU, en Suisse, avec une expérience de recherche en <strong>IA, robotique et vision par ordinateur</strong> — de l'imagerie par drone à l'<strong>ISRO</strong> à la surveillance automatisée de façades vitrées à l'UTP en Malaisie.</p><p>Avec deux <strong>publications IEEE</strong> et une solide pratique de Python, PyTorch et des systèmes embarqués, je me concentre sur une IA légère qui tourne là où ça compte : sur des appareils embarqués, dans le monde réel.</p>",
         hl_ai: "IA & Robotique", hl_ai_d: "Vision par ordinateur, CNN, YOLO, IA embarquée",
         hl_drone: "Technologie drone", hl_drone_d: "Imagerie UAV, profondeur stéréo, systèmes autonomes",
         hl_research: "Recherche", hl_research_d: "2 articles IEEE, stage ISRO, UTP",
@@ -1036,7 +1069,7 @@
         label_contact: "Restons en contact", title_contact: "Me contacter",
         c_email: "E-mail", location: "Zoug, Suisse",
         meta_desc: "Chercheur en IA et ingénieur en robotique en Suisse — imagerie par drone, vision par ordinateur et recherche publiée IEEE. Portfolio de Nilabh Pandey.",
-        f_all: "Tous", f_ai: "IA & ML", f_rob: "Robotique & Drones", f_iot: "IoT & Embarqué", f_bc: "Blockchain",
+        f_all: "Tous", f_ai: "IA & ML", f_rob: "Robotique & Drones", f_iot: "IoT & Embarqué", f_bc: "Blockchain", p_more: "Voir tous les projets", p_less: "Voir moins",
         copied: "Copié !", copy_email: "Copier l’e-mail", xt_loaded: "modules chargés",
         logo_name: "nilabhpandey", name_full: "Nilabh Pandey", alt_photo: "Nilabh Pandey souriant en extérieur, en blazer bleu marine et chemise bleu clair", footer_note: "Conçu avec passion.", btt: "Retour en haut"
     },
@@ -1046,12 +1079,12 @@
         hero_tag: "Disponível para oportunidades",
         hero_tagline: "Crio sistemas de IA que <span class='grad'>veem, voam e aprendem</span>.",
         roles: ["Pesquisador de IA", "Engenheiro de drones & visão", "Mestrando @ HSLU", "Autor IEEE", "Criador de robôs"],
-        hero_desc: "Pesquisador de IA & mestrando na HSLU, Suíça — unindo visão computacional, imagens por drone e aprendizado de máquina com inovação real. Do ISRO às publicações IEEE, transformando pesquisa em impacto.",
+        hero_desc: "Mestrando na HSLU, Suíça — da imagem por drone no ISRO às publicações IEEE.",
         hero_cta: "Entre em contato", hero_cta2: "Ver projetos", hero_scroll: "rolar",
         stat_pub: "Publicações IEEE", stat_proj: "Projetos técnicos", stat_roles: "Cargos de pesquisa",
         badge_loc: "Suíça",
         label_about: "Quem sou eu", title_about: "Sobre mim",
-        about_text: "<p>Sou mestrando em <strong>TI, Digitalização &amp; Sustentabilidade</strong> na Universidade de Ciências Aplicadas e Artes de Lucerna (HSLU), Suíça. Com experiência em pesquisa em <strong>IA, Robótica e Visão Computacional</strong>, trago uma combinação única de rigor acadêmico e engenharia prática.</p><p>Minha trajetória me levou desde a construção de <strong>sistemas de imagem por drone no ISRO</strong> (agência espacial da Índia) até o desenvolvimento de <strong>monitoramento automatizado de fachadas de vidro</strong> na Universiti Teknologi PETRONAS, na Malásia. Sou apaixonado por implementar modelos de IA leves e eficientes em dispositivos de borda.</p><p>Com trabalhos publicados em <strong>conferências IEEE</strong> e expertise em Python, PyTorch, TensorFlow e sistemas embarcados, faço a ponte entre pesquisa em deep learning e aplicações robóticas reais.</p>",
+        about_text: "<p>Sou mestrando em <strong>TI, Digitalização &amp; Sustentabilidade</strong> na HSLU, Suíça, com experiência de pesquisa em <strong>IA, robótica e visão computacional</strong> — da imagem por drone no <strong>ISRO</strong> ao monitoramento automatizado de fachadas de vidro na UTP, na Malásia.</p><p>Com duas <strong>publicações IEEE</strong> e prática sólida em Python, PyTorch e sistemas embarcados, foco em IA leve que roda onde importa: em dispositivos de borda, no mundo real.</p>",
         hl_ai: "IA & Robótica", hl_ai_d: "Visão computacional, CNNs, YOLO, IA de borda",
         hl_drone: "Tecnologia de drones", hl_drone_d: "Imagem UAV, profundidade estéreo, sistemas autônomos",
         hl_research: "Pesquisa", hl_research_d: "2 artigos IEEE, estágio ISRO, UTP",
@@ -1091,7 +1124,7 @@
         label_contact: "Vamos conversar", title_contact: "Entre em contato",
         c_email: "E-mail", location: "Zug, Suíça",
         meta_desc: "Pesquisador de IA e engenheiro de robótica na Suíça — imagens por drone, visão computacional e pesquisa publicada na IEEE. Portfólio de Nilabh Pandey.",
-        f_all: "Todos", f_ai: "IA & ML", f_rob: "Robótica & Drones", f_iot: "IoT & Embarcados", f_bc: "Blockchain",
+        f_all: "Todos", f_ai: "IA & ML", f_rob: "Robótica & Drones", f_iot: "IoT & Embarcados", f_bc: "Blockchain", p_more: "Ver todos os projetos", p_less: "Ver menos",
         copied: "Copiado!", copy_email: "Copiar e-mail", xt_loaded: "módulos carregados",
         logo_name: "nilabhpandey", name_full: "Nilabh Pandey", alt_photo: "Nilabh Pandey sorrindo ao ar livre, de blazer azul-marinho e camisa azul-clara", footer_note: "Criado com propósito.", btt: "Voltar ao topo"
     },
@@ -1101,12 +1134,12 @@
         hero_tag: "Disponible para oportunidades",
         hero_tagline: "Creo sistemas de IA que <span class='grad'>ven, vuelan y aprenden</span>.",
         roles: ["Investigador de IA", "Ingeniero de drones y visión", "Estudiante MS @ HSLU", "Autor IEEE", "Creador de robótica"],
-        hero_desc: "Investigador de IA & estudiante de máster en HSLU, Suiza — combinando visión por computadora, imágenes con drones y aprendizaje automático con innovación real. Del ISRO a publicaciones IEEE, convirtiendo investigación en impacto.",
+        hero_desc: "Estudiante de MS en la HSLU, Suiza — de los drones del ISRO a las publicaciones IEEE.",
         hero_cta: "Contáctame", hero_cta2: "Ver proyectos", hero_scroll: "desplázate",
         stat_pub: "Publicaciones IEEE", stat_proj: "Proyectos técnicos", stat_roles: "Puestos de investigación",
         badge_loc: "Suiza",
         label_about: "Quién soy", title_about: "Sobre mí",
-        about_text: "<p>Soy estudiante de máster en <strong>TI, Digitalización y Sostenibilidad</strong> en la Universidad de Ciencias Aplicadas de Lucerna (HSLU), Suiza. Con experiencia investigadora en <strong>IA, Robótica y Visión por Computadora</strong>, aporto una combinación única de rigor académico e ingeniería práctica.</p><p>Mi trayectoria me ha llevado desde la construcción de <strong>sistemas de imagen con drones en ISRO</strong> (la agencia espacial india) hasta el desarrollo de <strong>monitoreo automatizado de fachadas de vidrio</strong> en la Universiti Teknologi PETRONAS en Malasia. Me apasiona desplegar modelos de IA ligeros y eficientes en dispositivos de borde.</p><p>Con trabajo publicado en <strong>conferencias IEEE</strong> y experiencia en Python, PyTorch, TensorFlow y sistemas embebidos, conecto la investigación en aprendizaje profundo con aplicaciones robóticas reales.</p>",
+        about_text: "<p>Soy estudiante de máster en <strong>TI, Digitalización y Sostenibilidad</strong> en la HSLU, Suiza, con experiencia investigadora en <strong>IA, robótica y visión por computadora</strong> — desde imágenes con drones en el <strong>ISRO</strong> hasta el monitoreo automatizado de fachadas de vidrio en la UTP, Malasia.</p><p>Con dos <strong>publicaciones IEEE</strong> y práctica sólida en Python, PyTorch y sistemas embebidos, me centro en IA ligera que funciona donde importa: en dispositivos de borde, en el mundo real.</p>",
         hl_ai: "IA & Robótica", hl_ai_d: "Visión por computadora, CNNs, YOLO, IA de borde",
         hl_drone: "Tecnología de drones", hl_drone_d: "Imágenes UAV, profundidad estéreo, sistemas autónomos",
         hl_research: "Investigación", hl_research_d: "2 artículos IEEE, pasantía ISRO, UTP",
@@ -1146,7 +1179,7 @@
         label_contact: "Conectemos", title_contact: "Contacto",
         c_email: "Correo", location: "Zug, Suiza",
         meta_desc: "Investigador de IA e ingeniero en robótica en Suiza — imágenes con drones, visión por computadora e investigación publicada en IEEE. Portafolio de Nilabh Pandey.",
-        f_all: "Todos", f_ai: "IA & ML", f_rob: "Robótica y Drones", f_iot: "IoT y Embebidos", f_bc: "Blockchain",
+        f_all: "Todos", f_ai: "IA & ML", f_rob: "Robótica y Drones", f_iot: "IoT y Embebidos", f_bc: "Blockchain", p_more: "Ver todos los proyectos", p_less: "Ver menos",
         copied: "¡Copiado!", copy_email: "Copiar correo", xt_loaded: "módulos cargados",
         logo_name: "nilabhpandey", name_full: "Nilabh Pandey", alt_photo: "Nilabh Pandey sonriendo al aire libre, con blazer azul marino y camisa celeste", footer_note: "Creado con propósito.", btt: "Volver arriba"
     },
@@ -1156,12 +1189,12 @@
         hero_tag: "अवसरों के लिए उपलब्ध",
         hero_tagline: "मैं ऐसे AI सिस्टम बनाता हूँ जो <span class='grad'>देखते, उड़ते और सीखते</span> हैं।",
         roles: ["AI शोधकर्ता", "ड्रोन और CV इंजीनियर", "HSLU में MS का छात्र", "IEEE लेखक", "रोबोटिक्स निर्माता"],
-        hero_desc: "HSLU, स्विट्ज़रलैंड में AI शोधकर्ता और मास्टर छात्र — कंप्यूटर विज़न, ड्रोन इमेजिंग और मशीन लर्निंग को वास्तविक नवाचार के साथ जोड़ते हुए। ISRO से IEEE प्रकाशनों तक, शोध को प्रभाव में बदलना।",
+        hero_desc: "HSLU, स्विट्ज़रलैंड में MS का छात्र — ISRO के ड्रोन से IEEE प्रकाशनों तक।",
         hero_cta: "संपर्क करें", hero_cta2: "प्रोजेक्ट देखें", hero_scroll: "स्क्रॉल",
         stat_pub: "IEEE प्रकाशन", stat_proj: "तकनीकी प्रोजेक्ट", stat_roles: "शोध भूमिकाएँ",
         badge_loc: "स्विट्ज़रलैंड",
         label_about: "मैं कौन हूँ", title_about: "मेरे बारे में",
-        about_text: "<p>मैं <strong>IT, डिजिटलाइज़ेशन और सस्टेनेबिलिटी</strong> में मास्टर छात्र हूँ, ल्यूसर्न यूनिवर्सिटी ऑफ अप्लाइड साइंसेज (HSLU), स्विट्ज़रलैंड में। <strong>AI, रोबोटिक्स और कंप्यूटर विज़न</strong> में शोध अनुभव के साथ, मैं शैक्षणिक कठोरता और व्यावहारिक इंजीनियरिंग का अनूठा संयोजन लाता हूँ।</p><p>मेरी यात्रा मुझे <strong>ISRO में ड्रोन-आधारित इमेजिंग सिस्टम</strong> (भारत की अंतरिक्ष एजेंसी) बनाने से लेकर मलेशिया की Universiti Teknologi PETRONAS में <strong>स्वचालित ग्लास फ़ेसाड मॉनिटरिंग</strong> विकसित करने तक ले गई है। मुझे एज डिवाइसों पर हल्के, कुशल AI मॉडल तैनात करने का जुनून है।</p><p><strong>IEEE सम्मेलनों</strong> में प्रकाशित कार्य और Python, PyTorch, TensorFlow और एम्बेडेड सिस्टम में विशेषज्ञता के साथ, मैं डीप लर्निंग शोध और वास्तविक रोबोटिक अनुप्रयोगों के बीच का सेतु हूँ।</p>",
+        about_text: "<p>मैं HSLU, स्विट्ज़रलैंड में <strong>IT, डिजिटलाइज़ेशन और सस्टेनेबिलिटी</strong> में मास्टर छात्र हूँ — <strong>AI, रोबोटिक्स और कंप्यूटर विज़न</strong> में शोध अनुभव के साथ, <strong>ISRO</strong> में ड्रोन इमेजिंग से लेकर मलेशिया की UTP में स्वचालित ग्लास फ़ेसाड मॉनिटरिंग तक।</p><p>दो <strong>IEEE प्रकाशनों</strong> और Python, PyTorch तथा एम्बेडेड सिस्टम में व्यावहारिक गहराई के साथ, मेरा ध्यान हल्के AI पर है जो वहीं चलता है जहाँ ज़रूरी है: वास्तविक दुनिया के एज डिवाइसों पर।</p>",
         hl_ai: "AI और रोबोटिक्स", hl_ai_d: "कंप्यूटर विज़न, CNN, YOLO, एज AI",
         hl_drone: "ड्रोन तकनीक", hl_drone_d: "UAV इमेजिंग, स्टीरियो डेप्थ, स्वायत्त प्रणालियाँ",
         hl_research: "शोध", hl_research_d: "2 IEEE पेपर, ISRO इंटर्नशिप, UTP",
@@ -1201,7 +1234,7 @@
         label_contact: "जुड़ें", title_contact: "संपर्क करें",
         c_email: "ईमेल", location: "ज़ुग, स्विट्ज़रलैंड",
         meta_desc: "स्विट्ज़रलैंड में AI शोधकर्ता और रोबोटिक्स इंजीनियर — ड्रोन इमेजिंग, कंप्यूटर विज़न और IEEE-प्रकाशित शोध। नीलाभ पांडेय का पोर्टफोलियो।",
-        f_all: "सभी", f_ai: "AI और ML", f_rob: "रोबोटिक्स और ड्रोन", f_iot: "IoT और एम्बेडेड", f_bc: "ब्लॉकचेन",
+        f_all: "सभी", f_ai: "AI और ML", f_rob: "रोबोटिक्स और ड्रोन", f_iot: "IoT और एम्बेडेड", f_bc: "ब्लॉकचेन", p_more: "सभी प्रोजेक्ट देखें", p_less: "कम देखें",
         copied: "कॉपी हो गया!", copy_email: "ईमेल कॉपी करें", xt_loaded: "मॉड्यूल लोड हुए",
         logo_name: "नीलाभपांडेय", name_full: "नीलाभ पांडेय", alt_photo: "नीलाभ पांडेय, नेवी ब्लेज़र और हल्की नीली शर्ट में, बाहर मुस्कुराते हुए", footer_note: "सार्थक रूप से निर्मित।", btt: "ऊपर जाएँ"
     }
@@ -1326,7 +1359,7 @@
             requestAnimationFrame(loop);
         })();
         document.addEventListener('mouseover', function (e) {
-            var hit = e.target.closest('a, button, .card, .pill');
+            var hit = e.target.closest('a, button, .card');
             dot.classList.toggle('hov', !!hit);
             ring.classList.toggle('hov', !!hit);
         }, { passive: true });
@@ -1587,7 +1620,7 @@
         var max = h.scrollHeight - h.clientHeight;
         if (progress) progress.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
         if (btt) btt.classList.toggle('show', h.scrollTop > 620);
-        if (!REDUCED && heroInner) {
+        if (!REDUCED && heroInner && window.innerWidth > 900) {
             var hy = Math.min(h.scrollTop, 640);
             heroInner.style.transform = 'translateY(' + (hy * 0.16) + 'px)';
             heroInner.style.opacity = Math.max(1 - hy / 780, 0);
@@ -1641,30 +1674,59 @@
     })();
 
     /* ═══════════════════════════════════════════
-       PROJECT FILTER
+       PROJECTS: FILTER + SHOW MORE
     ═══════════════════════════════════════════ */
     var fbtns = document.querySelectorAll('.fbtn');
-    var pcards = document.querySelectorAll('.proj-card');
+    var pcards = [].slice.call(document.querySelectorAll('.proj-card'));
+    var moreBtn = document.getElementById('projMore');
+    var moreWrap = document.querySelector('.proj-morewrap');
+    var PROJ_CAP = 4;
+    var projExpanded = false;
+    var projFilter = 'all';
+
+    function applyProjects(animate) {
+        pcards.forEach(function (c, i) {
+            var cat = c.getAttribute('data-cat') || '';
+            var match = projFilter === 'all' || cat.indexOf(projFilter) !== -1;
+            var visible = match && (projFilter !== 'all' || projExpanded || i < PROJ_CAP);
+            c.classList.toggle('gone', !visible);
+            if (visible && animate && !REDUCED) {
+                c.classList.remove('pop');
+                void c.offsetWidth;
+                c.classList.add('pop');
+            }
+        });
+        if (moreWrap) moreWrap.style.display = projFilter === 'all' ? '' : 'none';
+        if (moreBtn) {
+            moreBtn.classList.toggle('open', projExpanded);
+            moreBtn.setAttribute('aria-expanded', projExpanded ? 'true' : 'false');
+            var sp = moreBtn.querySelector('span');
+            if (sp) {
+                sp.setAttribute('data-i18n', projExpanded ? 'p_less' : 'p_more');
+                sp.textContent = T[LANG][projExpanded ? 'p_less' : 'p_more'];
+            }
+        }
+    }
     fbtns.forEach(function (b) {
         b.addEventListener('click', function () {
-            var f = b.getAttribute('data-f');
+            projFilter = b.getAttribute('data-f');
             fbtns.forEach(function (x) {
                 var on = x === b;
                 x.classList.toggle('active', on);
                 x.setAttribute('aria-pressed', on ? 'true' : 'false');
             });
-            pcards.forEach(function (c) {
-                var cat = c.getAttribute('data-cat') || '';
-                var show = f === 'all' || cat.indexOf(f) !== -1;
-                c.classList.toggle('gone', !show);
-                if (show && !REDUCED) {
-                    c.classList.remove('pop');
-                    void c.offsetWidth;
-                    c.classList.add('pop');
-                }
-            });
+            applyProjects(true);
         });
     });
+    if (moreBtn) moreBtn.addEventListener('click', function () {
+        projExpanded = !projExpanded;
+        applyProjects(true);
+        if (!projExpanded) {
+            var sec = document.getElementById('projects');
+            if (sec) sec.scrollIntoView({ behavior: REDUCED ? 'auto' : 'smooth', block: 'start' });
+        }
+    });
+    applyProjects(false);
 
     /* ═══════════════════════════════════════════
        COPY EMAIL + TOAST
@@ -1701,35 +1763,7 @@
         });
     }
 
-    /* ═══════════════════════════════════════════
-       LIVE TELEMETRY CLOCK (Europe/Zurich)
-    ═══════════════════════════════════════════ */
-    var teleClock = document.getElementById('teleClock');
-    if (teleClock) {
-        var clockFmt = null;
-        try {
-            clockFmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Zurich', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
-        } catch (e) {}
-        var tickClock = function () {
-            teleClock.textContent = clockFmt ? clockFmt.format(new Date()) : new Date().toTimeString().slice(0, 8);
-        };
-        tickClock();
-        setInterval(tickClock, 1000);
-    }
 
-    /* ═══════════════════════════════════════════
-       SKILL COUNT BADGES
-    ═══════════════════════════════════════════ */
-    document.querySelectorAll('.skill-group').forEach(function (g) {
-        var n = g.querySelectorAll('.pill').length;
-        var t = g.querySelector('.sg-title');
-        if (t && n) {
-            var s = document.createElement('span');
-            s.className = 'sk-count';
-            s.textContent = (n < 10 ? '0' : '') + n;
-            t.appendChild(s);
-        }
-    });
 
     /* ═══════════════════════════════════════════
        HERO NAME: CLICK TO RE-SCAN
@@ -1798,6 +1832,36 @@
                 xtActivate(xtTabs[next].dataset.skt);
             });
         }
+    }
+
+    /* ═══════════════════════════════════════════
+       EXPERIENCE TABS
+    ═══════════════════════════════════════════ */
+    var xpBox = document.getElementById('xpBox');
+    if (xpBox) {
+        var xpTabs = [].slice.call(xpBox.querySelectorAll('.xp-tab'));
+        var xpPanes = [].slice.call(xpBox.querySelectorAll('.xp-pane'));
+        var xpGo = function (i) {
+            xpTabs.forEach(function (t, j) {
+                t.classList.toggle('act', j === i);
+                t.setAttribute('aria-selected', j === i ? 'true' : 'false');
+            });
+            xpPanes.forEach(function (p, j) { p.classList.toggle('act', j === i); });
+        };
+        xpTabs.forEach(function (t, i) {
+            t.addEventListener('click', function () { xpGo(i); });
+        });
+        xpBox.querySelector('.xp-tabs').addEventListener('keydown', function (e) {
+            var dir = (e.key === 'ArrowRight' || e.key === 'ArrowDown') ? 1
+                : (e.key === 'ArrowLeft' || e.key === 'ArrowUp') ? -1 : 0;
+            if (!dir) return;
+            var idx = xpTabs.indexOf(document.activeElement);
+            if (idx < 0) return;
+            e.preventDefault();
+            var next = (idx + dir + xpTabs.length) % xpTabs.length;
+            xpTabs[next].focus();
+            xpGo(next);
+        });
     }
 
     /* ═══════════════════════════════════════════
