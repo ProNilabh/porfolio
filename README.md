@@ -4,8 +4,6 @@ Personal portfolio of **Nilabh Pandey**, AI & robotics researcher and MS student
 
 **Live:** [nilabhpandey.com](https://nilabhpandey.com) · **GitHub Pages:** [pronilabh.github.io](https://pronilabh.github.io)
 
-> `nilabhpandey.com` works once the custom domain is connected (see [Custom domain](#custom-domain-optional)). Until then, the site lives at `pronilabh.github.io`.
-
 One file. No frameworks, no build step, no dependencies: just `index.html` and a photo.
 
 ---
