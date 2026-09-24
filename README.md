@@ -69,28 +69,6 @@ Hero · About · Experience · Education · Publications · Projects · Skills �
 | `cv` | Save the page as a PDF |
 | `neofetch`, `date`, `echo`, `history`, `clear` | The usual |
 
-## Deploy on GitHub Pages (free)
-
-1. Create a **public** repository named exactly `pronilabh.github.io`.
-2. Upload `index.html`, `Nilabh_Pandey_Image.jpg` and this `README.md` to the root of the repository. The photo must keep that exact filename; if it's missing, the page shows a placeholder.
-3. Go to **Settings → Pages → Build and deployment → Source: Deploy from a branch**, then choose **Branch: `main` / `(root)`** and **Save**.
-4. After a minute or two the site is live at **https://pronilabh.github.io**.
-
-To update the site later, upload the new `index.html` over the old one. GitHub Pages redeploys automatically.
-
-### Custom domain (optional)
-
-The canonical URL, Open Graph tags and JSON-LD in `index.html` point to `https://nilabhpandey.com/`. To make that address work:
-
-1. Register `nilabhpandey.com` with any domain registrar.
-2. In **Settings → Pages → Custom domain**, enter `nilabhpandey.com` and click **Save**. GitHub creates the `CNAME` file itself, so don't add one by hand before you own the domain; doing so breaks the site.
-3. At your registrar's DNS settings, add:
-   - four **A** records for `@` pointing to `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`
-   - one **CNAME** record for `www` pointing to `pronilabh.github.io`
-4. Once the DNS check passes (this can take up to a day), tick **Enforce HTTPS**.
-
-**Not buying the domain?** Replace every `https://nilabhpandey.com/` in the `<head>` of `index.html` (canonical link, `og:url`, `og:image`, JSON-LD) with `https://pronilabh.github.io/`, and update the **Live** link at the top of this README. The Save contact and Share buttons already use whatever address the site is actually served from.
-
 ## Customizing
 
 Everything lives in `index.html`:
