@@ -19,14 +19,21 @@ One file. No frameworks, no build step, no dependencies: just `index.html` and a
 - **Interactive terminal**: the Skills section is a working shell (`help`, `projects`, `skills ml`, `play drone`, `lang de`…) with Tab completion and command history.
 - **Command palette**: `Ctrl K` / `⌘K` jumps to any section, switches language or theme, copies the email, saves the contact card, shares the page, starts a game or saves the page as a PDF.
 - **Experience tabs**, **filterable projects** with "Show all", and **skills tabs**.
-- **Copy BibTeX** on each paper, **copy email**, **save contact (.vcf)** and **share** (native share sheet on phones; copies the link on desktop).
+- **Publications** list every co-author, link to IEEE Xplore / the journal PDF, and have a **Copy BibTeX** button with complete author lists.
+- **Copy email**, **save contact (.vcf)** and **share** (native share sheet on phones; copies the link on desktop).
 - Easter eggs: a signature in the browser console, and the Konami code (↑ ↑ ↓ ↓ ← → ← → B A) unlocks a gold drone.
 
 ### Languages & themes
 - **6 languages**: English, German, French, Portuguese, Spanish and Hindi. Every visible string is translated, including the games, the terminal and the contact form.
 - Detects the browser language on the first visit and remembers the choice.
-- **Dark / light theme**, remembered, with a theme-aware starfield background.
+- **Light / dark theme** that follows the visitor's device setting until they choose one; switching plays a circular reveal from the toggle (View Transitions API).
 - Flags are inline SVG, because Windows can't display emoji flags.
+
+### Design
+- Colour carries meaning: **sky blue** for drones and aerial work, **solar amber** for energy and IoT, **glass teal** for computer vision and AI, **signal violet** for research, and **orange** for actions. The same hues mark the About tiles, project categories and publication types, in both themes.
+- The hero portrait sits on three fanned panels (glass, solar cells, signal), a nod to the panels the research inspects.
+- One typeface, Schibsted Grotesk, at heavy weights for headlines; monospace only inside the terminal and the games.
+- Modern CSS with graceful fallbacks: a scroll-driven progress bar, balanced headline wrapping, and animated re-flow when filtering projects.
 
 ### Quality
 - Responsive from 320px phones to wide screens. Mobile gets a full-screen menu, swipeable certificates and 16px inputs so iOS doesn't zoom in.
@@ -77,10 +84,10 @@ Everything lives in `index.html`:
 - **Sections**: edit the matching `<section>` markup. Cards, tabs and reveals style themselves.
 - **Games**: the `INTERACTIVE LAB` block in the script. The difficulty constants (speed, gap size, round length) sit at the top of `makeDrone`, `makeFacade` and `makeTrack`.
 - **Terminal commands**: the `INTERACTIVE SHELL` block.
-- **BibTeX entries**: the `COPY BIBTEX` block. Add the full co-author lists there.
+- **Publications**: each paper is an `article.pub-card` in the Publications section (authors, year, venue, link); the matching BibTeX lives in the `COPY BIBTEX` block.
 - **Contact card**: `saveVCard()` in the `SAVE CONTACT (.vcf) + SHARE` block.
 - **Project links**: Baltic-ECA-Net and Drone Detection point to their repositories, DiveSSI and the smart-home system to their demo videos; the rest point to the GitHub profile.
-- **Colors & fonts**: the CSS variables in `:root`, `[data-theme="dark"]` and `[data-theme="light"]`.
+- **Colours & fonts**: the CSS variables in `:root`, `[data-theme="light"]` and `[data-theme="dark"]` (`--sky`, `--solar`, `--glass`, `--signal`, `--brand`, each with `-ink` and `-soft` variants).
 
 ## Languages
 
@@ -95,7 +102,7 @@ Everything lives in `index.html`:
 
 ## Tech
 
-Single-file HTML, CSS and vanilla JavaScript, with Canvas 2D for the games and the starfield. The contact form posts to the Web3Forms API. Fonts: Space Grotesk, Manrope and IBM Plex Mono, loaded from Google Fonts.
+Single-file HTML, CSS and vanilla JavaScript, with Canvas 2D for the games. The contact form posts to the Web3Forms API. Fonts: Schibsted Grotesk, IBM Plex Mono (terminal and games) and Noto Sans Devanagari (Hindi), loaded from Google Fonts.
 
 ## License
 
